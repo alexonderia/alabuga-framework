@@ -1,0 +1,57 @@
+{
+  "name": "@alabuga/workspace",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
+  "scripts": {
+    "ai:setup": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-ai.ps1",
+    "ai": "npm run build && tsx scripts/start-ai.ts",
+    "demo": "npm run build && tsx scripts/start-ai.ts --demo",
+    "demo:rehearse": "tsx scripts/demo-rehearsal.ts",
+    "ai:server": "tsx apps/ai-server/src/ai-server.ts",
+    "test:ai": "tsx --test tests/ai.test.ts tests/ai-server.test.ts tests/ai-content.test.ts tests/ai-reliability.test.ts",
+    "ai:acceptance": "node scripts/ai-live.mjs",
+    "ai:examples": "node scripts/ai-live.mjs --examples",
+    "ai:report": "python scripts/ai-report.py",
+    "predev": "npm run build:framework && tsx scripts/build-docs.ts",
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run typecheck && npm run check:boundaries && tsx scripts/build.ts",
+    "test": "tsx --test tests/schema.test.ts tests/editor.test.ts tests/public-api.test.ts tests/editor-save.test.ts",
+    "test:browser": "playwright test",
+    "preview": "vite preview --outDir dist/site --host 127.0.0.1",
+    "fonts": "python scripts/fonts.py",
+    "typecheck": "tsc --noEmit",
+    "check:boundaries": "tsx scripts/check-boundaries.ts",
+    "build:framework": "npm run build -w @alabuga/framework",
+    "build:editor": "npm run build -w @alabuga/editor",
+    "build:docs": "npm run build -w @alabuga/docs",
+    "build:ai": "npm run build -w @alabuga/ai",
+    "build:server": "npm run build -w @alabuga/ai-server",
+    "test:bootstrap": "tsx --test tests/bootstrap.test.ts tests/pinned-model.test.ts",
+    "test:model": "tsx scripts/run-model-check.ts",
+    "check:docs": "tsx scripts/check-docs.ts",
+    "test:release": "node scripts/release-smoke.mjs"
+  },
+  "dependencies": {
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.3.1",
+    "axe-core": "^4.13.0",
+    "esbuild": "0.28.2",
+    "marked": "17.0.5",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.3.6"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "npm@11.17.0"
+}

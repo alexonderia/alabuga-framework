@@ -1,0 +1,11 @@
+{
+  "name": "@alabuga/ai-server",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd ../.. && tsx scripts/build-workspace.ts ai-server",
+    "test": "cd ../.. && tsx --test tests/ai-server.test.ts tests/bootstrap.test.ts tests/pinned-model.test.ts"
+  },
+  "dependencies": {}
+}

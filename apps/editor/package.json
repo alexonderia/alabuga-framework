@@ -1,0 +1,14 @@
+{
+  "name": "@alabuga/editor",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "cd ../.. && tsx scripts/build-workspace.ts editor",
+    "test": "cd ../.. && tsx --test tests/editor.test.ts tests/editor-save.test.ts"
+  },
+  "dependencies": {
+    "@alabuga/framework": "0.6.0",
+    "@alabuga/ai": "0.6.0"
+  }
+}

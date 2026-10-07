@@ -1,0 +1,24 @@
+name: Trusted GPU acceptance
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    if: github.ref == 'refs/heads/main'
+    runs-on: [self-hosted, Windows, X64, alabuga-gpu]
+    environment: gpu-acceptance
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:model
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: real-model-rehearsal
+          path: artifacts/demo/rehearsal
+          retention-days: 30

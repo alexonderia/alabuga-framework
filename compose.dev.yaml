@@ -1,0 +1,17 @@
+name: alabuga-dev
+services:
+  editor:
+    build:
+      context: .
+      target: development
+    ports: ["127.0.0.1:5173:5173"]
+    environment:
+      AF_AI_PROXY: ${AF_AI_PROXY:-http://host.docker.internal:4176}
+      AF_POLLING: "1"
+    extra_hosts: ["host.docker.internal:host-gateway"]
+    volumes:
+      - .:/app
+      - dependencies:/app/node_modules
+    command: ["sh", "-c", "npm ci && npm run dev -- --host 0.0.0.0 --port 5173 --strictPort"]
+volumes:
+  dependencies:

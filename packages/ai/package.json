@@ -1,0 +1,29 @@
+{
+  "name": "@alabuga/ai",
+  "version": "0.6.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./claims": "./src/claims.ts",
+    "./commands": "./src/commands.ts",
+    "./content-format": "./src/content-format.ts",
+    "./content-review": "./src/content-review.ts",
+    "./context": "./src/context.ts",
+    "./contracts": "./src/contracts.ts",
+    "./demo-facts": "./src/demo-facts.ts",
+    "./generate": "./src/generate.ts",
+    "./planning": "./src/planning.ts",
+    "./prompt-policy": "./src/prompt-policy.ts",
+    "./provider": "./src/provider.ts",
+    "./topic-guidance": "./src/topic-guidance.ts",
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "cd ../.. && tsx scripts/build-workspace.ts ai",
+    "test": "cd ../.. && tsx --test tests/ai.test.ts tests/ai-content.test.ts tests/ai-reliability.test.ts"
+  },
+  "dependencies": {
+    "zod": "4.5.4",
+    "@alabuga/framework": "0.6.0"
+  }
+}

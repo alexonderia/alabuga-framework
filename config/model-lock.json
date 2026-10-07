@@ -1,0 +1,14 @@
+{
+  "model": "qwen3.5:2b",
+  "digest": "324d162be6ca5629ae4517c8710434d0bd2d665bc94dbad46e9af8fbf8a2f0df",
+  "ollama": "0.35.0",
+  "quantization": "Q8_0",
+  "downloadBytes": 2741192820,
+  "backend": "Vulkan",
+  "context": 4096,
+  "num_gpu": 99,
+  "num_batch": 128,
+  "think": false,
+  "device": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+  "note": "Automatic layer placement reserves excessive projector headroom; explicit full GPU offload verified. End-to-end acceptance is reported separately in artifacts/ai."
+}

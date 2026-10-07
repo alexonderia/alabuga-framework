@@ -1,0 +1,4542 @@
+{
+  "before": [
+    {
+      "id": "fixture-0",
+      "title": "",
+      "composition": "thesis",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-0-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "accent",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "orbit",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-1",
+      "title": "",
+      "composition": "divider",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-1-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "accent",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "orbit",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-2",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-2-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-3",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-3-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-4",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-4-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-5",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-5-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-6",
+      "title": "",
+      "composition": "features",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-6-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        },
+        {
+          "id": "fixture-6-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-7",
+      "title": "",
+      "composition": "features",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-7-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ]
+        },
+        {
+          "id": "fixture-7-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-8",
+      "title": "",
+      "composition": "comparison",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-8-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ]
+        },
+        {
+          "id": "fixture-8-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-9",
+      "title": "",
+      "composition": "steps",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-9-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        },
+        {
+          "id": "fixture-9-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-10",
+      "title": "",
+      "composition": "steps",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-10-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ]
+        },
+        {
+          "id": "fixture-10-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-11",
+      "title": "",
+      "composition": "metrics",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-11-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ]
+        },
+        {
+          "id": "fixture-11-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 4,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "01",
+          "note": "Визуальный язык"
+        },
+        {
+          "id": "fixture-11-widget-2",
+          "title": "",
+          "position": {
+            "col": 5,
+            "row": 3,
+            "width": 4,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "02",
+          "note": "Формата: сайт и презентация"
+        },
+        {
+          "id": "fixture-11-widget-3",
+          "title": "",
+          "position": {
+            "col": 9,
+            "row": 3,
+            "width": 4,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "∞",
+          "note": "Идей для ваших историй"
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-12",
+      "title": "",
+      "composition": "quote",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-12-widget-0",
+          "title": "",
+          "position": {
+            "col": 2,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "quote",
+          "text": "Сильная идея заслуживает ясной формы.",
+          "author": "Принцип Alabuga Framework"
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-3f0284d4a837a18ad1d9.webp"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-13",
+      "title": "",
+      "composition": "quote",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-13-widget-0",
+          "title": "",
+          "position": {
+            "col": 2,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "quote",
+          "text": "Сильная идея заслуживает ясной формы.",
+          "author": "Принцип Alabuga Framework"
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-3f0284d4a837a18ad1d9.webp"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-14",
+      "title": "",
+      "composition": "split",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-14-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 6,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ]
+        },
+        {
+          "id": "fixture-14-widget-1",
+          "title": "",
+          "position": {
+            "col": 8,
+            "row": 1,
+            "width": 5,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-e3b87137b1f1f2a216a9.webp",
+          "alt": "Фирменная геометрия и свет",
+          "fit": "cover",
+          "caption": ""
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-15",
+      "title": "",
+      "composition": "asymmetric",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-15-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 5,
+            "height": 7
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-19453be3f1b9c54b7b02.webp",
+          "alt": "Световая геометрия из фирменного шаблона",
+          "fit": "cover",
+          "caption": ""
+        },
+        {
+          "id": "fixture-15-widget-1",
+          "title": "",
+          "position": {
+            "col": 7,
+            "row": 2,
+            "width": 6,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        },
+        {
+          "id": "fixture-15-widget-2",
+          "title": "",
+          "position": {
+            "col": 7,
+            "row": 6,
+            "width": 4,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Выбрать композицию",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "contrast",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-16",
+      "title": "",
+      "composition": "brand-cover",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-16-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 3,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-54ddb68464f478e321f2.webp",
+          "alt": "Алабуга",
+          "fit": "contain",
+          "caption": ""
+        },
+        {
+          "id": "fixture-16-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 3,
+            "width": 10,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ]
+        },
+        {
+          "id": "fixture-16-widget-2",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 7,
+            "width": 4,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Создать свою историю",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-17",
+      "title": "",
+      "composition": "hero",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-17-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ]
+        },
+        {
+          "id": "fixture-17-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 6,
+            "width": 4,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Узнать больше",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "contrast",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "orbit",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-18",
+      "title": "",
+      "composition": "final",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-18-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 10,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        },
+        {
+          "id": "fixture-18-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 6,
+            "width": 4,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Узнать больше",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          }
+        },
+        {
+          "id": "fixture-18-widget-2",
+          "title": "",
+          "position": {
+            "col": 7,
+            "row": 6,
+            "width": 6,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "contrast",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "orbit",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-19",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-19-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "row": 1,
+            "width": 12,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. "
+            }
+          ]
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-20",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-20-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ]
+        },
+        {
+          "id": "fixture-20-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 3,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            }
+          ],
+          "pageSize": 2,
+          "variant": "corporate"
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-21",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-21-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ]
+        },
+        {
+          "id": "fixture-21-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 3,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            }
+          ],
+          "pageSize": 2,
+          "variant": "corporate"
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-22",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-22-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ]
+        },
+        {
+          "id": "fixture-22-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 3,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            },
+            {
+              "name": "Изменение",
+              "page": "На холсте",
+              "slides": "На холсте"
+            }
+          ],
+          "pageSize": 2,
+          "variant": "corporate"
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-23",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-23-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ]
+        },
+        {
+          "id": "fixture-23-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 3,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            },
+            {
+              "name": "Изменение",
+              "page": "На холсте",
+              "slides": "На холсте"
+            }
+          ],
+          "pageSize": 2,
+          "variant": "corporate"
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong"
+      },
+      "transition": "fade"
+    }
+  ],
+  "after": [
+    {
+      "id": "fixture-0",
+      "title": "",
+      "composition": "thesis",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-0-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-1",
+      "title": "",
+      "composition": "divider",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-1-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-a1b31bc454ba5a8b5d53.webp",
+        "backgroundId": "brand-a1b31bc454ba5a8b5d53",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-2",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-2-widget-0",
+          "title": "",
+          "position": {
+            "col": 4,
+            "width": 9,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-3",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-3-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-4",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-4-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-bb570f0c6ceb4f63de23.webp",
+        "backgroundId": "brand-bb570f0c6ceb4f63de23",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-5",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-5-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Выберите композицию",
+                "Добавьте своё содержание",
+                "Проверьте результат и экспортируйте"
+              ]
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-6",
+      "title": "",
+      "composition": "features",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-6-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-6-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-e3b87137b1f1f2a216a9.webp",
+        "backgroundId": "brand-e3b87137b1f1f2a216a9",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-7",
+      "title": "",
+      "composition": "features",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-7-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-7-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-8",
+      "title": "",
+      "composition": "comparison",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-8-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 1,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-8-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 5,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-9",
+      "title": "",
+      "composition": "steps",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-9-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-9-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-3f0284d4a837a18ad1d9.webp",
+        "backgroundId": "brand-3f0284d4a837a18ad1d9",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-10",
+      "title": "",
+      "composition": "steps",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-10-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-10-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "cards",
+          "items": [
+            {
+              "title": "Композиция",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Содержание",
+              "text": "Настраивайте результат прямо на холсте."
+            },
+            {
+              "title": "Оформление",
+              "text": "Настраивайте результат прямо на холсте."
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-4f5e588e73a56284b81c.webp",
+        "backgroundId": "brand-4f5e588e73a56284b81c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-11",
+      "title": "",
+      "composition": "metrics",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-11-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-11-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 4,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "01",
+          "note": "Визуальный язык",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-11-widget-2",
+          "title": "",
+          "position": {
+            "col": 5,
+            "width": 4,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "02",
+          "note": "Формата: сайт и презентация",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-11-widget-3",
+          "title": "",
+          "position": {
+            "col": 9,
+            "width": 4,
+            "row": 4,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "metric",
+          "value": "∞",
+          "note": "Идей для ваших историй",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-12",
+      "title": "",
+      "composition": "quote",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-12-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "quote",
+          "text": "Сильная идея заслуживает ясной формы.",
+          "author": "Принцип Alabuga Framework",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-13",
+      "title": "",
+      "composition": "quote",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-13-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "quote",
+          "text": "Сильная идея заслуживает ясной формы.",
+          "author": "Принцип Alabuga Framework",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-ab9ca487e9d6ed02a546.webp",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "backgroundId": "brand-ab9ca487e9d6ed02a546",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-14",
+      "title": "",
+      "composition": "split",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-14-widget-0",
+          "title": "",
+          "position": {
+            "col": 4,
+            "width": 6,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-14-widget-1",
+          "title": "",
+          "position": {
+            "col": 10,
+            "width": 3,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-e3b87137b1f1f2a216a9.webp",
+          "alt": "Фирменная геометрия и свет",
+          "fit": "cover",
+          "caption": "",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-15",
+      "title": "",
+      "composition": "asymmetric",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-15-widget-0",
+          "title": "",
+          "position": {
+            "col": 8,
+            "width": 5,
+            "row": 1,
+            "height": 7
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-19453be3f1b9c54b7b02.webp",
+          "alt": "Световая геометрия из фирменного шаблона",
+          "fit": "cover",
+          "caption": "",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-15-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 7,
+            "row": 1,
+            "height": 7
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-15-widget-2",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 8,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Выбрать композицию",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          },
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-16",
+      "title": "",
+      "composition": "brand-cover",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-16-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 4,
+            "row": 1,
+            "height": 2
+          },
+          "surface": "plain",
+          "type": "image",
+          "src": "../assets/brand/brand-54ddb68464f478e321f2.webp",
+          "alt": "Алабуга",
+          "fit": "contain",
+          "caption": "",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-16-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 3,
+            "height": 5
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-16-widget-2",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 8,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Создать свою историю",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          },
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-bb570f0c6ceb4f63de23.webp",
+        "backgroundId": "brand-bb570f0c6ceb4f63de23",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-17",
+      "title": "",
+      "composition": "hero",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-17-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 7
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "От идеи к результату"
+            },
+            {
+              "type": "paragraph",
+              "text": "Единая библиотека помогает собирать страницы и презентации. Единая библиотека помогает собирать страницы и презентации. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-17-widget-1",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 8,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Узнать больше",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          },
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-1ce919b59c13ec5b05a0.webp",
+        "backgroundId": "brand-1ce919b59c13ec5b05a0",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-18",
+      "title": "",
+      "composition": "final",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-18-widget-0",
+          "title": "",
+          "position": {
+            "col": 4,
+            "width": 9,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 80,
+            "body": 36,
+            "cardTitle": 40,
+            "caption": 28,
+            "table": 32,
+            "metric": 120
+          }
+        },
+        {
+          "id": "fixture-18-widget-1",
+          "title": "",
+          "position": {
+            "col": 4,
+            "width": 9,
+            "row": 8,
+            "height": 1
+          },
+          "surface": "plain",
+          "type": "button",
+          "label": "Узнать больше",
+          "variant": "primary",
+          "action": {
+            "type": "link",
+            "href": "https://example.com"
+          },
+          "typography": {
+            "heading": 80,
+            "body": 36,
+            "cardTitle": 40,
+            "caption": 28,
+            "table": 32,
+            "metric": 120
+          }
+        },
+        {
+          "id": "fixture-18-widget-2",
+          "title": "",
+          "position": {
+            "col": 4,
+            "width": 9,
+            "row": 4,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Создавайте вместе"
+            }
+          ],
+          "typography": {
+            "heading": 80,
+            "body": 36,
+            "cardTitle": 40,
+            "caption": 28,
+            "table": 32,
+            "metric": 120
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-19",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-19-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 8
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "paragraph",
+              "text": "Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. Проект сохраняется локально. Его можно открыть, изменить и экспортировать без изменения исходных материалов. "
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-20",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-20-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 1,
+            "height": 4
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-20-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 8,
+            "row": 5,
+            "height": 4
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            }
+          ],
+          "pageSize": 1,
+          "variant": "corporate",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-21",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-21-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-21-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            }
+          ],
+          "pageSize": 2,
+          "variant": "corporate",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-534ec4c0fc766e4e54b5.webp",
+        "backgroundId": "brand-534ec4c0fc766e4e54b5",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-22",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-22-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-22-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            },
+            {
+              "name": "Изменение",
+              "page": "На холсте",
+              "slides": "На холсте"
+            }
+          ],
+          "pageSize": 3,
+          "variant": "corporate",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "transition": "fade"
+    },
+    {
+      "id": "fixture-23",
+      "title": "",
+      "composition": "text",
+      "grid": {
+        "columns": 12,
+        "rowHeight": 64,
+        "gap": 16
+      },
+      "widgets": [
+        {
+          "id": "fixture-23-widget-0",
+          "title": "",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 1,
+            "height": 3
+          },
+          "surface": "plain",
+          "type": "text",
+          "content": [
+            {
+              "type": "heading",
+              "text": "Сайт и презентация"
+            }
+          ],
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        },
+        {
+          "id": "fixture-23-table",
+          "type": "table",
+          "title": "",
+          "align": "left",
+          "surface": "plain",
+          "position": {
+            "col": 1,
+            "width": 12,
+            "row": 4,
+            "height": 5
+          },
+          "columns": [
+            {
+              "key": "name",
+              "label": "Возможность"
+            },
+            {
+              "key": "page",
+              "label": "Сайт"
+            },
+            {
+              "key": "slides",
+              "label": "Презентация"
+            }
+          ],
+          "rows": [
+            {
+              "name": "Формат",
+              "page": "Адаптивный",
+              "slides": "16:9"
+            },
+            {
+              "name": "Экспорт",
+              "page": "HTML",
+              "slides": "HTML и PDF"
+            },
+            {
+              "name": "Изменение",
+              "page": "На холсте",
+              "slides": "На холсте"
+            }
+          ],
+          "pageSize": 3,
+          "variant": "corporate",
+          "typography": {
+            "heading": 112,
+            "body": 40,
+            "cardTitle": 44,
+            "caption": 28,
+            "table": 32,
+            "metric": 144
+          }
+        }
+      ],
+      "appearance": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "transition": "fade"
+    }
+  ],
+  "report": [
+    {
+      "index": 0,
+      "composition": "thesis",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "composition": "divider",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-a1b31bc454ba5a8b5d53.webp",
+        "backgroundId": "brand-a1b31bc454ba5a8b5d53",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-bb570f0c6ceb4f63de23.webp",
+        "backgroundId": "brand-bb570f0c6ceb4f63de23",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "composition": "features",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-e3b87137b1f1f2a216a9.webp",
+        "backgroundId": "brand-e3b87137b1f1f2a216a9",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "composition": "features",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "composition": "comparison",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "composition": "steps",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-3f0284d4a837a18ad1d9.webp",
+        "backgroundId": "brand-3f0284d4a837a18ad1d9",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "composition": "steps",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-4f5e588e73a56284b81c.webp",
+        "backgroundId": "brand-4f5e588e73a56284b81c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "composition": "metrics",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "composition": "quote",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "composition": "quote",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "background": "../assets/brand/brand-ab9ca487e9d6ed02a546.webp",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "backgroundId": "brand-ab9ca487e9d6ed02a546",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "composition": "split",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "composition": "asymmetric",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "composition": "brand-cover",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-bb570f0c6ceb4f63de23.webp",
+        "backgroundId": "brand-bb570f0c6ceb4f63de23",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "composition": "hero",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-1ce919b59c13ec5b05a0.webp",
+        "backgroundId": "brand-1ce919b59c13ec5b05a0",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "composition": "final",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "left-quarter",
+        "background": "../assets/brand/brand-47c9e13154f9b572414a.webp",
+        "backgroundId": "brand-47c9e13154f9b572414a",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 80,
+          "body": 36,
+          "cardTitle": 40,
+          "caption": 28,
+          "table": 32,
+          "metric": 120
+        },
+        {
+          "heading": 80,
+          "body": 36,
+          "cardTitle": 40,
+          "caption": 28,
+          "table": 32,
+          "metric": 120
+        },
+        {
+          "heading": 80,
+          "body": 36,
+          "cardTitle": 40,
+          "caption": 28,
+          "table": 32,
+          "metric": 120
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "right-third",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-534ec4c0fc766e4e54b5.webp",
+        "backgroundId": "brand-534ec4c0fc766e4e54b5",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "image",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "full",
+        "background": "../assets/brand/brand-d631d54bd5df943deb4c.webp",
+        "backgroundId": "brand-d631d54bd5df943deb4c",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "composition": "text",
+      "success": true,
+      "issues": [],
+      "changes": [
+        "Подобраны читаемые размеры текста",
+        "Проверены границы и переносы",
+        "Подобрана сетка",
+        "Подобрано фирменное оформление"
+      ],
+      "background": {
+        "theme": "light",
+        "spacing": "generous",
+        "width": "wide",
+        "layout": "fixed",
+        "decoration": "none",
+        "focal": "center",
+        "shade": "strong",
+        "fitted": true,
+        "backgroundPlacement": "none"
+      },
+      "typography": [
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        },
+        {
+          "heading": 112,
+          "body": 40,
+          "cardTitle": 44,
+          "caption": 28,
+          "table": 32,
+          "metric": 144
+        }
+      ]
+    }
+  ]
+}
