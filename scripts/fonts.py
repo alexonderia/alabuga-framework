@@ -2,7 +2,7 @@ from pathlib import Path
 from fontTools.ttLib import TTCollection
 root = Path(__file__).resolve().parents[1]
 collection = TTCollection(root / 'fonts/alabuga-sans.ttc')
-out = root / 'packages/framework/src/fonts'
+out = root / 'src/fonts'
 out.mkdir(parents=True, exist_ok=True)
 for index, name in [(3, 'regular'), (4, 'medium'), (6, 'heading-bold'), (7, 'heading-extra-bold')]:
     font = collection.fonts[index]

@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import React from 'react';
+import {renderToString} from 'react-dom/server';
+import {VERSION,validateDocument,renderDocument} from '@alabuga/framework';
+import {showcase} from '@alabuga/framework/compositions';
+import pkg from '@alabuga/framework/package.json' with {type:'json'};
+assert.equal(VERSION,pkg.version);assert.equal(typeof document,'undefined');
+assert(validateDocument(showcase('page')).success);assert.equal(typeof renderDocument,'function');
+for(const [entry,target]of Object.entries(pkg.exports))if(typeof target==='object')await import('@alabuga/framework'+(entry==='.'?'':entry.slice(1)));
+const require=createRequire(import.meta.url);
+const css=await readFile(require.resolve('@alabuga/framework/standalone.css'),'utf8');assert(css.includes('.af-btn'));assert(css.includes('data:font/woff2'));
+assert(renderToString(React.createElement('button',{className:'af-btn'},'Alabuga')).includes('af-btn'));
+console.log('All ESM entries import in Node without a DOM; React renders CSS components');

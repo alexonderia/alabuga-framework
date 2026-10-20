@@ -2,8 +2,8 @@ import {test,expect} from '@playwright/test';
 test('validation is atomic, text is literal, controllers are isolated and disposable',async({page})=>{
   await page.goto('/demos/panel.html');
   const result=await page.evaluate(async()=>{
-    const {renderDocument}=await import('/packages/framework/src/index.ts' as string);
-    const {panelExample}=await import('/packages/framework/src/examples.ts' as string);
+    const {renderDocument}=await import('/src/index.ts' as string);
+    const {panelExample}=await import('/src/examples.ts' as string);
     const host=document.createElement('div');document.body.append(host);
     const source=structuredClone(panelExample);source.pages[0].widgets[1].content=[{type:'paragraph',text:'<img src=x onerror="window.injected=true">',dropCap:false}];
     const first=renderDocument(host,source);const original=host.innerHTML;

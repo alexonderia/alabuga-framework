@@ -1,0 +1,21 @@
+import {mkdtemp} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {resolve} from 'node:path';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+const pkg=JSON.parse(await readFile('package.json','utf8')),report=JSON.parse(await readFile('artifacts/package/report.json','utf8'));
+const registry=process.env.ALABUGA_NPM_REGISTRY;if(!registry||!registry.startsWith('https://'))throw new Error('Set HTTPS ALABUGA_NPM_REGISTRY');
+if(process.env.GITHUB_REF_NAME!==`v${pkg.version}`)throw new Error('Release tag and package version differ');
+const npm=process.env.npm_execpath,options={encoding:'utf8',windowsHide:true};
+const tag=pkg.version.includes('-')?pkg.version.includes('alpha')?'alpha':'next':'latest';
+execFileSync(process.execPath,[npm,'publish',report.archive,'--ignore-scripts',`--registry=${registry}`,`--tag=${tag}`],{...options,stdio:'inherit'});
+const integrity=execFileSync(process.execPath,[npm,'view',`${pkg.name}@${pkg.version}`,'dist.integrity',`--registry=${registry}`],options).trim();
+if(integrity!==report.integrity)throw new Error('Published archive integrity mismatch');
+console.log(`Published ${pkg.name}@${pkg.version}; integrity verified`);
+
+const directory=await mkdtemp(resolve(tmpdir(),'alabuga-published-'));
+await writeFile(resolve(directory,'package.json'),JSON.stringify({private:true,type:'module'}));
+await writeFile(resolve(directory,'.npmrc'),`registry=https://registry.npmjs.org/\n@alabuga:registry=${registry}\n`);
+execFileSync(process.execPath,[npm,'install','--ignore-scripts','--no-audit','--no-fund',`${pkg.name}@${pkg.version}`],{...options,cwd:directory,stdio:'inherit'});
+execFileSync(process.execPath,['--input-type=module','-e',`import {VERSION} from '@alabuga/framework';if(VERSION!==${JSON.stringify(pkg.version)})throw new Error('Published version mismatch')`],{...options,cwd:directory,stdio:'inherit'});
+console.log('Clean installation of the published package passed');

@@ -5,8 +5,8 @@ from xml.etree import ElementTree as ET
 from PIL import Image
 
 root = Path(__file__).resolve().parents[1]
-source = next((root / 'docs').glob('*.pptx'))
-output = root / 'public/assets/brand'
+source = next((root / 'docs/brand-sources').glob('*.pptx'))
+output = root / 'assets/brand'
 originals = root / 'design/pptx-originals'
 output.mkdir(parents=True, exist_ok=True)
 originals.mkdir(parents=True, exist_ok=True)

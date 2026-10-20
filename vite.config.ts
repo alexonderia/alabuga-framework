@@ -1,9 +1,8 @@
 import {defineConfig} from 'vite';
-import {resolve} from 'node:path';
-export default defineConfig(({mode})=>mode==='library'?{
- publicDir:false,build:{outDir:'packages/framework/dist',lib:{entry:'packages/framework/src/index.ts',name:'Alabuga',formats:['es','iife'],fileName:f=>f==='es'?'alabuga.js':'alabuga.iife.js',cssFileName:'alabuga'}}
-}:{
- base:'./',publicDir:false,optimizeDeps:{entries:['index.html','builder/index.html','demo/index.html','demos/*.html']},server:{host:process.env.AF_DEV_HOST||'127.0.0.1',watch:{usePolling:process.env.AF_POLLING==='1',interval:1000,ignored:['**/node_modules/**','**/.git/**','**/artifacts/**','**/dist/**','**/public/demo/**','**/test-results/**','**/.local/**']},proxy:{'/api/ai':{target:process.env.AF_AI_PROXY||'http://127.0.0.1:4176',changeOrigin:true}}},
- plugins:[{name:'brand-assets',configureServer(server){server.middlewares.use(async(req,res,next)=>{if(!req.url?.match(/^\/(assets|projects|docs)\//))return next();const {readFile}=await import('node:fs/promises');const {extname,sep}=await import('node:path');const manuals=req.url.startsWith('/docs/'),root=resolve(manuals?'dist/docs':'public'),file=resolve(root,'.'+decodeURIComponent(req.url.split('?')[0]));if(!file.startsWith(root+sep))return next();try{const data=await readFile(file);res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.svg':'image/svg+xml','.png':'image/png','.woff2':'font/woff2'} as Record<string,string>)[extname(file)]||'application/octet-stream');res.end(data)}catch{next()}})}}],
- build:{outDir:mode==='docs'?'dist/docs':'dist/editor',rollupOptions:{input:(mode==='docs'?{docs:resolve('index.html'),panel:resolve('demos/panel.html'),form:resolve('demos/form.html'),slides:resolve('demos/slides.html'),showcase:resolve('demos/showcase.html')}:{demo:resolve('demo/index.html'),builder:resolve('builder/index.html')}) as Record<string,string>}}
-});
+import {resolve,extname,sep} from 'node:path';
+import {readFile} from 'node:fs/promises';
+export default defineConfig({base:'./',publicDir:false,server:{host:'127.0.0.1'},plugins:[{name:'framework-assets',configureServer(server){server.middlewares.use(async(req,res,next)=>{
+ const path=req.url?.split('?')[0]||'';if(!/^\/(assets|docs)\//.test(path))return next();
+ const root=resolve(path.startsWith('/docs/')?'dist/docs':'.');const file=resolve(root,'.'+decodeURIComponent(path));if(!file.startsWith(root+sep))return next();
+ try{const body=await readFile(file);res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.js':'text/javascript','.json':'application/json','.css':'text/css','.webp':'image/webp','.svg':'image/svg+xml','.woff2':'font/woff2'} as Record<string,string>)[extname(file)]||'application/octet-stream');res.end(body)}catch{next()}
+ })}}],build:{outDir:'dist/docs',emptyOutDir:true,rollupOptions:{input:{docs:resolve('index.html'),panel:resolve('demos/panel.html'),form:resolve('demos/form.html'),slides:resolve('demos/slides.html'),showcase:resolve('demos/showcase.html')}}}});

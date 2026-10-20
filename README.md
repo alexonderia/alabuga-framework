@@ -1,64 +1,31 @@
 # Alabuga Framework
 
-[Отчёт рефакторинга и приёмки](docs/refactor-report.ru.md)
+Independent proprietary design system and document renderer. Repository: https://github.com/alexonderia/alabuga-framework.
 
-[English](README.en.md) · [Руководства RU](apps/docs/content/ru/start.md) · [Architecture](apps/docs/content/en/architecture.md)
+Node.js 24.19.0 and npm 11.17.0. Run `npm ci`, `npm run tokens`, `npm run build`, `npm test`.
+Run `npm run build:docs`, `npm run check:docs`, and `npm run dev` for the independent RU/EN reference.
 
-Приватный монорепозиторий визуального конструктора сайтов и презентаций. Локальные проекты, фирменные композиции, поэлементное редактирование, автономный HTML и дополнительный помощник Qwen3.5-2B. Интерфейс приложения — русский; документация — RU/EN.
-
-## Быстрый запуск
-
-Требуются Node.js 24.19.0 и npm 11.17.0.
+Install the published package with your registry read credentials:
 
 ```sh
-npm ci
-npm run dev
+npm install --save-exact @alabuga/framework@1.0.2
 ```
 
-Откройте `http://127.0.0.1:5173/demo/`. Модель и GPU для разработки редактора не нужны.
-
-```sh
-npm run build
-npm run ai:server
+```js
+import '@alabuga/framework/standalone.css';
+import {renderDocument} from '@alabuga/framework';
+const controller = renderDocument(host, document, {assetsBaseUrl: '/assets/'});
+// Update without remounting; release listeners on unmount.
+controller.update(nextDocument);
+controller.destroy();
 ```
 
-Собранная версия: `http://127.0.0.1:4176/demo/`. Документация: `/docs/ru/start.html` и `/docs/en/start.html`.
+Plain HTML can serve `standalone.js`, `standalone.css` and package `assets/`, then call `Alabuga.renderDocument`. Always apply the `af` root class for CSS components. ESM browser modules resolve built-in assets relative to the package; bundler applications copy exported assets to their static directory and pass `assetsBaseUrl`. Schema imports work in Node without a DOM. React integration is demonstrated and tested in `tests/consumers/react-document.mjs`; React owns the host and Framework owns its children.
 
-## Docker
+`npm run test:package` verifies the actual archive. `npm run test:consumers` installs it into a temporary directory and checks Node, TypeScript NodeNext and React StrictMode. `npm run test:browser` checks the independent reference and component states. Use `AF_BROWSER_CHANNEL=chrome` for a locally installed Chrome; CI installs the Playwright browsers.
 
-```sh
-docker compose up --build -d
-docker compose --profile ai up --build -d
-```
+Public entries, DOM compatibility and release policy are documented in `docs/public-contract.md`. Documents 1–3 remain supported. The framework has no Constructor, IndexedDB, AI or server dependency.
 
-Без профиля запускается приложение без модели. Профиль `ai` автоматически загружает Ollama и закреплённую модель при первом запуске, сохраняя веса в томе. Для GPU требуется настроенный NVIDIA runtime; см. [эксплуатацию](apps/docs/content/ru/operations.md). Для изменения исходников: `docker compose -f compose.dev.yaml up --build`.
+Private registry deployment, accounts, backup and restore: `infra/registry/README.md`. Configure the real registry before release. A Framework release never deploys Constructor. The existing Constructor repository remains https://github.com/vldsmelov/alabugaframework.
 
-## Пакеты
-
-- `packages/framework`: схема, renderer, композиции, оформление и экспорт.
-- `packages/ai`: контракты и генерация без UI редактора.
-- `apps/editor`: витрина, конструктор, IndexedDB, демонстрация.
-- `apps/ai-server`: локальный API, Ollama, инициализация.
-- `apps/docs`: двуязычные руководства и примеры.
-
-Общий `package-lock.json` обязателен. Подробности: [разработка](apps/docs/content/ru/development.md) и [CONTRIBUTING](CONTRIBUTING.md).
-
-## Проверки
-
-```sh
-npm test
-npm run test:ai
-npm run test:bootstrap
-npm run build
-npm run check:docs
-npx playwright install
-npm run test:browser -- --workers=1
-```
-
-Реальная модель: после подготовки Ollama выполните `npm run test:model`. Модель проверяется отдельно от тестов с имитацией API. Известные ограничения и исторические результаты: [качество](apps/docs/content/ru/quality.md).
-
-## Данные и права
-
-Проекты находятся в браузере, не в Docker. Смена адреса/порта не переносит IndexedDB. Скачивайте переносимые проекты перед сменой среды. Корпоративные исходники PPTX/PDF/TTC хранятся через Git LFS; для обычной сборки они не требуются. Модели, отчёты и локальные настройки исключены из Git.
-
-Репозиторий предназначен для приватной работы команды. Открытая лицензия на код, шрифты и корпоративные материалы этим выпуском не предоставляется. Удалённый репозиторий и реальные владельцы областей назначаются отдельно.
+No open-source license is granted for the code, fonts or corporate materials.

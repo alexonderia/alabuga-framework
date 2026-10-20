@@ -1,0 +1,25 @@
+storage: /verdaccio/storage
+auth:
+  htpasswd:
+    file: /verdaccio/conf/htpasswd
+    max_users: -1
+    algorithm: bcrypt
+web:
+  enable: false
+security:
+  api:
+    legacy: false
+    jwt:
+      sign:
+        expiresIn: 30d
+packages:
+  '@alabuga/*':
+    access: $authenticated
+    publish: framework-publisher
+    unpublish: []
+  '**':
+    access: []
+    publish: []
+    unpublish: []
+listen: 0.0.0.0:4873
+log: {type: stdout, format: pretty, level: warn}

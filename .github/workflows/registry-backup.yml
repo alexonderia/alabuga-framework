@@ -1,0 +1,26 @@
+name: Registry backup
+on:
+  workflow_call:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+permissions: {contents: read}
+jobs:
+  backup:
+    if: vars.REGISTRY_BACKUP_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment: registry-operations
+    steps:
+      - name: Configure backup-only SSH identity
+        env:
+          BACKUP_KEY: ${{ secrets.REGISTRY_BACKUP_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.REGISTRY_KNOWN_HOSTS }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$BACKUP_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+      - name: Request consistent encrypted off-server backup
+        env:
+          BACKUP_HOST: ${{ vars.REGISTRY_BACKUP_SSH_HOST }}
+        run: ssh -- "$BACKUP_HOST" backup

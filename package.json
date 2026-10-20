@@ -1,43 +1,134 @@
 {
-  "name": "@alabuga/workspace",
-  "version": "0.6.0",
-  "private": true,
+  "name": "@alabuga/framework",
+  "version": "1.0.2",
+  "private": false,
   "type": "module",
+  "description": "Independent Alabuga design system, components and document renderer",
+  "license": "UNLICENSED",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/esm",
+    "dist/types",
+    "dist/assets",
+    "dist/fonts",
+    "dist/*.css",
+    "dist/*.js",
+    "dist/tokens.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": [
+    "**/*.css",
+    "**/*.iife.js"
+  ],
+  "exports": {
+    "./brand": {
+      "types": "./dist/types/brand.d.ts",
+      "import": "./dist/esm/brand.js"
+    },
+    "./components": {
+      "types": "./dist/types/components.d.ts",
+      "import": "./dist/esm/components.js"
+    },
+    "./compositions.css": "./dist/compositions.css",
+    "./compositions": {
+      "types": "./dist/types/compositions.d.ts",
+      "import": "./dist/esm/compositions.js"
+    },
+    "./demo-documents": {
+      "types": "./dist/types/demo-documents.d.ts",
+      "import": "./dist/esm/demo-documents.js"
+    },
+    "./dom": {
+      "types": "./dist/types/dom.d.ts",
+      "import": "./dist/esm/dom.js"
+    },
+    "./element-style": {
+      "types": "./dist/types/element-style.d.ts",
+      "import": "./dist/esm/element-style.js"
+    },
+    "./examples": {
+      "types": "./dist/types/examples.d.ts",
+      "import": "./dist/esm/examples.js"
+    },
+    "./experience": {
+      "types": "./dist/types/experience.d.ts",
+      "import": "./dist/esm/experience.js"
+    },
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js"
+    },
+    "./layout-variants": {
+      "types": "./dist/types/layout-variants.d.ts",
+      "import": "./dist/esm/layout-variants.js"
+    },
+    "./runtime": {
+      "types": "./dist/types/runtime.d.ts",
+      "import": "./dist/esm/runtime.js"
+    },
+    "./schema": {
+      "types": "./dist/types/schema.d.ts",
+      "import": "./dist/esm/schema.js"
+    },
+    "./slide-backgrounds.json": "./dist/esm/slide-backgrounds.json",
+    "./slide-fit": {
+      "types": "./dist/types/slide-fit.d.ts",
+      "import": "./dist/esm/slide-fit.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./widgets": {
+      "types": "./dist/types/widgets.d.ts",
+      "import": "./dist/esm/widgets.js"
+    },
+    "./standalone.js": "./dist/alabuga.iife.js",
+    "./standalone.css": "./dist/alabuga.css",
+    "./assets": {
+      "types": "./dist/types/assets.d.ts",
+      "import": "./dist/esm/assets.js"
+    },
+    "./export": {
+      "types": "./dist/types/export.d.ts",
+      "import": "./dist/esm/export.js"
+    },
+    "./assets/*": "./dist/assets/*",
+    "./tokens.json": "./dist/tokens.json",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexonderia/alabuga-framework.git"
+  },
   "engines": {
     "node": "24.x",
     "npm": "11.x"
   },
+  "packageManager": "npm@11.17.0",
+  "publishConfig": {
+    "registry": "https://npm.example.org/"
+  },
   "scripts": {
-    "ai:setup": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-ai.ps1",
-    "ai": "npm run build && tsx scripts/start-ai.ts",
-    "demo": "npm run build && tsx scripts/start-ai.ts --demo",
-    "demo:rehearse": "tsx scripts/demo-rehearsal.ts",
-    "ai:server": "tsx apps/ai-server/src/ai-server.ts",
-    "test:ai": "tsx --test tests/ai.test.ts tests/ai-server.test.ts tests/ai-content.test.ts tests/ai-reliability.test.ts",
-    "ai:acceptance": "node scripts/ai-live.mjs",
-    "ai:examples": "node scripts/ai-live.mjs --examples",
-    "ai:report": "python scripts/ai-report.py",
-    "predev": "npm run build:framework && tsx scripts/build-docs.ts",
-    "dev": "vite --host 127.0.0.1",
-    "build": "npm run typecheck && npm run check:boundaries && tsx scripts/build.ts",
-    "test": "tsx --test tests/schema.test.ts tests/editor.test.ts tests/public-api.test.ts tests/editor-save.test.ts",
-    "test:browser": "playwright test",
-    "preview": "vite preview --outDir dist/site --host 127.0.0.1",
-    "fonts": "python scripts/fonts.py",
+    "tokens": "node scripts/tokens.mjs",
+    "check:tokens": "node scripts/tokens.mjs --check",
     "typecheck": "tsc --noEmit",
-    "check:boundaries": "tsx scripts/check-boundaries.ts",
-    "build:framework": "npm run build -w @alabuga/framework",
-    "build:editor": "npm run build -w @alabuga/editor",
-    "build:docs": "npm run build -w @alabuga/docs",
-    "build:ai": "npm run build -w @alabuga/ai",
-    "build:server": "npm run build -w @alabuga/ai-server",
-    "test:bootstrap": "tsx --test tests/bootstrap.test.ts tests/pinned-model.test.ts",
-    "test:model": "tsx scripts/run-model-check.ts",
-    "check:docs": "tsx scripts/check-docs.ts",
-    "test:release": "node scripts/release-smoke.mjs"
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "build": "npm run check:tokens && npm run check:boundaries && node scripts/build.mjs && npm run typecheck",
+    "build:docs": "npm run build && vite build && tsx scripts/build-docs.ts",
+    "dev": "vite --host 127.0.0.1",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "playwright test",
+    "test:package": "node scripts/test-package.mjs",
+    "test:consumers": "node scripts/test-consumers.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
+    "prepack": "npm run build",
+    "release": "node scripts/release.mjs",
+    "fonts": "python scripts/fonts.py"
   },
   "dependencies": {
-    "zod": "^4.5.4"
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
@@ -48,10 +139,5 @@
     "tsx": "^4.23.13",
     "typescript": "^5.9.2",
     "vite": "^7.3.6"
-  },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "packageManager": "npm@11.17.0"
+  }
 }

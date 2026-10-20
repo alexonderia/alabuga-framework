@@ -1,3 +1,4 @@
+import '@alabuga/framework/standalone.css';
 import { renderDocument } from '@alabuga/framework';
 import { panelExample } from '@alabuga/framework/examples';
 import './style.css';

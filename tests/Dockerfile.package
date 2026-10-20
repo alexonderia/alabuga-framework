@@ -1,0 +1,7 @@
+FROM node:24.19.0-bookworm-slim
+WORKDIR /work
+COPY package.json package-lock.json ./
+RUN npm install --global npm@11.17.0 && npm ci
+COPY . .
+RUN npm run build && npm test && npm run test:package
+CMD ["cat", "artifacts/package/report.json"]

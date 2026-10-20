@@ -1,0 +1,11 @@
+[Unit]
+Description=Renew Alabuga registry TLS certificate
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=@REGISTRY_DIR@
+EnvironmentFile=/etc/alabuga-registry.env
+ExecStart=/usr/bin/docker compose --profile maintenance run --rm certbot renew --webroot -w /var/www/acme
+ExecStartPost=/usr/bin/docker compose exec -T proxy nginx -s reload

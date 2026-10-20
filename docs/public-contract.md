@@ -1,0 +1,13 @@
+# Public compatibility contract
+
+Framework uses independent SemVer. Document schema versions 1, 2 and 3 are read and normalized to 3. This format number is independent of the npm package version. All explicit exports in package.json are supported; `/src` and `/dist` imports are private. JS uses ESM; standalone.js exposes Alabuga. CSS must be imported explicitly.
+
+Stable runtime API: validateDocument, renderDocument, initComponents, composition factories, layout variants, fitting and export. DocumentController supports update, synchronize (authoring mode), destroy, getDocument, slide navigation and overflow checks. Invalid updates are atomic. destroy is idempotent; remount releases the prior controller. initComponents returns cleanup.
+
+Resource options are per operation. assetsBaseUrl overrides the package base. Built-in legacy `../assets/brand/...` references are recognized; user-relative paths retain browser semantics. asset:<sha256> uses the caller's resolver. Framework never reads storage. Export receives runtime CSS/script and an optional async resolver. Missing exported assets fail explicitly. External HTTP(S) images remain network resources.
+
+Public DOM authoring hooks: `[data-section-id]`, `[data-widget-id]`, `[data-action-id]`, `.af-page`, `.af-slide`, `.af-panel`, `.af-widget`, `.af-widget__title`, `.af-widget__content`, `.af-prose`, `.af-heading`, `.af-slide__title`, `.af-section-background`, `.af-table-scroll`, `.af-title`, `.af-label`, `.af-caption`, `.af-metric__value`, `.af-quote__text`, `.af-quote__author`, `.af-feature`, `.af-feature__title`, `.af-feature__text`. Prose children follow document content order; list items, gallery figcaptions, table body rows/cells and cards follow their data order. Constructor's framework-adapter owns its use of these hooks. Structure/selector changes that break editing require a major release.
+
+CSS component classes, documented modifier classes, ARIA/data state attributes and existing --af-* tokens remain compatible within a major. Core, semantic and component token layers preserve the previous effective values, including accessibility adjustments. design/figma-tokens.json is the original design snapshot; design/token-layers.json records the effective CSS mapping and explicit accessibility adjustments. `npm run tokens` deterministically generates layers; `check:tokens` detects drift and missing references.
+
+Patch fixes preserve contracts. Minor versions add compatible APIs. New serialized properties must be checked against older strict validators; use a new document format and migration when necessary. Breaking changes require a new major and migration guide. Previous major critical fixes are supported for six months. Published archives are immutable.

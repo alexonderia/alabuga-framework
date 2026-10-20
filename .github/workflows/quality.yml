@@ -1,43 +1,23 @@
-name: Quality
+name: Framework quality
 on:
   pull_request:
   push:
     branches: [main]
-permissions:
-  contents: read
+permissions: {contents: read}
 jobs:
-  checks:
+  quality:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: false
+        with: {lfs: false}
       - uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
-          cache: npm
+        with: {node-version-file: .node-version, cache: npm}
       - run: npm install --global npm@11.17.0
       - run: npm ci
-      - run: npm test && npm run test:ai && npm run test:bootstrap
-      - run: npm run build && npm run check:docs
       - run: npx playwright install --with-deps
+      - run: npm run build && npm test && npm run test:package && npm run test:consumers
+      - run: npm run build:docs && npm run check:docs
       - run: npm run test:browser -- --workers=1
-      - run: node scripts/release-smoke.mjs
       - uses: actions/upload-artifact@v4
         if: always()
-        with:
-          name: browser-evidence
-          path: |
-            test-results
-            artifacts
-          retention-days: 14
-  containers:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: docker compose config --quiet
-      - run: docker compose build web api
-      - run: docker compose up -d --wait
-      - run: curl --fail http://127.0.0.1:4176/demo/ && curl --fail http://127.0.0.1:4176/api/ai/health
-      - if: always()
-        run: docker compose down
+        with: {name: framework-evidence, path: "artifacts\ntest-results", retention-days: 14}
