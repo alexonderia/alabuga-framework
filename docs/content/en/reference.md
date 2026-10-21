@@ -1,49 +1,51 @@
-# API and format reference
+# Public API and DOM contract
 
-## Public entries
+## Entries
 
-| Import | Main capabilities |
+| Export | Capabilities |
 | --- | --- |
-| `@alabuga/framework/schema` | AFDocument, Section, Widget, validateDocument, isSafeUrl |
-| `@alabuga/framework/runtime` | renderDocument, DocumentController |
-| `@alabuga/framework/compositions` | compositionCatalog, makeComposition, changeComposition |
-| `@alabuga/framework/layout-variants` | semanticSlots, applyLayoutVariant |
-| `@alabuga/framework/slide-fit` | fitSlide, measureSlide, FitSlideOptions, FitSlideResult |
-| `@alabuga/framework/export` | exportHTML, ExportOptions |
-| `@alabuga/ai` | AIProvider, GenerationRequest, DraftResult, AICommand, generateDraft |
+| Package root | VERSION, schema, renderer, behavior, compositions, export |
+| schema | AFDocument, Section, Widget, validateDocument, isSafeUrl |
+| runtime | renderDocument, DocumentController |
+| components, dom, widgets | initComponents, DOM helpers, registry |
+| compositions, layout-variants | compositionCatalog, makeComposition, changeComposition, semanticSlots, applyLayoutVariant |
+| slide-fit | fitSlide, measureSlide, slideBackgrounds, option/result types |
+| experience, element-style | Actions, motion, typography and appearance |
+| assets, export | Image preparation, exportHTML, ExportOptions |
+| brand, examples, demo-documents | Brand references and pure sample documents |
+| tokens.css, styles.css, compositions.css | Explicit partial CSS imports |
+| standalone.js, standalone.css | Self-contained IIFE and complete CSS |
+| assets/*, tokens.json, slide-backgrounds.json | Static assets, snapshot and backgrounds |
 
-The framework root import includes styles; the schema entry supports validation in Node.js. Package exports define allowed entries. Never import neighbouring src or dist internals.
+JS exports resolve to built dist/esm and dist/types. /src and /dist are private. Import CSS separately; root/schema work in Node without DOM.
+
+## Validation and lifecycle
 
 ```ts
 import {validateDocument} from '@alabuga/framework/schema';
 import {renderDocument} from '@alabuga/framework/runtime';
 const result = validateDocument(input);
 if (!result.success) throw new Error(result.issues.map(i => i.message).join('; '));
-const controller = renderDocument(host, result.data, {editing: true});
-// When closing the document:
+const controller = renderDocument(host, result.data, {editing: true, assetsBaseUrl: '/assets/'});
+controller.update(result.data);
+const issues = controller.checkOverflow();
 controller.destroy();
 ```
 
-Export accepts `{runtime: {css, script}, resolveAsset?}`. It resolves `asset:<id>` asynchronously. Missing assets produce an error rather than a silent replacement. The resulting HTML does not depend on Ollama or the API. The framework build provides `standalone.css` and `standalone.js` entries for export packaging.
+synchronize updates data after inline DOM edits in editing mode only. Navigation uses goToSlide/next/previous. getDocument returns controller data. initComponents returns its own cleanup. Release the renderer before removing its host.
 
-## Formats and compatibility
+## Fitting and export
 
-Documents use `schemaVersion: 3`, `kind: page | presentation`, a title and pages. Portable projects use `format: alabuga-project`, `version: 3`, a document and assets. Imports pass shared validation. Moving source files does not justify a new document version.
+```ts
+import {fitSlide} from '@alabuga/framework/slide-fit';
+const result = await fitSlide(slide, {keepLayout: false, assetsBaseUrl: '/assets/', signal});
+if (result.success) documentData.pages[index] = result.slide;
+```
 
-GenerationRequest contains kind, scope, count, prompt, audience and sources. DraftResult is stored outside the project document. GenerationServices is supplied through generator options; the browser adapter provides fitSlide. Model requests require a cancellation signal.
+keepBackground/keepTypography preserve selected values; resolveAsset resolves asset:. Results include changes/issues/candidates and are never applied automatically. Export accepts runtime.css, runtime.script, assetsBaseUrl and async resolveAsset. See [formats/resources](data.md).
 
-## Local HTTP API
+## DOM compatibility
 
-| Method and path | Purpose |
-| --- | --- |
-| GET `/api/ai/health` | API liveness; no model required |
-| GET `/api/ai/readiness` | Pinned model readiness and initialization state |
-| GET `/api/ai/status` | Version, digest, context and placement |
-| GET `/api/ai/diagnostics` | Service state and available GPU information |
-| POST `/api/ai/generate` | JSON containing system, prompt and format |
+Authoring hooks include data-section-id, data-widget-id, data-action-id, .af-page, .af-slide, .af-panel, .af-widget, its title/content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, quote text/author and feature title/text. Prose/list/figcaption/row/cell/card order follows data. docs/public-contract.md records the full contract. Breaking these hooks requires a major release.
 
-Only one generation runs at a time. Busy requests receive 409, context-budget violations 413, and model errors 502. The server timeout is 120 seconds. The API does not execute user JavaScript or HTML.
-
-## Classes and live examples
-
-Buttons, forms, panel grids and presentations are demonstrated in the [interactive reference](../../../../index.html). Core classes include `.af-btn`, `.af-field`, `.af-input`, `.af-panel` and `.af-widget`. Corporate variants are selected through documents and composition catalogs, not arbitrary author CSS. The legacy interactive reference is Russian; this manual documents the same public API in English.
+See [live API examples](/index.html#api), [compositions](author.md) and [brand](brand.md).

@@ -2,7 +2,7 @@ name: Registry configuration
 on:
   workflow_dispatch:
   pull_request:
-    paths: ['infra/registry/**']
+    paths: ['compose*.yaml', 'docs/Dockerfile', 'infra/registry/**', '.github/workflows/registry.yml']
 permissions: {contents: read}
 jobs:
   validate:
@@ -11,5 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: mkdir -p infra/registry/secrets && touch infra/registry/secrets/htpasswd
+      - run: docker compose --profile https --profile maintenance config --quiet
+      - run: docker compose -f compose.docs.yaml config --quiet
+      - run: docker compose -f infra/registry/compose.local.yaml config --quiet
       - run: docker compose -f infra/registry/compose.yaml config --quiet
       - run: bash -n infra/registry/*.sh

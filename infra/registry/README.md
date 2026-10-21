@@ -1,5 +1,20 @@
 # Private npm registry
 
+Service definitions live in the repository-root `compose.yaml`, together with the documentation site. From the repository root, `docker compose up --build -d` starts docs and the local registry; `docker compose up --build -d docs` starts only docs. Create `infra/registry/secrets/htpasswd` with `create-user.sh` before starting the registry. Optional configuration is documented in `.env.example` at the root. Stop the previous docs and registry containers before using their ports in the combined stack. Do not run two registry containers against the same storage volume.
+
+For HTTPS in the combined stack, export `REGISTRY_DOMAIN`, `REGISTRY_PUBLIC_URL=https://YOUR_DOMAIN`, and `ACME_EMAIL`. When migrating an existing production registry, also set `REGISTRY_STORAGE_VOLUME=alabuga-registry_storage`; the combined stack otherwise reuses `alabuga-registry-local_storage`. Certificate and challenge volumes keep their previous production names. From the root run:
+
+```sh
+docker compose up -d --wait registry
+docker compose --profile maintenance run --rm -p 80:80 certbot certonly --standalone --non-interactive --agree-tos --email "$ACME_EMAIL" -d "$REGISTRY_DOMAIN"
+docker compose --profile https up --build -d
+# Renewal after initial issuance:
+docker compose --profile maintenance run --rm certbot renew --webroot -w /var/www/acme
+docker compose --profile https exec -T proxy nginx -s reload
+```
+
+Local registry access remains bound to loopback in the combined stack. The compatibility files `compose.local.yaml` and `compose.yaml` in this directory extend the root services and retain the separate deployment names. The production wrapper also removes the loopback port mapping. Existing `bootstrap.sh`, backup/restore scripts and the renewal timer continue to use that production wrapper. To operate a combined production stack with those scripts, set `COMPOSE_PROJECT_NAME=alabuga-framework` and the same `REGISTRY_STORAGE_VOLUME`/certificate volume settings in their environment (including `/etc/alabuga-registry.env` for the timer). For isolated restores choose a fresh Compose project and storage volume; never reuse a combined stack's fixed storage name.
+
 Production runs separately from Constructor on a Linux Docker Compose host. Set REGISTRY_DOMAIN and ACME_EMAIL, point DNS to the host, and permit 80/443. Port 4873 has no public mapping. The image is pinned by version and digest.
 
 Install apache2-utils and age on the operations host. Run `sudo bash create-user.sh framework-publisher`, then create one account per developer/application (constructor-ci and dependency-bot for CI). Registration and the web UI are disabled; all known users can read @alabuga/*, only framework-publisher can publish, and unpublish is disabled. No upstream fallback exists. `sudo -E bash bootstrap.sh` obtains the first certificate and starts HTTPS. Configure a daily certbot renewal and nginx reload using the command printed by bootstrap. Test certificate renewal before cutover.
@@ -12,7 +27,7 @@ Set BACKUP_RECIPIENT to an age public recipient and BACKUP_TARGET to an off-serv
 
 Quarterly recovery: choose an isolated Compose project and empty storage volume, set AGE_IDENTITY, and run RESTORE_EMPTY_VOLUME=yes bash restore.sh BACKUP.tar.age. Review and restore extracted conf/config.yaml and conf/htpasswd, then start the new instance. Check old package integrity, read access and denied publication before replacing the live registry. Never restore on top of a non-empty volume.
 
-Local validation uses compose.local.yaml and bind-only 127.0.0.1:4873. Create bcrypt htpasswd entries first; keep passwords/tokens in ignored .local and secrets directories. Local HTTP is only for loopback testing. Required acceptance: metadata/tarball deny anonymous access, readers install but cannot publish, publisher publishes, registration fails, restart preserves packages, a fresh restored volume returns identical integrity.
+Local validation can use the combined stack or `docker compose -f compose.local.yaml up -d` from this directory; both bind only to 127.0.0.1:4873. Create bcrypt htpasswd entries first; keep passwords/tokens in ignored .local and secrets directories. Local HTTP is only for loopback testing. Required acceptance: metadata/tarball deny anonymous access, readers install but cannot publish, publisher publishes, registration fails, restart preserves packages, a fresh restored volume returns identical integrity.
 
 GitHub setup: create the private repository under alexonderia, protect main and version tags, configure ALABUGA_NPM_REGISTRY, and set FRAMEWORK_PUBLISH_TOKEN only in environment framework-release. Deploy registry configuration independently. Do not trigger Constructor workflows from library release events.
 

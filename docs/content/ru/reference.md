@@ -1,49 +1,51 @@
-# Справочник API и форматов
+# Публичные API и DOM-контракт
 
-## Публичные точки входа
+## Точки входа
 
-| Импорт | Основные возможности |
+| Экспорт | Возможности |
 | --- | --- |
-| `@alabuga/framework/schema` | AFDocument, Section, Widget, validateDocument, isSafeUrl |
-| `@alabuga/framework/runtime` | renderDocument, DocumentController |
-| `@alabuga/framework/compositions` | compositionCatalog, makeComposition, changeComposition |
-| `@alabuga/framework/layout-variants` | semanticSlots, applyLayoutVariant |
-| `@alabuga/framework/slide-fit` | fitSlide, measureSlide, FitSlideOptions, FitSlideResult |
-| `@alabuga/framework/export` | exportHTML, ExportOptions |
-| `@alabuga/ai` | AIProvider, GenerationRequest, DraftResult, AICommand, generateDraft |
+| Корень пакета | VERSION, schema, renderer, поведение, композиции и экспорт |
+| schema | AFDocument, Section, Widget, validateDocument, isSafeUrl |
+| runtime | renderDocument, DocumentController |
+| components, dom, widgets | initComponents, DOM-помощники, реестр |
+| compositions, layout-variants | compositionCatalog, makeComposition, changeComposition, semanticSlots, applyLayoutVariant |
+| slide-fit | fitSlide, measureSlide, slideBackgrounds, типы настроек и результата |
+| experience, element-style | Действия, движение, типографика и оформление |
+| assets, export | Подготовка изображений, exportHTML и ExportOptions |
+| brand, examples, demo-documents | Фирменные ссылки и чистые примеры документов |
+| tokens.css, styles.css, compositions.css | Явное подключение CSS-частей |
+| standalone.js, standalone.css | Самодостаточный IIFE и полный CSS |
+| assets/*, tokens.json, slide-backgrounds.json | Статика, snapshot и каталог фонов |
 
-Корневой импорт framework подключает стили; точка schema пригодна для проверки данных в Node.js. Структура exports в package.json является разрешённым списком точек входа. Не импортируйте соседние src или dist напрямую.
+Все JS exports направлены в готовый dist/esm и соответствующие dist/types. /src и /dist не являются публичными подмодулями. CSS подключается отдельно; root/schema импортируются в Node без DOM.
+
+## Проверка и жизненный цикл
 
 ```ts
 import {validateDocument} from '@alabuga/framework/schema';
 import {renderDocument} from '@alabuga/framework/runtime';
 const result = validateDocument(input);
 if (!result.success) throw new Error(result.issues.map(i => i.message).join('; '));
-const controller = renderDocument(host, result.data, {editing: true});
-// При закрытии документа:
+const controller = renderDocument(host, result.data, {editing: true, assetsBaseUrl: '/assets/'});
+controller.update(result.data);
+const issues = controller.checkOverflow();
 controller.destroy();
 ```
 
-Экспорт получает `{runtime: {css, script}, resolveAsset?}`. Материалы `asset:<id>` разрешаются асинхронно. Отсутствующий материал вызывает ошибку, а не тихую подмену. Полученная строка HTML не зависит от Ollama или API. Сборка пакета framework предоставляет `standalone.css` и `standalone.js` для упаковки экспорта.
+synchronize обновляет данные после inline-редактирования DOM только в режиме editing. Навигация: goToSlide, next, previous. getDocument возвращает документ контроллера. initComponents возвращает отдельный cleanup. Не удаляйте host без освобождения renderer.
 
-## Форматы и совместимость
+## Подбор и экспорт
 
-Документ: `schemaVersion: 3`, `kind: page | presentation`, название и массив `pages`. Переносимый проект: `format: alabuga-project`, `version: 3`, документ и материалы. Импорт проходит общую валидацию. Не создавайте новый номер версии только из-за перемещения исходников.
+```ts
+import {fitSlide} from '@alabuga/framework/slide-fit';
+const result = await fitSlide(slide, {keepLayout: false, assetsBaseUrl: '/assets/', signal});
+if (result.success) documentData.pages[index] = result.slide;
+```
 
-GenerationRequest содержит kind, scope, count, prompt, audience и sources. DraftResult хранится отдельно от документа. GenerationServices передаётся через options генератора; браузерный адаптер предоставляет fitSlide. Сигнал отмены обязателен для запросов модели.
+keepBackground/keepTypography сохраняют выбранные настройки; resolveAsset разрешает asset:. fit возвращает changes/issues/candidates и не записывает результат самостоятельно. Экспорт принимает runtime.css, runtime.script, assetsBaseUrl и async resolveAsset. [Форматы и ресурсы](data.md).
 
-## HTTP локального сервиса
+## DOM и совместимость
 
-| Метод и путь | Назначение |
-| --- | --- |
-| GET `/api/ai/health` | Жив ли процесс API; модель не требуется |
-| GET `/api/ai/readiness` | Готовность закреплённой модели и состояние подготовки |
-| GET `/api/ai/status` | Версия, digest, контекст, размещение модели |
-| GET `/api/ai/diagnostics` | Состояние сервиса и доступные сведения GPU |
-| POST `/api/ai/generate` | JSON с system, prompt и format |
+Редакторские опоры: data-section-id, data-widget-id, data-action-id; .af-page, .af-slide, .af-panel, .af-widget, .af-widget__title, .af-widget__content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, .af-quote__text, .af-quote__author, .af-feature и его title/text. Порядок prose, list items, figcaption, строк/ячеек и карточек соответствует данным. Полный контракт хранится в docs/public-contract.md. Нарушение этих опор требует major-версии.
 
-Генерация допускает один запрос одновременно; занятость возвращает 409, превышение бюджета — 413, ошибка модели — 502. Серверный таймаут — 120 секунд. Пользовательский JavaScript или HTML API не выполняет.
-
-## Классы и живые примеры
-
-Примеры кнопок, форм, панельной сетки и презентаций доступны в [интерактивном справочнике](../../../../index.html). Базовые классы: `.af-btn`, `.af-field`, `.af-input`, `.af-panel`, `.af-widget`. Фирменные варианты выбираются через документ и каталог композиций, а не произвольный CSS в проекте автора.
+[Живые примеры](/index.html#api), [композиции](author.md), [бренд](brand.md).

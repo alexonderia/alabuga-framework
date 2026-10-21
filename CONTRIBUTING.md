@@ -1,3 +1,13 @@
-# Framework development
+# Работа с Framework
 
-Use pinned Node/npm. Run build, unit, package, consumer, docs and browser checks. Keep archives immutable and review public API/DOM changes. Framework must never depend on Constructor or storage. Change token mappings and generated layers together; review visual snapshots.
+[English](CONTRIBUTING.en.md)
+
+Одна задача — одна ветка. Не меняйте формат документов вместе с механическим переносом. Используйте публичные exports, обновляйте lock-файл вместе с зависимостями. Для схемы, DOM/CSS и renderer проверяйте старые документы, отрицательные сценарии, доступность и потребителей опубликованного пакета.
+
+Запускайте build, unit, package, consumers, docs и браузерные проверки. Токены и сгенерированные слои изменяются вместе; визуальные изменения сравниваются с эталонами. RU/EN обновляются одновременно. PR описывает проблему, итог, совместимость и доказательства; имитации API не выдаются за реальную генерацию.
+
+Перед первым push включите Git LFS, обязательное ревью, Quality и защиту main/тегов. Владелец репозитория — alexonderia; CODEOWNERS не содержит выдуманных команд. Проверьте staged-файлы на секреты и большие артефакты. Публикуется только проверенный tgz, версии не перезаписываются. Реестр и backup/restore развёртываются отдельно по infra/registry/README.md.
+
+Не изменяйте исходные PPTX/PDF/Figma ради рефакторинга и не добавляйте открытую лицензию корпоративным материалам. Готовые WOFF2 и assets достаточны для обычной сборки; регенерация использует Python/Pillow/fontTools и LFS-оригиналы. Не коммитьте локальные проекты, модели, токены и каталоги артефактов.
+
+Framework не импортирует Constructor, storage, AI или server. Приватный GPU runner и пользовательская приёмка остаются в Constructor. Семантика DOM/CSS входит в SemVer; обновление приложения принимается его отдельным PR.

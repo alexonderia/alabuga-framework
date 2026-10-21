@@ -1,0 +1,6 @@
+name: alabuga-framework-docs
+services:
+  docs:
+    extends:
+      file: compose.yaml
+      service: docs

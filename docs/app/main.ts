@@ -10,12 +10,16 @@ import {makeComposition,showcase} from '@alabuga/framework/compositions';
 const libraryCss=baseCss+compositionCss;
 import tokens from '../../design/figma-tokens.json';
 import './site.css';
+const constructorOrigin=new URL(import.meta.env.VITE_CONSTRUCTOR_URL||'http://127.0.0.1:4176').origin;
 
 const pages = [
+  ['ai','Локальный ИИ','Документы'],
   ['start','Начало работы','Обзор'],['colors','Цвета и токены','Основа'],['typography','Типографика','Основа'],['grid','Панельная сетка','Основа'],
   ['buttons','Кнопки','Компоненты'],['forms','Формы и выбор','Компоненты'],['feedback','Уведомления и бейджи','Компоненты'],['dialog','Диалог','Компоненты'],
-  ['compositions','Композиции и эффекты','Документы'],['widgets','Виджеты','Документы'],['slides','Презентации','Документы'],['builder','Конструктор','Документы'],['classes','Справочник классов','Справочник'],['api','JavaScript API','Справочник'],['changes','Изменения и решения','Справочник'],
+  ['compositions','Композиции и эффекты','Документы'],['widgets','Виджеты','Документы'],['slides','Презентации','Документы'],['builder','Конструктор','Документы'],['workspace','Проекты и материалы','Документы'],['classes','Справочник классов','Справочник'],['api','JavaScript API','Справочник'],['changes','Изменения и решения','Справочник'],
 ];
+const constructorGuides:Record<string,string>={ai:'ai',workspace:'projects'};
+const pageHref=(id:string)=>constructorGuides[id]?`${constructorOrigin}/docs/ru/${constructorGuides[id]}.html`:'#'+id;
 const descriptions: Record<string,string>={
   ai:'Qwen3.5-2B: запрос, редактируемый черновик и применение в локальном конструкторе.',
   workspace:'Фирменная библиотека, кадрирование, история проектов и приёмка с авторами.',
@@ -32,12 +36,12 @@ const descriptions: Record<string,string>={
 };
 const app=document.querySelector<HTMLElement>('#app')!;app.className='af docs';
 app.innerHTML=`<a class="skip-link" href="#content">К содержимому</a>
-<header class="site-header"><a class="wordmark" href="#start"><span class="brand-mark" aria-hidden="true">A</span><span>alabuga<span class="wordmark-sub">framework</span></span></a><span class="header-label">ДИЗАЙН → КОД</span><nav class="header-nav" aria-label="Верхняя навигация"><a href="#start">Документация</a><a href="http://127.0.0.1:4176/builder/">Конструктор ↗</a><a href="/docs/ru/start.html" lang="ru">RU</a><a href="/docs/en/start.html" lang="en">EN</a><a href="#changes" class="version">v${VERSION}</a></nav></header>
-<aside class="sidebar"><label class="search-box"><span class="af-sr-only">Поиск классов и разделов</span><input id="search" type="search" placeholder="Поиск классов…" autocomplete="off"><kbd>/</kbd></label><div id="search-results" role="status"></div><nav id="navigation" aria-label="Разделы документации"></nav><div class="sidebar-footer"><span class="status-dot"></span> Рабочее ядро <span>0.6</span></div></aside>
+<header class="site-header"><a class="wordmark" href="#start"><span class="brand-mark" aria-hidden="true">A</span><span>alabuga<span class="wordmark-sub">framework</span></span></a><span class="header-label">ДИЗАЙН → КОД</span><nav class="header-nav" aria-label="Верхняя навигация"><a href="#start">Документация</a><a href="${constructorOrigin}/builder/">Конструктор ↗</a><a href="/docs/ru/start.html" lang="ru">RU</a><a href="/docs/en/start.html" lang="en">EN</a><a href="#changes" class="version">v${VERSION}</a></nav></header>
+<aside class="sidebar"><label class="search-box"><span class="af-sr-only">Поиск классов и разделов</span><input id="search" type="search" placeholder="Поиск классов…" autocomplete="off"><kbd>/</kbd></label><div id="search-results" role="status"></div><nav id="navigation" aria-label="Разделы документации"></nav><div class="sidebar-footer"><span class="status-dot"></span> Рабочее ядро <span>${VERSION}</span></div></aside>
 <main id="content" class="content" tabindex="-1"></main><aside class="toc" aria-label="На этой странице"><span>НА ЭТОЙ СТРАНИЦЕ</span><nav id="toc"></nav><div class="toc-note">Один источник.<br>Живой пример.<br>Точный код.</div></aside>`;
 const main=document.querySelector<HTMLElement>('#content')!;
 const navigation=document.querySelector<HTMLElement>('#navigation')!;
-let category='';for(const [id,title,group] of pages){if(group!==category){navigation.append(el('p','nav-group',group));category=group}const a=el('a','nav-link',title);a.href='#'+id;a.dataset.page=id;navigation.append(a)}
+let category='';for(const [id,title,group] of pages){if(group!==category){navigation.append(el('p','nav-group',group));category=group}const a=el('a','nav-link',title);a.href=pageHref(id);a.dataset.page=id;navigation.append(a)}
 let dispose:()=>void=()=>{};let controllers:DocumentController[]=[];
 const classNames=[...new Set([...libraryCss.matchAll(/\.(af(?:-[a-z0-9_-]+)?)(?![\w-])/g)].map(m=>m[1]))].sort();
 const classGroup=(name:string)=>/btn/.test(name)?'buttons':/input|field|label|required|check|radio|switch|select|textarea|help|error|placeholder|icon/.test(name)?'forms':/alert|badge/.test(name)?'feedback':/dialog/.test(name)?'dialog':/slide|deck/.test(name)?'slides':/calendar|table|widget|metric|image|empty/.test(name)?'widgets':/panel|page/.test(name)?'grid':'typography';
@@ -70,7 +74,9 @@ function mountExample(parent:HTMLElement,example:(typeof examples)[string][numbe
 }
 function render(){
   dispose();controllers.forEach(c=>c.destroy());controllers=[];
-  const [route,anchor]=location.hash.slice(1).split('/');current=pages.some(p=>p[0]===route)?route:'start';
+  const [route,anchor]=location.hash.slice(1).split('/');
+  if(constructorGuides[route]){location.replace(pageHref(route));return}
+  current=pages.some(p=>p[0]===route)?route:'start';
   main.replaceChildren();document.querySelector('#toc')!.replaceChildren();
   navigation.querySelectorAll('a').forEach(a=>{if(a.dataset.page===current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   document.title=`${pages.find(p=>p[0]===current)![1]} — Alabuga Framework`;
@@ -78,14 +84,14 @@ function render(){
   if(current==='start'){
     const hero=el('section','hero');hero.innerHTML=`<div class="hero-content"><span class="hero-label">СОЗДАНО ДЛЯ АЛАБУГИ</span><h2>Один язык.<br>Любая композиция.</h2><p>Компоненты, которые работают вместе.<br>От первого блока до целой презентации.</p><a class="hero-link" href="#buttons">Изучить компоненты <span>↗</span></a></div><div class="hero-art" aria-hidden="true"><div class="art-panel"><div class="art-top"><span></span><i></i><i></i></div><div class="art-main"><div class="art-cell"><b>24</b><small>Возможности</small></div><div class="art-bars"><i></i><i></i><i></i><i></i></div><div class="art-lines"><i></i><i></i><i></i></div><div class="art-check">✓</div></div></div><div class="art-tag">4 × 4</div></div>`;main.append(hero);
     const links=el('div','quick-links');for(const [number,title,copy,href]of[['01','Компоненты','Готовые состояния и размеры','#buttons'],['02','Панельная сетка','Собирайте из виджетов','#grid'],['03','Презентации','Тот же язык на слайдах','#slides']]){const a=el('a','quick-card');a.href=href;a.append(el('span','quick-number',number),el('h2','',title),el('p','',copy),el('span','quick-arrow','↗'));links.append(a)}main.append(links);
-    const install=section('Быстрое подключение','installation');paragraph(install,'После npm run build возьмите файлы из dist/library. Пример ниже не требует сборщика на вашем сайте. Все классы применяются внутри контейнера .af.');install.append(codeBlock(`<link rel="stylesheet" href="alabuga.css">
+    const install=section('Быстрое подключение','installation');paragraph(install,'Установите @alabuga/framework из приватного реестра. Готовые файлы находятся в dist; публичные точки входа — standalone.css и standalone.js. Пример ниже не требует сборщика на вашем сайте. Все классы применяются внутри контейнера .af.');install.append(codeBlock(`<link rel="stylesheet" href="alabuga.css">
 <script src="alabuga.iife.js"></script>
 <main class="af">
   <h1 class="af-heading">Начните с главного</h1>
   <button class="af-btn af-btn--lg">Создать документ</button>
 </main>`));
     const principles=section('Общие правила','principles');paragraph(principles,'Используйте семантические HTML-элементы, назначайте понятные подписи и выбирайте одно основное действие. Для интерактивности формы и диалога вызовите Alabuga.initComponents().');
-    const development=section('Запуск и проверка','development');paragraph(development,'Для разработки нужны Node.js 24.19.0 и npm 11.17.0. Готовые WOFF2 находятся в packages/framework/src/fonts. Исходный шрифт — fonts/alabuga-sans.ttc.');development.append(codeBlock(`npm ci
+    const development=section('Запуск и проверка','development');paragraph(development,'Для разработки нужны Node.js 24.19.0 и npm 11.17.0. Готовые WOFF2 находятся в src/fonts. Исходный шрифт — fonts/alabuga-sans.ttc.');development.append(codeBlock(`npm ci
 npm run dev
 
 # Проверка и сборка
@@ -93,7 +99,7 @@ npm test
 npm run build
 npx playwright install chromium firefox webkit
 npm run test:browser`,'Команды'));
-    paragraph(development,'dist/library — CSS, ES-модуль, обычный JS и TypeScript-типы. dist/site — документация и примеры для статического сервера. dist/standalone/index.html и slides.html открываются напрямую с диска. Для просмотра сборки документации: npm run preview.');
+    paragraph(development,'dist — CSS, ES-модули, IIFE, TypeScript-типы и ресурсы. npm run build:docs создаёт независимый сайт в dist/docs. dist/standalone/index.html открывается напрямую с диска. Статический справочник запускается через docker compose up --build -d docs. Constructor не нужен для сборки Framework.');
     paragraph(development,'Новый компонент сопровождается живым примером, описанием классов и состояний, клавиатурного управления и ограничений. HTML примера и показанный код берутся из одного источника; код виджетов формируется из того же документа, который отображается.');
   }
   if(current==='colors'){
@@ -127,7 +133,7 @@ deck.checkOverflow(); // список переполненных областе�
   }
   if(current==='builder'){
     const slideMenu=section('Настройки слайда','slide-settings');paragraph(slideMenu,'В презентации нажмите «Оформление и показ» рядом со списком слайдов или «Настройки слайда» в верхней панели. Вкладка «Шаблон и структура» содержит выбор шаблона, сетку и список элементов. «Фон» — фирменные цвета, изображение, кадрирование и декор. «Поведение» — переход слайда, показ всех элементов сразу или по шагам, эффекты и просмотр текущего слайда. Шаг 0 виден сразу; элементы с одинаковым номером появляются вместе. Пустому слайду можно назначить любой шаблон; для заполненного сохраняется проверка совместимости содержимого.');
-    const launch=section('Собрать документ','launch');const link=el('a','af-btn','Открыть конструктор ↗');link.href='http://127.0.0.1:4176/builder/';launch.append(link);paragraph(launch,'Начните с примера или создайте пустую страницу либо презентацию. Конструктор использует те же компоненты и формат документа, что и библиотека.');
+    const launch=section('Собрать документ','launch');const link=el('a','af-btn','Открыть конструктор ↗');link.href=constructorOrigin+'/builder/';launch.append(link);paragraph(launch,'Начните с примера или создайте пустую страницу либо презентацию. Конструктор использует те же компоненты и формат документа, что и библиотека.');
     const workflow=section('Работа с блоками','workflow');const steps=el('ol','af-list');['Нажмите «Добавить секцию» между секциями и выберите готовую композицию, в том числе Header — шапку или Footer — подвал. Замените демонстрационные ссылки и контакты своими. Кнопка «+ Блок» добавляет отдельный виджет в сетку текущей секции.','Нажмите на текст, заголовок, показатель или ячейку таблицы и редактируйте прямо на странице. Содержимое сохраняется по мере ввода. «Настройки блока» открывает дополнительную панель; изменения в ней сразу видны на странице.','Наведите указатель на блок: появятся настройки, копирование, удаление и ручки. На сенсорном экране выберите блок касанием. Ручка ↕ перемещает блок, угол ↘ меняет размер. На ручках работают стрелки клавиатуры. Красная рамка означает недопустимое положение; после отпускания блок вернётся на прежнее место.','В настройках блока используйте ползунок горизонтального смещения или команды «Слева / По центру / Справа». «Выравнивание содержимого» меняет положение текста внутри блока. Полноширинный блок сначала нужно сузить, чтобы освободить место для сдвига.','Пересечения и выход за границы отклоняются. Остальные блоки автоматически не сдвигаются.','Ctrl+Z отменяет действие, Ctrl+Shift+Z возвращает его. История хранит до 30 действий в пределах текущего сеанса и ограничена по объёму.','Предпросмотр включает интерактивные компоненты и мобильную компоновку. Секции по содержимому адаптируются к ширине холста. Фиксированные панели сохраняют сетку; на узком экране доступен предпросмотр.'].forEach(t=>steps.append(el('li','',t)));workflow.append(steps);
     const content=section('Содержимое и слайды','editor-content');paragraph(content,'Текст собирается из абзацев, заголовков, списков, ссылок, акцентов и разделителей. Буквица включается у отдельного абзаца. Таблица редактируется по ячейкам; строки редактора показываются порциями по десять. Изображения PNG, JPEG, WebP и GIF до 2 МБ можно загрузить в проект или указать ссылкой.');paragraph(content,'Презентация поддерживает добавление, копирование, перестановку и удаление слайдов. Перед экспортом проверяется переполнение: сократите текст или увеличьте блок. Для полной печати таблицы задайте достаточное число записей на странице.');
     const files=section('Сохранение и экспорт','editor-files');paragraph(files,'Корректные изменения автоматически сохраняются в этом браузере. Ввод текста на странице группируется в одно действие истории до потери фокуса. Некорректные размеры не меняют документ. Проекты и материалы хранятся в библиотеке IndexedDB. «Мои проекты» переключает документы, «История версий» восстанавливает до 20 сохранённых состояний. История отмены текущего сеанса не переживает перезагрузку. «Сохранить проект» скачивает файл .json для дальнейшей работы через «Открыть проект». Это файл проекта, а не редактор кода.');paragraph(files,'«Скачать HTML» создаёт готовый документ со встроенными библиотекой, шрифтом и загруженными изображениями. Его можно открыть с диска. Изображения по внешним HTTP(S)-ссылкам требуют доступа к сети. HTML предназначен для просмотра; для дальнейшего редактирования сохраняйте файл проекта.');paragraph(files,'Если память браузера заполнена или недоступна, конструктор сообщает об этом. Скачайте проект, чтобы сохранить изменения. Облачное хранение, совместное редактирование и публикация пока не подключены.');

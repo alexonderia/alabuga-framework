@@ -1,5 +1,25 @@
-# Публикация и реестр
+# Публикация и эксплуатация Framework
 
-Релиз: собственный SemVer, тег vVERSION, проверки архива и установка в чистый проект, затем публикация в собственный HTTPS Verdaccio. Настройте ALABUGA_NPM_REGISTRY и publisher token. Развёртывание реестра, резервирование и восстановление описаны в infra/registry/README.md. Constructor выпускается независимо.
+## npm-поставка
 
-[Reference](reference.md)
+Один пакет @alabuga/framework содержит готовые ESM, IIFE Alabuga, CSS, декларации, шрифты и материалы. Исходники приложений, модельные конфигурации, отчёты, секреты и LFS-оригиналы не входят в архив. LICENSE/UNLICENSED не предоставляют открытую лицензию корпоративным материалам.
+
+Перед релизом настройте ALABUGA_NPM_REGISTRY и publishConfig.registry на реальный HTTPS endpoint. npm run test:package создаёт проверяемый tgz, test:consumers устанавливает именно его. release workflow проверяет тег vVERSION, выполняет проверки, публикует проверенный архив и сверяет установленный dist.integrity. Нельзя перепаковать или перезаписать уже опубликованную версию.
+
+## SemVer и обновления
+
+Patch сохраняет контракт, minor расширяет совместимо, major меняет API/типы/DOM/CSS или форматы несовместимо. Версии документа и оболочки приложения независимы. Старую ошибочную версию не удаляют: выпускают исправление и deprecated. Для новой major нужны migration guide и преобразователи; критические исправления предыдущей major поддерживаются шесть месяцев.
+
+Constructor принимает обновление отдельным PR с точной версией и lock-файлом и может пропустить выпуск. Framework не запускает его release/deploy. Реальные GitHub Releases и production-публикация пока не выполнены.
+
+## Приватный реестр
+
+infra/registry содержит отдельный Verdaccio 6.x, закреплённый по версии/digest, Nginx/HTTPS, закрытую регистрацию и Web UI. Анонимное чтение metadata/tarball запрещено; только framework-publisher публикует, остальные учётные записи читают. JWT действует 30 дней, ротация до дня 25. Runtime приложения не требует реестра. Publisher secret хранится только в Framework release environment; Docker использует BuildKit secret.
+
+Зашифрованный согласованный snapshot storage, htpasswd, конфигурации и signing secret выполняется ежедневно и после релиза, хранится вне сервера 30 дней. Цели: RPO ≤24 ч, RTO ≤4 ч, ежеквартальная проверка восстановления. Локальный restore проверен; production HTTPS, off-server backups и restore требуют настройки и приёмки. Подробные команды: infra/registry/README.md.
+
+## Независимый сайт документации
+
+docker compose up --build -d docs публикует только статический сайт на 4391. CONSTRUCTOR_URL перед сборкой задаёт обратные ссылки; для Vite используется VITE_CONSTRUCTOR_URL. Docker-образ сайта собирается без Constructor, его read token и локального реестра. Готовая статика находится в dist/docs. [Редактор]({{CONSTRUCTOR_URL}}/builder/).
+
+Корневой compose.yaml объединяет сайт и npm-реестр: docker compose up --build -d запускает оба сервиса после создания учётных записей реестра. Профиль https добавляет прокси, maintenance предоставляет Certbot для разовых задач. Настройки портов, адресов и томов перечислены в .env.example. Тестовый Dockerfile остаётся отдельным. Старые Compose-файлы используют те же определения сервисов; перед переходом остановите прежние контейнеры на тех же портах. Локальный том пакетов сохраняет имя alabuga-registry-local_storage.

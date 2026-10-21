@@ -52,6 +52,10 @@ test('slides fit, navigate and print all eight pages',async({page,browserName},i
   if(browserName==='chromium')await page.pdf({path:info.outputPath('slides.pdf'),preferCSSPageSize:true,printBackground:true});
 });
 test('standalone bundle works without development server',async({page})=>{
-  await page.goto(pathToFileURL(resolve('dist/standalone/index.html')).href);await expect(page.locator('.af-widget')).toHaveCount(6);await expect(page.locator('[data-date="2026-09-30"]')).toBeVisible();
+  await page.route(/^https?:\/\//,route=>route.abort());
+  for(const [name,selector,count]of [['index','.af-widget',6],['slides','.af-slide',8],['landing','.af-page',10],['presentation','.af-slide',11]] as const){
+    await page.goto(pathToFileURL(resolve(`dist/standalone/${name}.html`)).href);await expect(page.locator(selector)).toHaveCount(count);
+    await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()))});
+  }
   expect(await page.evaluate(()=>document.fonts.load('16px "Alabuga Sans"').then(f=>f.length))).toBe(1);
 });

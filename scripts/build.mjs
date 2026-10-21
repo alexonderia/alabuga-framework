@@ -18,6 +18,9 @@ console.log(`Built ${pkg.name}@${pkg.version}: ESM, IIFE, CSS, declarations and 
 await mkdir('dist/standalone',{recursive:true});
 for(const name of ['alabuga.css','alabuga.iife.js'])await cp('dist/'+name,'dist/standalone/'+name);
 await cp('assets','dist/standalone/assets',{recursive:true});
-const {panelExample}=await import('../dist/esm/examples.js');
-const json=JSON.stringify(panelExample).replace(/</g,'\\u003c');
-await writeFile('dist/standalone/index.html',`<!doctype html><html lang="ru"><meta charset="utf-8"><title>Alabuga standalone</title><link rel="stylesheet" href="alabuga.css"><main id="document"></main><script src="alabuga.iife.js"></script><script>Alabuga.renderDocument(document.getElementById('document'),${json});</script></html>`);
+const {panelExample,presentationExample}=await import('../dist/esm/examples.js');
+const {showcase}=await import('../dist/esm/compositions.js');
+for(const [name,doc]of [['index',panelExample],['slides',presentationExample()],['landing',showcase('page')],['presentation',showcase('presentation')]]){
+ const json=JSON.stringify(doc).replaceAll('../assets/','assets/').replace(/</g,'\\u003c');
+ await writeFile(`dist/standalone/${name}.html`,`<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${doc.title}</title><link rel="stylesheet" href="alabuga.css"><style>body{margin:${name==='landing'||name==='presentation'?0:24}px}@media print{body{margin:0}}</style><main id="document"></main><script src="alabuga.iife.js"></script><script>window.demoController=Alabuga.renderDocument(document.getElementById('document'),${json});</script></html>`);
+}

@@ -1,5 +1,27 @@
-# Разработка
+# Разработка Framework
 
-Node.js 24.19.0, npm 11.17.0. npm ci; npm run tokens; npm run build; npm test. Собственная документация: npm run build:docs. Источник токенов и явных поправок: design/figma-tokens.json и design/token-layers.json. Генерация проверяется check:tokens.
+## Среда и команды
 
-[Reference](reference.md)
+Node.js 24.19.0 и npm 11.17.0 закреплены в конфигурациях. npm ci устанавливает самостоятельный lock-файл. Репозиторий Constructor для сборки не нужен.
+
+| Команда | Назначение |
+| --- | --- |
+| npm run tokens / check:tokens | Генерация слоёв и проверка дрейфа/ссылок |
+| npm run build | ESM, IIFE, CSS, типы, материалы и проверка типов |
+| npm test | Схемы, API, ресурсы и токены |
+| npm run test:package | Проверка фактического npm-архива и exports |
+| npm run test:consumers | Чистые Node, NodeNext и React-потребители |
+| npm run build:docs / check:docs | Справочник, RU/EN, ссылки и ресурсы |
+| npm run test:browser | Состояния CSS, runtime, примеры и снимки |
+
+## Дизайн-токены и исходные материалы
+
+design/figma-tokens.json — исходный snapshot. design/token-layers.json сохраняет эффективное сопоставление и явные поправки доступности. Генератор выпускает core/semantic/component CSS; существующие имена --af-* и вычисленные значения совместимы. Изменяйте исходные значения и генерируемые слои вместе; проверяйте контраст и визуальные эталоны.
+
+Готовые WOFF2 находятся в src/fonts, TTC — в fonts. PDF/PPTX и ссылка Figma — в docs/brand-sources. Для регенерации нужны git lfs pull, Python и python -m pip install -r scripts/requirements-assets.txt; затем scripts/fonts.py или scripts/extract_brand.py. Обычная сборка не требует Python/LFS-оригиналов. Не изменяйте исходники брендбука ради рефакторинга.
+
+## Изменения публичного контракта
+
+Новый элемент требует схемы, renderer, CSS-состояний, примера и описания lifecycle. Композиции определяют семантические слоты, сетку и ограничения; проверяйте смену оформления без потери IDs, действий и содержимого. Изменение DOM/CSS проверяется потребителями и Constructor через опубликованный пакет. Не подключайте его checkout к библиотеке.
+
+Обновляйте RU/EN вместе. В PR указывайте проблему, итоговое поведение, совместимость и доказательства; для визуальных изменений нужны сравнения, для схем — старые документы и отрицательные сценарии. Секреты, артефакты и локальные проекты не коммитятся. [Политика выпусков](operations.md).

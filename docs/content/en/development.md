@@ -1,5 +1,27 @@
-# Development
+# Framework development
 
-Use Node.js 24.19.0/npm 11.17.0. Run npm ci, npm run tokens, npm run build and npm test. Documentation builds with npm run build:docs. Design snapshot and effective accessibility adjustments live in design/figma-tokens.json and design/token-layers.json; check:tokens verifies generated layers.
+## Environment and commands
 
-[Reference](reference.md)
+Node.js 24.19.0/npm 11.17.0 are pinned. npm ci uses this repository's independent lockfile. No Constructor checkout is required.
+
+| Command | Purpose |
+| --- | --- |
+| npm run tokens / check:tokens | Generate layers, detect drift/missing references |
+| npm run build | ESM, IIFE, CSS, declarations, resources and types |
+| npm test | Schemas, API, resources and tokens |
+| npm run test:package | Actual npm archive and exports |
+| npm run test:consumers | Isolated Node, NodeNext and React consumers |
+| npm run build:docs / check:docs | Reference, RU/EN, links and resources |
+| npm run test:browser | CSS states, runtime, examples and snapshots |
+
+## Tokens and original assets
+
+design/figma-tokens.json is the original snapshot. design/token-layers.json records effective mappings and explicit accessibility fixes. Generation produces core/semantic/component CSS, preserving existing --af-* names and computed values. Change sources and generated layers together; check contrast and visual baselines.
+
+Prepared WOFF2 are in src/fonts; TTC is in fonts. PDF/PPTX and the Figma link are in docs/brand-sources. Regeneration needs git lfs pull, Python and python -m pip install -r scripts/requirements-assets.txt, followed by scripts/fonts.py or scripts/extract_brand.py. Normal builds need neither Python nor LFS originals. Do not modify brand-book originals during refactoring.
+
+## Public changes
+
+New elements need schema, renderer, CSS states, examples and lifecycle documentation. Compositions define semantic slots, grids and limits; verify ID/action/content preservation during transformations. Check DOM/CSS changes with consumers and Constructor through the published package, never by adding its checkout here.
+
+Update RU/EN together. PRs describe the problem, final behavior, compatibility and evidence; visual changes require comparisons, schema changes require old-document and negative cases. Never commit secrets, artifacts or local projects. See [releases](operations.md).

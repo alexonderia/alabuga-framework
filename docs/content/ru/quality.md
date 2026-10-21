@@ -1,5 +1,19 @@
-# Проверки
+# Проверки и приёмка библиотеки
 
-npm run build; npm test; npm run test:package; npm run test:consumers; npm run build:docs; npm run check:docs; npm run test:browser. Проверяются exports, NodeNext, React StrictMode, публичный DOM, CSS-состояния, изображения и автономный HTML. Нельзя публиковать архив, отличный от проверенного.
+## Обязательные уровни
 
-[Reference](reference.md)
+Проверяйте типы, границы зависимостей, unit-тесты схем/ресурсов/композиций, все публичные exports и декларации. test:package проверяет состав архива, test:consumers — установку вне workspace, Node без DOM, TypeScript NodeNext и React SSR/StrictMode mount/update/cleanup.
+
+Браузерные проверки охватывают поиск справочника, клавиатуру, формы, диалог, календарь, таблицу, презентации, экспорт, доступность и 50 слайдов/500 элементов с сохранением фокуса и DOM. CSS-состояния используют toHaveScreenshot для default, disabled, selected, hover, focus и pressed. Простое сохранение снимка не является сравнением.
+
+Playwright запускает отдельный сервер 4277. Для установленного Chrome задайте AF_BROWSER_CHANNEL=chrome и --project=chromium; для всей матрицы установите согласованные Chromium/Firefox/WebKit через npx playwright install. Не используйте рабочий сервер приложения вместо тестового.
+
+## Ресурсы и доказательства
+
+Проверьте нестандартный assetsBaseUrl, старые пути /assets, data/asset: и сетевые изображения. Сайт и презентация должны открываться из экспортированного HTML с отключённой сетью с прежним ограничением внешних HTTP(S)-изображений. PDF с фонами проверяется отдельно. Доказательства генерируются заново; модели и весь каталог артефактов не коммитятся.
+
+## Текущий статус
+
+Локальная приёмка разделения ранее зафиксировала 16 unit Framework и 15 Chromium-сценариев, чистых потребителей, визуальные эталоны и воспроизводимый Linux-архив. Общий набор двух проектов — 62 unit и 90 Chromium. Это не полная текущая матрица: Firefox/WebKit и облачные workflows пока не подтверждены. GPU и авторские исследования относятся к Constructor и не выдаются за проверки библиотеки. Исторические отчёты прежнего монорепозитория сохранены в Constructor docs/refactor-report.*.md.
+
+[Разработка](development.md), [выпуск](operations.md), [приёмка Constructor]({{CONSTRUCTOR_URL}}/docs/ru/quality.html).
