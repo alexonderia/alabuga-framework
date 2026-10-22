@@ -12,8 +12,16 @@ Playwright owns a separate server on 4277. Set AF_BROWSER_CHANNEL=chrome and --p
 
 Verify custom assetsBaseUrl, legacy /assets paths, data/asset: and network images. Exported page/deck HTML must work with networking disabled, retaining the existing external HTTP(S) image limitation. Check PDF with backgrounds separately. Regenerate evidence; never commit models or complete artifact directories.
 
-## Recorded status
+## 1.1.0 acceptance
 
-Local split acceptance previously recorded 16 Framework units, 15 Chromium scenarios, isolated consumers, visual baselines and reproducible Linux archives. Combined projects recorded 62 units/90 Chromium scenarios. This is not a complete current matrix: Firefox/WebKit and cloud workflows remain unverified. GPU and author studies belong to Constructor. Historical monorepo reports remain in Constructor docs/refactor-report.*.md.
+The current full matrix covers Chromium, Firefox and WebKit, including offline HTML, export, forms and components. JSON results, PDF and screenshots are kept with the candidate report. `npm run check:design` verifies local Figma archive integrity without networking; CI runs it before building.
+
+Source palettes in Feedback/Navigation have documented contrast limits. The full test admits only the exact source colors inside those previews, then audits `--accessible` variants with no exceptions. Other reference pages, rendered documents and demo forms are audited strictly. This does not certify AA for the source palette or replace manual screen-reader acceptance.
+
+The release is published to local Verdaccio; a fresh installation and integrity passed. Manual screen-reader acceptance was deferred by the user and has not been performed. Sources, limits and saved manual scenarios are recorded in `docs/releases/1.1.0.md`. See the [release](/index.html#changes/release-1-1-0).
+
+## Historical status
+
+Local split acceptance previously recorded 16 Framework units, 15 Chromium scenarios, isolated consumers, visual baselines and reproducible Linux archives. Combined projects recorded 62 units/90 Chromium scenarios. This is a historical split record; the current three-browser matrix is described above. Cloud workflows were not executed during this local run. GPU and author studies belong to Constructor. Historical monorepo reports remain in Constructor docs/refactor-report.*.md.
 
 See [development](development.md), [release](operations.md) and [Constructor acceptance]({{CONSTRUCTOR_URL}}/docs/en/quality.html).

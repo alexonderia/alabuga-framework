@@ -1,4 +1,18 @@
 import {test,expect} from '@playwright/test';
+import axe from 'axe-core';
+
+test('rendered prose preserves readable links and callouts after source-palette component changes',async({page})=>{
+  await page.goto('/demos/panel.html');
+  await page.evaluate(async()=>{
+    const {renderText}=await import('/src/widgets.ts' as string);
+    const host=document.createElement('main');host.id='prose-regression';host.className='af';
+    const title=document.createElement('h1');title.textContent='Документ';host.append(title,renderText([{type:'heading',text:'Материалы встречи'},{type:'callout',tone:'warning',text:'Проверьте материалы перед отправкой.'},{type:'link',text:'Открыть материалы',href:'#materials'}],'h2'));document.body.replaceChildren(host);
+  });
+  await expect(page.locator('#prose-regression .af-alert')).toHaveClass(/af-alert--accessible/);
+  await expect(page.getByRole('link',{name:'Открыть материалы'})).toHaveClass(/af-link--inline/);
+  await expect(page.getByRole('link')).toHaveCSS('text-decoration-line','underline');
+  await page.evaluate(axe.source);expect(await page.evaluate(async()=>((await (window as any).axe.run(document.querySelector('main'))).violations).map((v:any)=>v.id))).toEqual([]);
+});
 test('validation is atomic, text is literal, controllers are isolated and disposable',async({page})=>{
   await page.goto('/demos/panel.html');
   const result=await page.evaluate(async()=>{

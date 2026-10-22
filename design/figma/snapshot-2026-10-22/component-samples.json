@@ -1,0 +1,1326 @@
+[
+  {
+    "set": "button",
+    "variants": [
+      {
+        "id": "281:416",
+        "name": "Size=M, View=Primary, State=Selected",
+        "w": 206,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#0c6ff1"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "281:417",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "281:418",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#ffffff"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "281:419",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "281:827",
+        "name": "Size=M, View=Secondary, State=Selected",
+        "w": 208,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#deeefd"
+        ],
+        "strokes": [
+          "#0c6ff1"
+        ],
+        "children": [
+          {
+            "id": "281:828",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "281:829",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "281:830",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "281:1086",
+        "name": "Size=M, View=Ghost, State=Selected",
+        "w": 208,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#ffffff"
+        ],
+        "strokes": [
+          "#cccfd8"
+        ],
+        "children": [
+          {
+            "id": "281:1087",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "281:1088",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "281:1089",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "290:307",
+        "name": "Size=M, View=Clear, State=Selected",
+        "w": 206,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#0c6ff1"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "290:308",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "290:309",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#ffffff"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "290:310",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "290:279",
+        "name": "Size=M, View=Clear, State=Pressed",
+        "w": 206,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#0c6ff1"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "290:280",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "290:281",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#ffffff"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "290:282",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "290:265",
+        "name": "Size=M, View=Clear, State=Hover",
+        "w": 208,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 10,
+        "paddingBottom": 10,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 12,
+        "fills": [
+          "#ffffff"
+        ],
+        "strokes": [
+          "#0c6ff1"
+        ],
+        "children": [
+          {
+            "id": "290:266",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "290:267",
+            "name": "Кнопка призыва",
+            "w": 110,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Кнопка призыва",
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "290:268",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "Switch",
+    "variants": [
+      {
+        "id": "354:1022",
+        "name": "Size=L, State=Default (OFF)",
+        "w": 95,
+        "h": 24,
+        "cornerRadius": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "itemSpacing": 12,
+        "fills": [],
+        "strokes": [],
+        "children": [
+          {
+            "id": "354:1023",
+            "name": "Switch(OFF)",
+            "w": 44,
+            "h": 24,
+            "cornerRadius": 333,
+            "paddingTop": 2,
+            "paddingBottom": 2,
+            "paddingLeft": 2,
+            "paddingRight": 2,
+            "itemSpacing": 10,
+            "fills": [
+              "#cccfd8"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "354:1025",
+            "name": "Label",
+            "w": 40,
+            "h": 11,
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 135.0000023841858
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Regular"
+            },
+            "characters": "Label",
+            "fills": [
+              "#161616"
+            ],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "354:967",
+        "name": "Size=L, State=Selected (ON)",
+        "w": 95,
+        "h": 24,
+        "cornerRadius": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "itemSpacing": 12,
+        "fills": [],
+        "strokes": [],
+        "children": [
+          {
+            "id": "354:968",
+            "name": "Switch(OFF)",
+            "w": 44,
+            "h": 24,
+            "cornerRadius": 333,
+            "paddingTop": 2,
+            "paddingBottom": 2,
+            "paddingLeft": 2,
+            "paddingRight": 2,
+            "itemSpacing": 10,
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "354:970",
+            "name": "Label",
+            "w": 40,
+            "h": 11,
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 135.0000023841858
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Regular"
+            },
+            "characters": "Label",
+            "fills": [
+              "#161616"
+            ],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "Chip",
+    "variants": [
+      {
+        "id": "371:1293",
+        "name": "Size=M, View=Default",
+        "w": 76,
+        "h": 20,
+        "cornerRadius": 333,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "itemSpacing": 8,
+        "fills": [
+          "#cccfd8"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "371:1294",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "371:1295",
+            "name": "Text",
+            "w": 24,
+            "h": 8,
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Text",
+            "fills": [
+              "#495057"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "371:1296",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "371:1289",
+        "name": "Size=M, View=Error",
+        "w": 76,
+        "h": 20,
+        "cornerRadius": 333,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "itemSpacing": 8,
+        "fills": [
+          "#f7b1b1"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "371:1290",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "371:1291",
+            "name": "Text",
+            "w": 24,
+            "h": 8,
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Text",
+            "fills": [
+              "#e62626"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "371:1292",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "371:1285",
+        "name": "Size=M, View=Warning",
+        "w": 76,
+        "h": 20,
+        "cornerRadius": 333,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "itemSpacing": 8,
+        "fills": [
+          "#ffdfb5"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "371:1286",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "371:1287",
+            "name": "Text",
+            "w": 24,
+            "h": 8,
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Text",
+            "fills": [
+              "#f79009"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "371:1288",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "371:1281",
+        "name": "Size=M, View=Success",
+        "w": 76,
+        "h": 20,
+        "cornerRadius": 333,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "itemSpacing": 8,
+        "fills": [
+          "#d0facc"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "371:1282",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "371:1283",
+            "name": "Text",
+            "w": 24,
+            "h": 8,
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Text",
+            "fills": [
+              "#3eac64"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "371:1284",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "371:1277",
+        "name": "Size=M, View=Info",
+        "w": 76,
+        "h": 20,
+        "cornerRadius": 333,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 6,
+        "paddingRight": 6,
+        "itemSpacing": 8,
+        "fills": [
+          "#deeefd"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "371:1278",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "371:1279",
+            "name": "Text",
+            "w": 24,
+            "h": 8,
+            "fontSize": 12,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Text",
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "371:1280",
+            "name": "icon",
+            "w": 12,
+            "h": 12,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "Alert",
+    "variants": [
+      {
+        "id": "379:3539",
+        "name": "Size=M, View=Info",
+        "w": 263,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "itemSpacing": 12,
+        "fills": [
+          "#deeefd"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "379:3540",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "379:3541",
+            "name": "This user has a notification.",
+            "w": 175,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "This user has a notification.",
+            "fills": [
+              "#0c6ff1"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "379:3542",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "379:3599",
+        "name": "Size=M, View=Success",
+        "w": 263,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "itemSpacing": 12,
+        "fills": [
+          "#d0facc"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "379:3600",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "379:3601",
+            "name": "This user has a notification.",
+            "w": 175,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "This user has a notification.",
+            "fills": [
+              "#3eac64"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "379:3602",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "379:3611",
+        "name": "Size=M, View=Warning",
+        "w": 263,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "itemSpacing": 12,
+        "fills": [
+          "#ffdfb5"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "379:3612",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "379:3613",
+            "name": "This user has a notification.",
+            "w": 175,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "This user has a notification.",
+            "fills": [
+              "#f79009"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "379:3614",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "379:3623",
+        "name": "Size=M, View=Error",
+        "w": 263,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "itemSpacing": 12,
+        "fills": [
+          "#f7b1b1"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "379:3624",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "379:3625",
+            "name": "This user has a notification.",
+            "w": 175,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "This user has a notification.",
+            "fills": [
+              "#e62626"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "379:3626",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      },
+      {
+        "id": "379:3635",
+        "name": "Size=M, View=Default",
+        "w": 263,
+        "h": 40,
+        "cornerRadius": 8,
+        "paddingTop": 8,
+        "paddingBottom": 8,
+        "paddingLeft": 12,
+        "paddingRight": 12,
+        "itemSpacing": 12,
+        "fills": [
+          "#cccfd8"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "379:3636",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "379:3637",
+            "name": "This user has a notification.",
+            "w": 175,
+            "h": 10,
+            "fontSize": 14,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "This user has a notification.",
+            "fills": [
+              "#495057"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "379:3638",
+            "name": "icon",
+            "w": 20,
+            "h": 20,
+            "cornerRadius": 0,
+            "paddingTop": 4,
+            "paddingBottom": 4,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "itemSpacing": 10,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "Dialog",
+    "variants": [
+      {
+        "id": "402:1724",
+        "name": "Dialog",
+        "w": 350,
+        "h": 141,
+        "cornerRadius": 16,
+        "paddingTop": 16,
+        "paddingBottom": 16,
+        "paddingLeft": 16,
+        "paddingRight": 16,
+        "itemSpacing": 16,
+        "fills": [
+          "#ffffff"
+        ],
+        "strokes": [],
+        "children": [
+          {
+            "id": "386:3936",
+            "name": "HeaderContainer",
+            "w": 318,
+            "h": 26,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 99,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "386:3857",
+            "name": "Information for user",
+            "w": 318,
+            "h": 11,
+            "fontSize": 16,
+            "lineHeight": {
+              "unit": "PERCENT",
+              "value": 129.99999523162842
+            },
+            "fontName": {
+              "family": "Alabuga Sans",
+              "style": "Medium"
+            },
+            "characters": "Information for user",
+            "fills": [
+              "#6c757d"
+            ],
+            "strokes": []
+          },
+          {
+            "id": "386:3938",
+            "name": "Buttons",
+            "w": 318,
+            "h": 40,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 12,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "set": "Textarea",
+    "variants": [
+      {
+        "id": "303:1737",
+        "name": "State=Default",
+        "w": 278,
+        "h": 162,
+        "cornerRadius": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "itemSpacing": 8,
+        "fills": [],
+        "strokes": [],
+        "children": [
+          {
+            "id": "303:1738",
+            "name": "LabelContainer",
+            "w": 278,
+            "h": 10,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 4,
+            "fills": [],
+            "strokes": []
+          },
+          {
+            "id": "303:1741",
+            "name": "InputContainer",
+            "w": 278,
+            "h": 128,
+            "cornerRadius": 8,
+            "paddingTop": 12,
+            "paddingBottom": 12,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "itemSpacing": 0,
+            "fills": [
+              "#ffffff"
+            ],
+            "strokes": [
+              "#dee2e6"
+            ]
+          },
+          {
+            "id": "303:1836",
+            "name": "SettingsContainer",
+            "w": 278,
+            "h": 8,
+            "cornerRadius": 0,
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "paddingRight": 0,
+            "itemSpacing": 37,
+            "fills": [],
+            "strokes": []
+          }
+        ]
+      }
+    ]
+  }
+]

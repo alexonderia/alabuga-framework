@@ -15,5 +15,6 @@ assert(![...files].some(f=>/^(src|apps|config|infra|artifacts)\/|^dist\/(docs|st
 assert([...files].some(f=>f.endsWith('.woff2')));assert(files.has('dist/assets/brand/manifest.json'));
 const archive='artifacts/package/'+pack.filename,integrity='sha512-'+createHash('sha512').update(await readFile(archive)).digest('base64');
 assert.equal(integrity,pack.integrity);
-await writeFile('artifacts/package/report.json',JSON.stringify({archive,integrity,files:files.size,passed:true},null,2));
+const toolchain={platform:process.platform,arch:process.arch,node:process.version,npm:process.env.npm_config_user_agent?.match(/^npm\/(\S+)/)?.[1]??null};
+await writeFile('artifacts/package/report.json',JSON.stringify({name:pkg.name,version:pkg.version,archive,integrity,sha256:createHash('sha256').update(await readFile(archive)).digest('hex'),files:files.size,passed:true,toolchain},null,2));
 console.log(`${archive}: ${files.size} files; all public exports and integrity verified`);

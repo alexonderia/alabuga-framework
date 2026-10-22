@@ -1,0 +1,980 @@
+{
+  "schemaVersion": 1,
+  "project": "Alabuga Framework",
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "url": "https://www.figma.com/design/ObAoKiDwraibmQrxUNvGWI/Design-System?node-id=0-1",
+    "page": "0:1",
+    "section": "420:3704"
+  },
+  "collection": {
+    "archivedOn": "2026-10-22",
+    "capturedOn": [
+      "2026-10-21",
+      "2026-10-22"
+    ],
+    "status": "partial",
+    "method": "Offline recovery of previously collected Figma materials; no new Figma requests",
+    "policy": "Collect once per project; implement from local sources. Fetch only genuinely missing material once; full refresh requires an explicit user request.",
+    "scope": {
+      "families": 23,
+      "variants": 454,
+      "variables": 117,
+      "textStyles": 25
+    },
+    "gaps": [
+      "No complete project-overview screenshot archived.",
+      "Dedicated property contexts and screenshots cover only part of the 23 inventoried families.",
+      "Calendar attachment source is not available as a local file.",
+      "Three P2 user screenshots were visually read and transcribed locally; original attachment image bytes are unavailable."
+    ],
+    "missingMaterialAttempts": [
+      {
+        "date": "2026-10-22",
+        "record": "design/figma/p2-access-2026-10-22.json",
+        "result": "quota-limited; no design data received, no retry"
+      }
+    ]
+  },
+  "inventory": "design/figma/snapshot-2026-10-22/inventory.json",
+  "variables": "design/figma/snapshot-2026-10-22/tokens-and-styles.json",
+  "visualRules": {
+    "data": "design/surface-rules.json",
+    "screenshot": "design/figma/snapshot-2026-10-22/screenshots/visual-rules.png"
+  },
+  "relatedSources": {
+    "brand": "docs/brand-sources/",
+    "audit": "docs/design-audit.ru.md",
+    "webDecisions": "design-qa.md",
+    "browserEvidence": "artifacts/ (implementation screenshots, not Figma references)",
+    "componentStatus": "design/component-status.json"
+  },
+  "hashAlgorithm": "sha256",
+  "files": [
+    {
+      "path": "design/figma/snapshot-2026-10-22/metadata.json",
+      "kind": "metadata",
+      "capturedOn": "2026-10-21",
+      "nodeId": "0:1",
+      "method": "Figma get_metadata response; hierarchy, node IDs and dimensions",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-metadata.json",
+      "bytes": 138575,
+      "sha256": "e316edf7080a3d403b87dc4541245f449c27b267f1e862b2b439ba91ce196df9"
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/inventory.json",
+      "kind": "inventory",
+      "capturedOn": "2026-10-21",
+      "nodeId": "0:1",
+      "method": "Read-only Plugin API component-family inventory",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-inventory-summary.json",
+      "bytes": 10083,
+      "sha256": "fcf2b76422b6a4a0b39488870654b148a1fdc4a47b1bee721f393bf6dd409f11"
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/tokens-and-styles.json",
+      "kind": "variables-and-styles",
+      "capturedOn": "2026-10-21",
+      "nodeId": "0:1",
+      "method": "Read-only Plugin API variables and local text styles",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-tokens-current.json",
+      "bytes": 35443,
+      "sha256": "979cd0aae046a6d3b3505195daf83bbc1bfd7583f579f535d3b272cf15318c27"
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/component-samples.json",
+      "kind": "component-properties",
+      "capturedOn": "2026-10-21",
+      "nodeId": "0:1",
+      "method": "Read-only Plugin API samples from six component families; not all variants",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-component-samples.json",
+      "bytes": 32486,
+      "sha256": "caa10f509eb38e3ef8972cb52d620e1a8daaa60a055ad2c7a34980ed1939a3f7"
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/select-properties.json",
+      "kind": "component-properties",
+      "capturedOn": "2026-10-21",
+      "nodeId": "322:218",
+      "method": "Read-only Plugin API Select property samples",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-select-properties.json",
+      "bytes": 32262,
+      "sha256": "cfc35771d461b5626aba72b0bd73e383fc352cf3266e4b8793ce86705268836c"
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/screenshots/buttons.png",
+      "kind": "figma-screenshot",
+      "capturedOn": "2026-10-21",
+      "nodeId": "276:276",
+      "method": "Previously saved Figma screenshot",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-buttons.png",
+      "bytes": 99213,
+      "sha256": "344aa96d12ba152886d4e785eef75acc907de92d2267274b1f4bd1f2fe07fa62",
+      "pixels": {
+        "width": 2642,
+        "height": 380
+      }
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/screenshots/list.png",
+      "kind": "figma-screenshot",
+      "capturedOn": "2026-10-21",
+      "nodeId": "337:584",
+      "method": "Previously saved Figma screenshot",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-list.png",
+      "bytes": 3421,
+      "sha256": "ae28f1051e5a91215d6f18613b8a7a5ec073fd2565ba3ac198d244eead1fc612",
+      "pixels": {
+        "width": 300,
+        "height": 165
+      }
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/screenshots/select.png",
+      "kind": "figma-screenshot",
+      "capturedOn": "2026-10-21",
+      "nodeId": "322:218",
+      "method": "Previously saved Figma screenshot",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-select.png",
+      "bytes": 53947,
+      "sha256": "b823cbe8d3d6f152afe44f0050d1572ef5b3e18f2593a31d09afb03c53e8520b",
+      "pixels": {
+        "width": 896,
+        "height": 634
+      }
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/screenshots/visual-rules.png",
+      "kind": "figma-screenshot",
+      "capturedOn": "2026-10-21",
+      "nodeId": "250:339",
+      "method": "Previously saved Figma screenshot",
+      "originalCachePath": "artifacts/design-audit-2026-10-21/figma-visual-rules.png",
+      "bytes": 133647,
+      "sha256": "206f0aba916475b29c7d399ab19bb0261d509fbb93d721fc3df10dd058aa722e",
+      "pixels": {
+        "width": 1577,
+        "height": 1778
+      }
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/screenshots/datepicker-states.png",
+      "kind": "figma-screenshot",
+      "capturedOn": "2026-10-22",
+      "nodeId": "340:1019",
+      "method": "Previously saved Figma screenshot; 320×608 px",
+      "originalCachePath": "artifacts/design-audit-2026-10-22/figma-datepicker-states.png",
+      "bytes": 26272,
+      "sha256": "0cf10ba5a430d41a59ead2ef2c22b4c55453b507922432999eb9ca61e7bbfb4f",
+      "pixels": {
+        "width": 320,
+        "height": 608
+      }
+    },
+    {
+      "path": "design/figma/snapshot-2026-10-22/datepicker-default.txt",
+      "kind": "design-context",
+      "capturedOn": "2026-10-22",
+      "nodeId": "340:1018",
+      "method": "Previously saved get_design_context text; temporary SVG URLs replaced with local source paths",
+      "originalCachePath": "artifacts/design-audit-2026-10-22/figma-datepicker-default.txt",
+      "bytes": 32744,
+      "sha256": "22a9939f6d3e9c536c4baf5b9c97b7c119f7cbe65055d4152a2707e8f44a15d2"
+    },
+    {
+      "path": "design/calendar-rules.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 2320,
+      "sha256": "491c1eeec65467d5acaa86cbf387e441b745ba2e9f4f204314647cd925fa99a6"
+    },
+    {
+      "path": "design/control-assets.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 2373,
+      "sha256": "42c633eb990c3c3bb076395b22e1d772d0190a7c30853b0b11359daebe7eeea0"
+    },
+    {
+      "path": "design/datepicker-rules.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 4540,
+      "sha256": "899969cda7e8630d058b3b68867703eacb67dadac3b3dbeeae8d15e896224761",
+      "updatedOn": "2026-10-22",
+      "changeReason": "User requested standard DatePicker sizes; preserve original L source and document S/M extensions."
+    },
+    {
+      "path": "design/field-assets.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 2164,
+      "sha256": "992f81a651918e501e6b675f6360441ff9b208673026a8dde304af3451e3817d"
+    },
+    {
+      "path": "design/select-assets.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 1122,
+      "sha256": "b7dd6bd87e9a19a8a1e567c4db5a19107767225699019d0637c8659473196792"
+    },
+    {
+      "path": "design/surface-rules.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 2214,
+      "sha256": "568d37e18ed94a7d93b1c5708e2b062d99299835d8846733c25a57af9759ded5"
+    },
+    {
+      "path": "design/type-icon-assets.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 34686,
+      "sha256": "f60a5ced1d112648a0f404d2ff5447973d85954621901811e5c537ac603356de"
+    },
+    {
+      "path": "src/icons/bullet-diamond.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 212,
+      "sha256": "3168b1669d9bd9b51049c604d9c9a4aced8136c76e2fed5b08f4120d6d1490e9"
+    },
+    {
+      "path": "src/icons/bullet-triangle.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 337,
+      "sha256": "6d0839b0e0b8f21e607cddad4eb9484192e49a4940ab440b70c82c6c5f7c12b9"
+    },
+    {
+      "path": "src/icons/button-loading-blue-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 985,
+      "sha256": "64fef8f9da4d145d47f26a64da2083f105473e6349856e6f5bd81d60f9ebbc61"
+    },
+    {
+      "path": "src/icons/button-loading-blue-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 955,
+      "sha256": "67569442d232d160700611bab986054aebaccb98242a319c46a85b9b1bf17a6b"
+    },
+    {
+      "path": "src/icons/button-loading-blue-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 971,
+      "sha256": "a7309ee87a62635d1e247d31f0b26f5191a29ed9054b05ef62ea9f8cf62eba08"
+    },
+    {
+      "path": "src/icons/button-loading-white-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 983,
+      "sha256": "31e9c3711a874a845518f774f70d8f6dc9e38200c5ab1d942acafc0e90eb1073"
+    },
+    {
+      "path": "src/icons/button-loading-white-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 953,
+      "sha256": "b271b40aee7d78496ed7f501a97af1094e01735626c5516fe502d17b671d92a0"
+    },
+    {
+      "path": "src/icons/button-loading-white-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 969,
+      "sha256": "11b6f119df6c22411adf5baa15b997a063c2ae2bd1d13e4fe0bd04ba988b894e"
+    },
+    {
+      "path": "src/icons/calendar-next-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 541,
+      "sha256": "37c7a115717a9171996c4997a4ba9a22b1aa9f128a6bbd420c0e5ecbddd37230"
+    },
+    {
+      "path": "src/icons/calendar-previous-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 542,
+      "sha256": "f38d0532fa995ff6bef89b2f12101bfefdba54de1be8127a372e33b7fca56e57"
+    },
+    {
+      "path": "src/icons/checkbox-checked-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 447,
+      "sha256": "e36b682e0b6afc0cf08e6259e7a2f54e1418b62b7076fb79591916e5692d23dc"
+    },
+    {
+      "path": "src/icons/checkbox-checked-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 446,
+      "sha256": "19432052202f7489bb60ccedbcd15ebafd2beab57868c0ae0ee2070633696859"
+    },
+    {
+      "path": "src/icons/checkbox-checked-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 445,
+      "sha256": "b9fcb841aa364c3ab34eb733622390c5b4203a9bc6e934ea1f3cab933abefd57"
+    },
+    {
+      "path": "src/icons/datepicker-calendar-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 852,
+      "sha256": "de5e97a475cec39d1d2f4740a8e997ecaeceb2b640d651b261514336c764160a"
+    },
+    {
+      "path": "src/icons/datepicker-info-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 761,
+      "sha256": "e5cf5cf33adb296ca9ca2e33398d8965ba31e21ee924c5e738637d513a0a4ca1"
+    },
+    {
+      "path": "src/icons/field-error-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 664,
+      "sha256": "e3e10f76de908520ab33d848f8acf289fa285659566d0a44030aebdd8dc9f677"
+    },
+    {
+      "path": "src/icons/field-error-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 580,
+      "sha256": "40480c557493a44682543eba976fb779d6f0071630f0e464874b26a449148d11"
+    },
+    {
+      "path": "src/icons/field-error-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 629,
+      "sha256": "a6cd46d915448e4124025acc1657597ed820ad1a97ad1db2ffa1ed280ee8b5ca"
+    },
+    {
+      "path": "src/icons/field-info-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 759,
+      "sha256": "a4d69ce49182e6c218e0298c410ede7cd642275a8b2f193882f3ca1ebed88e48"
+    },
+    {
+      "path": "src/icons/field-info-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 676,
+      "sha256": "e76d7addb58e608483b5e52af8b157e11f38497208c6adc7ed8e7f0c126cc2b6"
+    },
+    {
+      "path": "src/icons/field-info-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 731,
+      "sha256": "56567c8c0c874f66c477742b7b9665999aaf3d02eb869b1b003aea16783a48d5"
+    },
+    {
+      "path": "src/icons/field-success-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 608,
+      "sha256": "7688ecc38e2df78619a3b4f4a0893098cdf9d327acdb61ae231d6d93b01fe2a9"
+    },
+    {
+      "path": "src/icons/field-success-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 522,
+      "sha256": "d4aa2b9b5b582b43553fa35b7d6014ca3eb80251830e03f89683107a4946957a"
+    },
+    {
+      "path": "src/icons/field-success-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 589,
+      "sha256": "1da7fc00b956f14cb2878533b6b0ebcef1e569482a085037fce0b25c0b982879"
+    },
+    {
+      "path": "src/icons/radio-checked-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 376,
+      "sha256": "ab02a879fe7081e191b0caadfeed7124d82f339196d9de338969ddeb156f7378"
+    },
+    {
+      "path": "src/icons/radio-checked-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 380,
+      "sha256": "3456bb61c929b1e8b0b54b08cb522aee2b2d1d4c06efa5e51164530ace4a7c71"
+    },
+    {
+      "path": "src/icons/radio-checked-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 370,
+      "sha256": "aa523330a61b8ea9a48a9c93c8e5384b5d92c938bde0baab941038b10265bfa2"
+    },
+    {
+      "path": "src/icons/select-collapse-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 545,
+      "sha256": "1d806b95d1b843a28017a4ea4a5a3782db2952f3ac0604ea75762e945045fa5d"
+    },
+    {
+      "path": "src/icons/select-collapse-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 548,
+      "sha256": "832348f155ac600fc1348d7c6c9164e976b7c9452b7f3002bb272db48ef2391f"
+    },
+    {
+      "path": "src/icons/select-collapse-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 544,
+      "sha256": "ec3e8da66fda8a7f5b7576b0e703613d98e371f461798a4b25157ee2d822bab2"
+    },
+    {
+      "path": "src/icons/select-expand-l.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 540,
+      "sha256": "133ba36926bc5b758ce06fbd7fdaad93fdf4532415dfea0e26a6ecd066a38a24"
+    },
+    {
+      "path": "src/icons/select-expand-m.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 548,
+      "sha256": "71e7d8bc13a337979c949878a4827fa789a720a8c07405210b813cc8127aad04"
+    },
+    {
+      "path": "src/icons/select-expand-s.svg",
+      "kind": "local-svg-export",
+      "provenance": "See component *-assets.json / *-rules.json mappings in design/",
+      "bytes": 544,
+      "sha256": "42eb8cd5a2de3b50e719955e8ded044f4a7997c7f0bdb6559a3fab9fac17a862"
+    },
+    {
+      "path": "design/figma-tokens.json",
+      "kind": "existing-project-token-source",
+      "note": "Historic token source and effective project roles; current working-file variables are archived separately. Preserve original provenance.",
+      "bytes": 31120,
+      "sha256": "0010ff2e416e56040098e0422a6124583bc1550b29bd40a4111b274810f105b9"
+    },
+    {
+      "path": "design/token-layers.json",
+      "kind": "existing-project-token-source",
+      "note": "Historic token source and effective project roles; current working-file variables are archived separately. Preserve original provenance.",
+      "bytes": 5684,
+      "sha256": "08df370f93e8ef16cf4e8d0383203bf630ab320660920f93d2c07db36752909b"
+    },
+    {
+      "path": "design/secondary-components-rules.json",
+      "kind": "component-source-mapping-and-web-decisions",
+      "bytes": 8626,
+      "sha256": "09748b7b89b03afd61020664ed58dd06103d4538cbbfd3c6b6dd0a859733838a",
+      "updatedOn": "2026-10-22",
+      "method": "Cached Figma properties + three user-supplied screenshots; corrected implementation rules"
+    },
+    {
+      "path": "design/figma/p2-access-2026-10-22.json",
+      "kind": "source-access-record",
+      "bytes": 403,
+      "sha256": "1ee00d6fb50583f09d65abae0abd217c28eeb84a481254d7c35217b5e8b98aa0",
+      "updatedOn": "2026-10-22"
+    },
+    {
+      "path": "assets/close.svg",
+      "kind": "existing-shared-svg-asset",
+      "bytes": 733,
+      "sha256": "501c2d6ea9221a09dbacdb377ab01d8c1f4a00cbad46dd047863044c43a93317",
+      "provenance": "Existing local close SVG reused in P2 CSS masks; dedicated P2 icon exports remain unavailable."
+    },
+    {
+      "path": "design/figma/p2-user-references-2026-10-22.json",
+      "kind": "user-reference-observations",
+      "capturedOn": "2026-10-22",
+      "nodeId": "0:1",
+      "method": "Visual transcription of the three user-supplied screenshots; original attachment bytes unavailable",
+      "bytes": 2685,
+      "sha256": "0af9f6996db4a880b17c34044930384f7a2ac6317878e1ede1d0d262e570ba2f"
+    },
+    {
+      "path": "design/icon-catalog.json",
+      "kind": "asset-catalogue-and-rules",
+      "capturedOn": "2026-10-22",
+      "nodeId": "275:227",
+      "method": "Local inventory, original archived SVG hashes and current implementation review; no new Figma call",
+      "bytes": 22634,
+      "sha256": "308a138348cb40983b7e548041fe0391edc9e8244852582bf4436032b551ba82"
+    },
+    {
+      "path": "design/component-status.json",
+      "kind": "implementation-index",
+      "capturedOn": "2026-10-22",
+      "nodeId": "0:1",
+      "method": "Local inventory, original archived SVG hashes and current implementation review; no new Figma call",
+      "bytes": 21712,
+      "sha256": "21c2f3cc54aa7323ec8bee814865a5ae06c850af2367ba7bfdd046529a0c27c1"
+    }
+  ],
+  "coverage": [
+    {
+      "name": "Bullet",
+      "nodeId": "352:939",
+      "variants": 3,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/type-icon-assets.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/type-icon-assets.json"
+      ],
+      "gaps": [
+        "Dimensions and two original SVGs are saved; the outline variant uses extracted CSS rules. No dedicated full design context is saved.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "Text Field",
+      "nodeId": "298:1211",
+      "variants": 24,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/field-assets.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "icon-button",
+      "nodeId": "294:423",
+      "variants": 144,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/type-icon-assets.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/type-icon-assets.json",
+        "design/control-assets.json"
+      ],
+      "gaps": [
+        "Geometry for all 144 variants is saved; complete per-state color/property coverage has not been certified.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "checkbox",
+      "nodeId": "343:3296",
+      "variants": 18,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/control-assets.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "radio-button",
+      "nodeId": "377:1426",
+      "variants": 18,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/control-assets.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "button",
+      "nodeId": "276:276",
+      "variants": 72,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "screenshots": [
+        "design/figma/snapshot-2026-10-22/screenshots/buttons.png"
+      ],
+      "rules": [
+        "design/control-assets.json"
+      ],
+      "gaps": [
+        "Detailed export contains samples; complete per-variant property coverage has not been certified."
+      ]
+    },
+    {
+      "name": "icon",
+      "nodeId": "275:227",
+      "variants": 49,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/icon-catalog.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/type-icon-assets.json",
+        "design/control-assets.json",
+        "design/field-assets.json",
+        "design/select-assets.json",
+        "design/datepicker-rules.json",
+        "design/icon-catalog.json"
+      ],
+      "gaps": [
+        "The standalone icon family has 49 nodes and 15 type names; its complete SVG/context/screenshot export is unavailable.",
+        "Default, Help, CancelRound, Check and Radio have no public named glyph in this catalogue; related control state artwork is not substituted for them.",
+        "Cancel variants have repeated Size=L labels at 16/20/24 px in the source metadata; dimensions are retained verbatim. The one archived close SVG is 24 px.",
+        "Previous/Next use 20 px originals and Calendar/Close use 24 px originals; other slots explicitly scale these assets."
+      ]
+    },
+    {
+      "name": "ListItem",
+      "nodeId": "377:2186",
+      "variants": 18,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "Select",
+      "nodeId": "322:218",
+      "variants": 18,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/select-properties.json"
+      ],
+      "screenshots": [
+        "design/figma/snapshot-2026-10-22/screenshots/select.png"
+      ],
+      "rules": [
+        "design/select-assets.json"
+      ],
+      "gaps": [
+        "Detailed export contains samples; complete per-variant property coverage has not been certified."
+      ]
+    },
+    {
+      "name": "List",
+      "nodeId": "337:584",
+      "variants": 15,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [
+        "design/figma/snapshot-2026-10-22/screenshots/list.png"
+      ],
+      "rules": [],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources."
+      ]
+    },
+    {
+      "name": "Textarea",
+      "nodeId": "303:1699",
+      "variants": 8,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/field-assets.json"
+      ],
+      "gaps": [
+        "Detailed export contains samples; complete per-variant property coverage has not been certified.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "Calendar",
+      "nodeId": "332:883",
+      "variants": 1,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/calendar-rules.json",
+        "design/datepicker-rules.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk.",
+        "User-supplied Calendar screenshot is visible in the conversation; original attachment file is not present locally. Do not substitute browser captures."
+      ]
+    },
+    {
+      "name": "Day",
+      "nodeId": "332:639",
+      "variants": 7,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/calendar-rules.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk.",
+        "User-supplied Calendar screenshot is visible in the conversation; original attachment file is not present locally. Do not substitute browser captures."
+      ]
+    },
+    {
+      "name": "Week",
+      "nodeId": "332:706",
+      "variants": 2,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [],
+      "screenshots": [],
+      "rules": [
+        "design/calendar-rules.json"
+      ],
+      "gaps": [
+        "No dedicated high-fidelity context/property export in the recovered archive; use metadata, saved rules and related local sources.",
+        "No dedicated Figma family screenshot saved on disk.",
+        "User-supplied Calendar screenshot is visible in the conversation; original attachment file is not present locally. Do not substitute browser captures."
+      ]
+    },
+    {
+      "name": "DatePicker",
+      "nodeId": "340:1019",
+      "variants": 8,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/datepicker-default.txt"
+      ],
+      "screenshots": [
+        "design/figma/snapshot-2026-10-22/screenshots/datepicker-states.png"
+      ],
+      "rules": [
+        "design/datepicker-rules.json"
+      ],
+      "gaps": [
+        "Only Default design context is saved; other state details rely on the saved state screenshot."
+      ]
+    },
+    {
+      "name": "Switch",
+      "nodeId": "354:958",
+      "variants": 6,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/field-assets.json"
+      ],
+      "gaps": [
+        "Detailed export contains samples; complete per-variant property coverage has not been certified.",
+        "No dedicated Figma family screenshot saved on disk."
+      ]
+    },
+    {
+      "name": "Option-btn",
+      "nodeId": "354:981",
+      "variants": 5,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Multi-switch",
+      "nodeId": "354:1004",
+      "variants": 3,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Chip",
+      "nodeId": "371:1195",
+      "variants": 15,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Alert",
+      "nodeId": "376:1500",
+      "variants": 15,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Dialog",
+      "nodeId": "402:1724",
+      "variants": 1,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Breadcrumps",
+      "nodeId": "407:1751",
+      "variants": 1,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    },
+    {
+      "name": "Link",
+      "nodeId": "407:1740",
+      "variants": 3,
+      "status": "partial",
+      "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+      "data": [
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "screenshots": [],
+      "rules": [
+        "design/secondary-components-rules.json"
+      ],
+      "gaps": [
+        "Complete per-variant Figma property export remains unavailable.",
+        "Original user attachment image bytes are not present locally; extracted measurements are archived.",
+        "Dedicated P2 vectors were not exported; original local Field/close/chevron vectors are reused explicitly."
+      ],
+      "visualVerification": {
+        "date": "2026-10-22",
+        "basis": "design/figma/p2-user-references-2026-10-22.json",
+        "status": "Visible screenshot variants reviewed; original binary files not archived"
+      }
+    }
+  ]
+}

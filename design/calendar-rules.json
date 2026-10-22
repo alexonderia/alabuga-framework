@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "user-supplied screenshot",
+    "date": "2026-10-21",
+    "description": "First image in the Calendar correction message: four Calendar variants on a dark Figma canvas.",
+    "pixels": {"width":1722,"height":533},
+    "approximateScale": 1.42,
+    "figmaMetadata": {"calendar":"332:883","day":"332:639","week":"332:706","fiveWeekSize":[250,304],"withoutActionsSize":[250,260]},
+    "note": "Fresh Figma context was quota-limited. Visual decisions use the supplied screenshot; metadata only confirms known dimensions. This is not a fresh Figma export."
+  },
+  "geometry": {
+    "width":250,"daySize":32,"columnGap":0,"rowGap":4,
+    "padding":[8,12,12],"headerHeight":26,"headerInlineMargin":-3,
+    "border":1,"radius":8,"shadow":"0 2px 3px neutral/300",
+    "monthFont":"500 16px/20px Alabuga Sans","dayFont":"400 14px/20px Alabuga Sans",
+    "footerGap":12,"footerMarginTop":4,"actionHeight":40,
+    "fiveWeekHeight":260,"fiveWeekWithActionsHeight":304,
+    "note":"Padding/header placement is inferred from the screenshot and checked with a browser capture at the same scale. Month height changes with its real week count."
+  },
+  "icons": {"source":["src/icons/calendar-previous-m.svg","src/icons/calendar-next-m.svg"],"rootSize":20,"retrieved":"2026-10-22","note":"Original Calendar navigation exports from the DatePicker 340:1018 context replace the earlier rotated Select chevron. No text glyph or SVG approximation."},
+  "variants": ["empty with actions","immediate single selection","single selection with confirmation","range with confirmation"],
+  "decisions": [
+    "The reference contains September 31. Keep actual Gregorian dates: September has 30 days and October 1 is Thursday in 2026.",
+    "Leading grid slots remain blank as in the screenshot; trailing dates are visible, muted and disabled.",
+    "Weekday text uses the existing accessible secondary token instead of the reference's low-contrast gray.",
+    "Range-start text uses the existing link token on the pale selected background; borders/middle/end retain the brand-blue tokens.",
+    "The existing widget remains immediate single-date selection. Draft/range options are independent component state, not new AFDocument fields.",
+    "A separate DatePicker input/popover is outside this Calendar correction."
+  ]
+}

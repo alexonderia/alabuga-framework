@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-22",
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "default": "340:1018",
+    "states": "340:1019",
+    "defaultContext": "high-fidelity get_design_context including screenshot",
+    "otherStates": "saved get_screenshot render, 320x608 px; further contexts were quota-limited"
+  },
+  "geometry": {
+    "size": "L",
+    "height": 48,
+    "labelSize": 14,
+    "fontSize": 16,
+    "lineHeight": 1.35,
+    "iconSize": 24,
+    "gap": 12,
+    "paddingInline": 12,
+    "radius": 8,
+    "border": 1,
+    "fieldGap": 4,
+    "referenceRenderedWidth": 280,
+    "note": "Figma's outer frame is 278 px but its rendered input overflows to 280 px. The implementation uses responsive width; examples use 280 px and do not clip the text."
+  },
+  "popup": {
+    "calendar": "existing renderCalendar with confirmation and inclusive min/max",
+    "gap": 4,
+    "viewportEdge": 8,
+    "position": "fixed native modal dialog, flips above when space below is insufficient",
+    "shadow": "0 2px 4px neutral/300"
+  },
+  "assets": [
+    {
+      "node": "332:394",
+      "file": "src/icons/datepicker-calendar-l.svg",
+      "width": 24,
+      "height": 24,
+      "slot": "leading calendar button"
+    },
+    {
+      "node": "332:345",
+      "file": "src/icons/datepicker-info-l.svg",
+      "width": 24,
+      "height": 24,
+      "slot": "trailing information hint"
+    },
+    {
+      "node": "I340:912;332:568",
+      "file": "src/icons/calendar-previous-m.svg",
+      "width": 20,
+      "height": 20,
+      "slot": "Calendar previous month"
+    },
+    {
+      "node": "I340:912;332:572",
+      "file": "src/icons/calendar-next-m.svg",
+      "width": 20,
+      "height": 20,
+      "slot": "Calendar next month"
+    }
+  ],
+  "states": {
+    "default": "existing Field tokens plus original SVGs",
+    "hover": "existing strong border",
+    "focus": "one brand-blue border; hide empty placeholder while focused",
+    "filled": "real ISO-backed DD.MM.YYYY value",
+    "error": "native validity or aria-invalid, red border/error SVG; darker error text for contrast",
+    "success": "af-input--success with existing source success SVG",
+    "disabled": "native disabled/fieldset, muted background/icons",
+    "readonly": "native readonly, muted background with unchanged FormData value"
+  },
+  "behavior": {
+    "authoring": "input.af-datepicker[type=date] + initComponents",
+    "display": "DD.MM.YYYY; accepts DDMMYYYY and ISO as well",
+    "value": "original input and FormData use ISO YYYY-MM-DD",
+    "years": [
+      1,
+      9999
+    ],
+    "invalidInput": "clear stale native value and set owned parse validity without overwriting host errors",
+    "fallback": "validate ISO/format/bounds when the browser exposes type=date as text",
+    "events": "original input/change; generated text proxy has no name and is excluded from form validation",
+    "cleanup": "close/remove generated dialog and proxy, restore native attributes and release observers/listeners"
+  },
+  "decisions": [
+    "Reuse existing Field, Calendar and Button components and the current JS/CSS entry points.",
+    "Use native modal-dialog focus behavior with a transparent backdrop rather than an unlabelled floating div.",
+    "Keep accessible placeholder/error text and disabled helper text slightly darker than the low-contrast source.",
+    "No document schema fields, separate public initializer or runtime dependency is added.",
+    "User explicitly requested all standard sizes on 2026-10-22: add S/M as documented Field-based extensions; preserve L source geometry and the fixed-size Calendar popup."
+  ],
+  "sizes": {
+    "default": "M",
+    "S": {
+      "modifier": "af-input--sm",
+      "height": 32,
+      "text": 12,
+      "icon": 16,
+      "label": 10,
+      "help": 8,
+      "radius": 6
+    },
+    "M": {
+      "modifier": null,
+      "height": 40,
+      "text": 14,
+      "icon": 20,
+      "label": 12,
+      "help": 10,
+      "radius": 8
+    },
+    "L": {
+      "modifier": "af-input--lg",
+      "height": 48,
+      "text": 16,
+      "icon": 24,
+      "label": 14,
+      "help": 12,
+      "radius": 8
+    },
+    "provenance": "L matches the saved Figma source; S/M are user-requested extensions following existing Field sizes. The original calendar SVG is scaled by its CSS mask slot; original SVG bytes/root dimensions are unchanged. M/S info icons reuse matching Field assets.",
+    "behavior": "Changing the native input size classes updates proxy and wrapper without replacing nodes, losing values or closing an open calendar draft."
+  }
+}

@@ -8,7 +8,7 @@ await rm(out,{recursive:true,force:true});await mkdir('dist/esm',{recursive:true
 const entries=(await readdir('src')).filter(n=>n.endsWith('.ts')).map(n=>'src/'+n);
 await build({entryPoints:entries,outdir:'dist/esm',format:'esm',target:'es2022',supported:{'import-attributes':true},define:{__AF_VERSION__:JSON.stringify(pkg.version)}});
 await build({entryPoints:['src/index.ts'],outfile:'dist/alabuga.iife.js',bundle:true,format:'iife',globalName:'Alabuga',target:'es2022',minify:true,define:{__AF_VERSION__:JSON.stringify(pkg.version)},plugins:[{name:'iife-resource-base',setup(b){b.onLoad({filter:/resource\.ts$/},async args=>({contents:(await readFile(args.path,'utf8')).replace("new URL('../assets/', import.meta.url).href","new URL('assets/', document.currentScript?.getAttribute('src') ? new URL(document.currentScript.getAttribute('src'), document.baseURI) : document.baseURI).href"),loader:'ts'}))}}]});
-for(const name of ['styles','compositions','tokens'])await build({entryPoints:[`src/${name}.css`],outfile:`dist/${name}.css`,bundle:true,minify:true,loader:{'.woff2':'dataurl'}});
+for(const name of ['styles','compositions','tokens'])await build({entryPoints:[`src/${name}.css`],outfile:`dist/${name}.css`,bundle:true,minify:true,loader:{'.woff2':'dataurl','.svg':'dataurl'}});
 await writeFile('dist/alabuga.css',(await readFile('dist/styles.css','utf8'))+'\n'+await readFile('dist/compositions.css','utf8'));
 await cp('assets','dist/assets',{recursive:true});await cp('src/fonts','dist/fonts',{recursive:true});
 await cp('src/slide-backgrounds.json','dist/esm/slide-backgrounds.json');await cp('design/figma-tokens.json','dist/tokens.json');
@@ -18,6 +18,7 @@ console.log(`Built ${pkg.name}@${pkg.version}: ESM, IIFE, CSS, declarations and 
 await mkdir('dist/standalone',{recursive:true});
 for(const name of ['alabuga.css','alabuga.iife.js'])await cp('dist/'+name,'dist/standalone/'+name);
 await cp('assets','dist/standalone/assets',{recursive:true});
+await writeFile('dist/standalone/select.html',(await readFile('demos/select.html','utf8')).replaceAll('"../dist/','"'));
 const {panelExample,presentationExample}=await import('../dist/esm/examples.js');
 const {showcase}=await import('../dist/esm/compositions.js');
 for(const [name,doc]of [['index',panelExample],['slides',presentationExample()],['landing',showcase('page')],['presentation',showcase('presentation')]]){

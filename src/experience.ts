@@ -7,6 +7,11 @@ export function styleSection(shell:HTMLElement,page:Section,kind:AFDocument['kin
  const a=page.appearance;if(!a)return;
  shell.classList.add('af-composition','af-theme--'+a.theme,'af-spacing--'+a.spacing,'af-width--'+a.width,'af-decoration--'+a.decoration);
  shell.dataset.composition=page.composition??'blank';
+ // Generated CTAs use an explicit modifier; section CSS must not restyle every button.
+ page.widgets.filter(w=>w.type==='button').forEach(w=>{
+  const trigger=shell.querySelector<HTMLElement>('[data-action-id="'+w.id+'"]');
+  trigger?.classList.toggle('af-btn--inverse',['accent','contrast','image'].includes(a.theme)&&w.surface!=='card');
+ });
  if(kind==='page'&&a.layout==='flow')shell.classList.add('af-flow');
  if(a.fitted)shell.classList.add('af-slide-fitted');
  if(a.fitted&&kind==='presentation')shell.style.setProperty('--af-fit-section-heading',(page.widgets.find(w=>w.typography)?.typography?.heading??64)+'px');

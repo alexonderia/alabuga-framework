@@ -1,0 +1,72 @@
+{
+  "source": "https://www.figma.com/design/ObAoKiDwraibmQrxUNvGWI/Design-System",
+  "date": "2026-10-21",
+  "method": "Read-only Figma Plugin API exportAsync SVG_STRING; original viewBox, paths and root dimensions preserved; embedded into CSS at build time.",
+  "assets": [
+    {
+      "file": "src/icons/checkbox-checked-l.svg",
+      "node": "343:3347",
+      "variant": "Size=L, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/checkbox-checked-m.svg",
+      "node": "367:4136",
+      "variant": "Size=M, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/checkbox-checked-s.svg",
+      "node": "367:4173",
+      "variant": "Size=S, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/radio-checked-l.svg",
+      "node": "377:1431",
+      "variant": "Size=L, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/radio-checked-m.svg",
+      "node": "377:1455",
+      "variant": "Size=M, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/radio-checked-s.svg",
+      "node": "377:1479",
+      "variant": "Size=S, View=Primary, State=Selected"
+    },
+    {
+      "file": "src/icons/button-loading-white-l.svg",
+      "node": "280:382",
+      "variant": "Size=L, View=Primary, State=Loading"
+    },
+    {
+      "file": "src/icons/button-loading-white-m.svg",
+      "node": "281:426",
+      "variant": "Size=M, View=Primary, State=Loading"
+    },
+    {
+      "file": "src/icons/button-loading-white-s.svg",
+      "node": "281:523",
+      "variant": "Size=S, View=Primary, State=Loading"
+    },
+    {
+      "file": "src/icons/button-loading-blue-m.svg",
+      "node": "281:838",
+      "variant": "Size=M, View=Secondary, State=Loading"
+    },
+    {
+      "file": "src/icons/button-loading-blue-l.svg",
+      "node": "281:696",
+      "variant": "Size=L, View=Secondary, State=Loading"
+    },
+    {
+      "file": "src/icons/button-loading-blue-s.svg",
+      "node": "281:939",
+      "variant": "Size=S, View=Secondary, State=Loading"
+    }
+  ],
+  "notes": [
+    "Checkbox/radio gap L/M 8px, S 6px; visual sizes 24/20/16px. Labels retain a minimum 32px hit area.",
+    "Selected button text retains Framework accessibility corrections; indeterminate is a native HTML extension.",
+    "Loading checkbox/radio slots in Figma are empty and are not mapped to indeterminate or busy behavior."
+  ]
+}

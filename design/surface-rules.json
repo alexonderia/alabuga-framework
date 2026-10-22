@@ -1,0 +1,31 @@
+{
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "nodeId": "250:339",
+    "section": "Визуальные правила (источник Брендбук)",
+    "method": "Previously captured high-fidelity get_design_context response and screenshot",
+    "date": "2026-10-21",
+    "pdf": "docs/brand-sources/Визуальные правила.pdf"
+  },
+  "geometry": {
+    "nodeId": "270:203",
+    "outer": {"textNodeId":"270:193","padding":32,"radius":32,"gap":16,"class":"af-card--outer"},
+    "inner": {"textNodeId":"270:194","padding":16,"radius":16,"gap":16,"class":"af-card--inner"}
+  },
+  "emphasis": {
+    "rulesNodeId": "270:196",
+    "exclusiveRecommendationNodeId": "270:198",
+    "filled": {"nodeId":"270:199","background":"#0c6ff1","border":0,"shadow":"none","class":"af-card--filled"},
+    "outline": {"textNodeId":"270:197","background":"#ffffff","borderWidth":2,"borderColor":"#0c6ff1","shadow":"none","class":"af-card--outline"},
+    "outlineThick": {"nodeId":"270:204","background":"#ffffff","borderWidth":3,"borderColor":"#0c6ff1","shadow":"none","class":"af-card--outline-thick"},
+    "elevated": {"nodeId":"270:200","background":"#ffffff","border":0,"shadow":{"x":0,"y":2,"blur":3,"spread":0,"color":"#cccfd8"},"class":"af-card--elevated"}
+  },
+  "implementationDecisions": [
+    "The component names are a CSS API for the visual rules; the inspected Figma file has no separate Card component family.",
+    "Explicit outer/inner geometry remains 32/16 px at mobile sizes, with a 16 px gap and direct text margins reset to avoid doubling the gap.",
+    "Legacy af-card without geometry modifiers retains its previous block layout, neutral 1 px border and 20 px mobile padding/radius; these are existing Framework choices.",
+    "A filled surface uses inherited white text. Nested explicit white cards reset to primary text; nested controls keep their own component colors. Inverse CTAs are explicit.",
+    "Forced colors replace fill/elevation with a visible system border and remove the shadow.",
+    "No new serialized surface values, runtime JavaScript, renderer wrappers or entry points are introduced. Existing af-surface--plain/card renderer flags remain distinct."
+  ]
+}

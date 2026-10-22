@@ -6,8 +6,10 @@ Alabuga Framework is an independent design system, CSS component library and web
 
 Configure the @alabuga HTTPS registry and a read token in user npm config, then pin a version:
 
+Version 1.1.0 is published to authenticated local Verdaccio. With read credentials configured, install from that registry:
+
 ```sh
-npm install --save-exact @alabuga/framework@1.0.2
+npm install --save-exact @alabuga/framework@1.1.0 --registry=http://127.0.0.1:4873/
 ```
 
 Local acceptance uses authenticated Verdaccio on 127.0.0.1:4873. Production hosting is not yet connected. Built applications do not contact the registry at runtime.

@@ -1,0 +1,27 @@
+{
+  "name": "@alabuga/framework",
+  "version": "1.1.0",
+  "published": true,
+  "status": "published-local",
+  "registry": "http://127.0.0.1:4873/",
+  "tag": "latest",
+  "publishedAt": "2026-10-22T09:16:16.433Z",
+  "verifiedAt": "2026-10-22T09:17:31.793Z",
+  "integrity": "sha512-bzftfbbhmfsrw/19W6fIlfZzpHUpo8NO/yQG9cmCdy8kRysToZFmh8Je1FCD6RrU6BKKHYuOtFppXFLx9rFy/w==",
+  "sha256": "e26084c22217c6961db07b0ebb7ff7337610ee58818fab5efd3218d2b21ab599",
+  "tarball": "http://127.0.0.1:4873/@alabuga/framework/-/framework-1.1.0.tgz",
+  "verification": {
+    "authenticatedRead": true,
+    "freshRegistryInstall": true,
+    "lockfileIntegrity": true,
+    "allEsmEntries": true,
+    "nodeWithoutDom": true,
+    "installedFilesMatchBuild": true
+  },
+  "manualScreenReader": {
+    "status": "deferred-by-user",
+    "performed": false,
+    "date": "2026-10-22",
+    "reason": "User explicitly requested publication without the manual screen-reader check."
+  }
+}

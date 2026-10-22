@@ -1,6 +1,6 @@
 import '@alabuga/framework/standalone.css';
 import {slideFitDocs} from './slide-fit-docs';
-import { initComponents, renderDocument, VERSION, widgetRegistry, type DocumentController, type AFDocument } from '@alabuga/framework';
+import { initComponents, renderDocument, renderCalendar, VERSION, widgetRegistry, type DocumentController, type AFDocument, type CalendarRange } from '@alabuga/framework';
 import { panelExample, presentationExample } from '@alabuga/framework/examples';
 import { el, button } from '@alabuga/framework/dom';
 import { examples } from './examples';
@@ -16,6 +16,9 @@ const pages = [
   ['ai','Локальный ИИ','Документы'],
   ['start','Начало работы','Обзор'],['colors','Цвета и токены','Основа'],['typography','Типографика','Основа'],['grid','Панельная сетка','Основа'],
   ['buttons','Кнопки','Компоненты'],['forms','Формы и выбор','Компоненты'],['feedback','Уведомления и бейджи','Компоненты'],['dialog','Диалог','Компоненты'],
+  ['surfaces','Блоки и поверхности','Компоненты'],
+  ['navigation','Навигация','Компоненты'],
+  ['icons','Иконки','Компоненты'],
   ['compositions','Композиции и эффекты','Документы'],['widgets','Виджеты','Документы'],['slides','Презентации','Документы'],['builder','Конструктор','Документы'],['workspace','Проекты и материалы','Документы'],['classes','Справочник классов','Справочник'],['api','JavaScript API','Справочник'],['changes','Изменения и решения','Справочник'],
 ];
 const constructorGuides:Record<string,string>={ai:'ai',workspace:'projects'};
@@ -29,6 +32,9 @@ const descriptions: Record<string,string>={
   grid:'Колонки, строки и предсказуемые размеры. Панель управляет размещением, виджет — своим содержимым.',
   buttons:'Одно главное действие. Четыре визуальных веса. Три размера.',forms:'Понятные подписи, заметный фокус и сообщения, которые помогают исправить ошибку.',
   feedback:'Сообщайте о результате с помощью цвета и текста. Цвет не должен быть единственным признаком состояния.',dialog:'Сфокусированное действие без потери контекста.',
+  surfaces:'Внешние и внутренние блоки, отступы и три способа выделения объекта из визуальных правил.',
+  navigation:'Путь к разделу и текущая страница: доступные ссылки и навигационная цепочка.',
+  icons:'Доступные исходные SVG, размеры 16/20/24 px и примеры с текстом и кнопками.',
   widgets:'Самостоятельные блоки для вашей композиции. Один контракт — разные сценарии.',slides:'Та же библиотека на холсте 16:9. Собирайте, показывайте и печатайте.',
   compositions:'Готовые фирменные композиции, адаптивная сетка и сценарии движения.',
   builder:'Визуальная сборка страниц и презентаций. Выберите виджет, настройте содержимое и разместите его в сетке.',
@@ -44,7 +50,7 @@ const navigation=document.querySelector<HTMLElement>('#navigation')!;
 let category='';for(const [id,title,group] of pages){if(group!==category){navigation.append(el('p','nav-group',group));category=group}const a=el('a','nav-link',title);a.href=pageHref(id);a.dataset.page=id;navigation.append(a)}
 let dispose:()=>void=()=>{};let controllers:DocumentController[]=[];
 const classNames=[...new Set([...libraryCss.matchAll(/\.(af(?:-[a-z0-9_-]+)?)(?![\w-])/g)].map(m=>m[1]))].sort();
-const classGroup=(name:string)=>/btn/.test(name)?'buttons':/input|field|label|required|check|radio|switch|select|textarea|help|error|placeholder|icon/.test(name)?'forms':/alert|badge/.test(name)?'feedback':/dialog/.test(name)?'dialog':/slide|deck/.test(name)?'slides':/calendar|table|widget|metric|image|empty/.test(name)?'widgets':/panel|page/.test(name)?'grid':'typography';
+const classGroup=(name:string)=>/btn/.test(name)?'buttons':/^af-card(?:$|--)/.test(name)?'surfaces':/^af-surface--/.test(name)?'compositions':/^(af-label|af-body|af-title|af-heading|af-display|af-bullet|af-list)/.test(name)?'typography':/breadcrumb|^af-link/.test(name)?'navigation':/chip|alert|badge/.test(name)?'feedback':/^af-icon(?:$|--)/.test(name)?'icons':/option|input|field|required|check|radio|switch|select|textarea|help|error|placeholder|icon/.test(name)?'forms':/dialog/.test(name)?'dialog':/slide|deck/.test(name)?'slides':/calendar|table|widget|metric|image|empty/.test(name)?'widgets':/panel|page/.test(name)?'grid':'typography';
 function codeBlock(code:string,language='HTML'){
   const box=el('div','code-block');const top=el('div','code-bar');top.append(el('span','',language));
   const copy=button('Копировать',async()=>{try{await navigator.clipboard.writeText(code);copy.textContent='Скопировано';setTimeout(()=>{if(copy.isConnected)copy.textContent='Копировать'},1500)}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);copy.textContent='Выделено · Ctrl+C'}},'copy-button');
@@ -54,22 +60,52 @@ function section(title:string,id:string){const s=el('section','doc-section');s.i
 function paragraph(parent:HTMLElement,text:string){parent.append(el('p','doc-copy',text))}
 let current='start';
 function mountExample(parent:HTMLElement,example:(typeof examples)[string][number],i:number){
-  const s=section(example.title,`example-${i}`);if(example.description)paragraph(s,example.description);
-  const live=el('div','example-preview');live.innerHTML=example.html;s.append(live);s.append(codeBlock(example.html));if(example.js&&!['panel','calendar','table'].includes(example.enhancement??''))s.append(codeBlock(example.js,'JavaScript'));
+  const s=section(example.title,example.id??`example-${i}`);if(example.description)paragraph(s,example.description);
+  const live=el('div','example-preview');live.innerHTML=example.html;s.append(live);
+  let codeHost:HTMLElement=s;
+  if(example.collapseCode){
+    const details=el('details','example-code');
+    details.append(el('summary','','Код примера'));s.append(details);codeHost=details;
+  }
+  codeHost.append(codeBlock(example.html));
+  if(example.js&&!['panel','calendar','table'].includes(example.enhancement??''))codeHost.append(codeBlock(example.js,'JavaScript'));
   const kind=example.enhancement;
+  if(kind==='choices')live.querySelector<HTMLInputElement>('#choice-mixed')!.indeterminate=true;
   if(kind==='form')live.querySelector('form')!.addEventListener('af:submit',()=>{live.querySelector<HTMLElement>('#form-success')!.hidden=false});
+  if(kind==='date-form'){
+    const output=live.querySelector<HTMLElement>('#meeting-date-result')!;
+    live.querySelector('form')!.addEventListener('af:submit',event=>{output.textContent='Встреча запланирована: '+(event as CustomEvent<FormData>).detail.get('meetingDate')});
+    live.querySelector('form')!.addEventListener('reset',()=>{output.textContent='Выберите дату и запланируйте встречу. Данные остаются в браузере.'});
+  }
+  if(kind==='calendar-component'){
+    const target=live.firstElementChild as HTMLElement,output=live.querySelector<HTMLElement>('[role="status"]')!;
+    const date=example.calendarDate!,options=example.calendarOptions??{};
+    const select=(value:string|CalendarRange)=>{output.textContent='Выбрано: '+(typeof value==='string'?value:value.start+' — '+value.end)};
+    target.append(options.mode==='range'?renderCalendar(date,select,options):renderCalendar(date,select,options));
+    live.classList.add('example-preview--calendar');
+    s.append(codeBlock(`const host = document.querySelector('#${target.id}');\nconst output = document.querySelector('#${output.id}');\nconst calendar = Alabuga.renderCalendar('${date}', value => {\n  output.textContent = 'Выбрано: ' + (typeof value === 'string'\n    ? value : value.start + ' — ' + value.end);\n}, ${JSON.stringify(options,null,2)});\nhost.append(calendar);`,'JavaScript'));
+  }
   if(kind==='panel'){
     const target=live.querySelector<HTMLElement>('#panel-example')!;const c=renderDocument(target,panelExample);controllers.push(c);
     const controls=el('div','af-row demo-controls');
     controls.append(button('Комментарий 1×1 / показатель 1×2',()=>{const d=c.getDocument();d.pages[0].widgets[1].position.width=1;d.pages[0].widgets[2].position.height=2;d.pages[0].widgets[4].position.row=4;c.update(d)}),button('Сбросить',()=>c.update(panelExample)));live.prepend(controls);
-    const a=el('a','af-link','Открыть панель на всю ширину ↗');a.href='demos/panel.html';s.append(a);s.append(codeBlock(`const documentData = ${JSON.stringify(panelExample,null,2)};\nconst controller = Alabuga.renderDocument(document.querySelector('#panel-example'), documentData);`,'JavaScript'));
+    const a=el('a','af-link af-link--inline','Открыть панель на всю ширину ↗');a.href='demos/panel.html';s.append(a);s.append(codeBlock(`const documentData = ${JSON.stringify(panelExample,null,2)};\nconst controller = Alabuga.renderDocument(document.querySelector('#panel-example'), documentData);`,'JavaScript'));
   }
   if(kind==='calendar'||kind==='table'){
     const w=structuredClone(panelExample.pages[0].widgets.find(w=>w.type===kind)!);w.position={col:1,row:1,width:4,height:4};
     const d:AFDocument={schemaVersion:1,kind:'page',title:example.title,pages:[{id:'example-page',title:'',grid:{columns:4,rowHeight:64,gap:16},widgets:[w]}]};
     if(w.type==='table'){w.rows=Array.from({length:12},(_,i)=>({name:`Задача ${i+1}`,status:i%2?'Готово':'В работе'}));w.pageSize=4}
-    live.classList.add(kind==='calendar'?'example-preview--calendar':'example-preview--table');controllers.push(renderDocument(live.firstElementChild as HTMLElement,d));
-    s.append(codeBlock(`const documentData = ${JSON.stringify(d,null,2)};\nconst controller = Alabuga.renderDocument(document.querySelector('#${kind}-example'), documentData);`,'JavaScript'));
+    if(w.type==='calendar'){w.title=example.title;if(example.calendarDate)w.date=example.calendarDate}
+    const target=live.firstElementChild as HTMLElement;
+    let selectionCode='';
+    if(w.type==='calendar'){
+      const output=live.querySelector<HTMLElement>('[role="status"]')!;
+      output.textContent='Выбрано: '+w.date;
+      target.addEventListener('af:change',event=>{output.textContent='Выбрано: '+(event as CustomEvent).detail.value});
+      selectionCode=`\nconst output = document.querySelector('#${output.id}');\nhost.addEventListener('af:change', event => {\n  output.textContent = 'Выбрано: ' + event.detail.value;\n});`;
+    }
+    live.classList.add(kind==='calendar'?'example-preview--calendar':'example-preview--table');controllers.push(renderDocument(target,d));
+    s.append(codeBlock(`const documentData = ${JSON.stringify(d,null,2)};\nconst host = document.querySelector('#${target.id}');\nconst controller = Alabuga.renderDocument(host, documentData);${selectionCode}`,'JavaScript'));
   }
 }
 function render(){
@@ -117,7 +153,7 @@ npm run test:browser`,'Команды'));
   if(current==='grid'){const rules=section('Правила размещения','rules');paragraph(rules,'По умолчанию: 12 колонок, строка 64 px, промежуток 16 px. col/row начинаются с 1, width/height задают число ячеек. validateDocument отклоняет пересечения и выход за границы. При ширине окна менее 768 px страница становится одноколоночной; порядок виджетов берётся из массива документа.');paragraph(rules,'Размер 1×1 — единица сетки, а не квадрат. Текст и таблица прокручиваются внутри. Состояние календаря хранится в документе; сортировка и страница таблицы при update сбрасываются.');}
   if(current==='widgets'){const registry=section('Реестр виджетов','registry');const table=el('table','af-table');table.innerHTML='<thead><tr><th>Виджет</th><th>Тип</th><th>Минимум</th></tr></thead>';const body=el('tbody');for(const [type,r]of Object.entries(widgetRegistry)){const tr=el('tr');tr.append(el('td','',r.title),el('td','',type),el('td','',`${r.minWidth}×${r.minHeight}`));body.append(tr)}table.append(body);registry.append(table);paragraph(registry,'Изображение принимает HTTP(S), относительный путь или встроенный растр, alt и режим cover/contain. Текст хранится блоками paragraph, heading, list, divider, callout и link. Показатель содержит value и необязательную note.');}
   if(current==='slides'){
-    const s=section('Восемь слайдов, одна система','presentation');paragraph(s,'Холст 1600×900 масштабируется целиком. Для стрелок навигации установите фокус на презентации вне интерактивных элементов. Печать использует реальный размер слайда; включите фоновые изображения в настройках браузера.');const target=el('div');s.append(target);controllers.push(renderDocument(target,presentationExample()));const a=el('a','af-link','Открыть презентацию на всю ширину ↗');a.href='demos/slides.html';s.append(a);
+    const s=section('Восемь слайдов, одна система','presentation');paragraph(s,'Холст 1600×900 масштабируется целиком. Для стрелок навигации установите фокус на презентации вне интерактивных элементов. Печать использует реальный размер слайда; включите фоновые изображения в настройках браузера.');const target=el('div');s.append(target);controllers.push(renderDocument(target,presentationExample()));const a=el('a','af-link af-link--inline','Открыть презентацию на всю ширину ↗');a.href='demos/slides.html';s.append(a);
     const print=section('Перед печатью','print');paragraph(print,'Кнопка «Печать / PDF» проверяет переполнение текстовых областей. Если текст или таблица не помещаются, увеличьте блок или разделите материал на слайды. Таблица печатает текущую страницу данных; для полного вывода укажите pageSize не меньше числа строк.');
     print.append(codeBlock(`const deck = Alabuga.renderDocument(container, presentationData);
 deck.goToSlide(2); // индекс начинается с 0
@@ -140,7 +176,7 @@ deck.checkOverflow(); // список переполненных областе�
   }
   if(current==='classes'){
     const s=section('Классы библиотеки','class-list');const label=el('label','af-field');label.append(el('span','af-label','Фильтр по имени класса'));const filter=el('input','af-input');filter.type='search';filter.placeholder='Например: btn, calendar, dialog';label.append(filter);s.append(label);const table=el('table','af-table class-table');table.innerHTML='<thead><tr><th>Класс</th><th>Раздел</th><th>Назначение</th></tr></thead>';const body=el('tbody');table.append(body);s.append(table);const empty=el('p','af-empty','Ничего не найдено');s.append(empty);
-    const fill=()=>{body.replaceChildren();let count=0;classNames.filter(n=>n.includes(filter.value.toLowerCase())).forEach(n=>{count++;const group=classGroup(n);const row=el('tr');const name=el('td');name.append(el('code','',n));const link=el('a','af-link',pages.find(p=>p[0]===group)![1]);link.href='#'+group;const cell=el('td');cell.append(link);row.append(name,cell,el('td','',n.includes('__')?'Внутренняя часть':n.includes('--')?'Модификатор':'Базовый класс'));body.append(row)});empty.hidden=!!count};filter.addEventListener('input',fill);fill();
+    const fill=()=>{body.replaceChildren();let count=0;classNames.filter(n=>n.includes(filter.value.toLowerCase())).forEach(n=>{count++;const group=classGroup(n);const row=el('tr');const name=el('td');name.append(el('code','',n));const link=el('a','af-link af-link--inline',pages.find(p=>p[0]===group)![1]);link.href='#'+group;const cell=el('td');cell.append(link);row.append(name,cell,el('td','',n.includes('__')?'Внутренняя часть':n.includes('--')?'Модификатор':'Базовый класс'));body.append(row)});empty.hidden=!!count};filter.addEventListener('input',fill);fill();
   }
   if(current==='api'){
     const s=section('Проверка и отображение','lifecycle');s.append(codeBlock(`const result = Alabuga.validateDocument(documentData);
@@ -165,6 +201,27 @@ dispose();`,'JavaScript'));
   }
   if(current==='slides')dispose=slideFitDocs(main);
   if(current==='changes'){
+    const candidate=section('1.1.0 — опубликовано в локальном реестре','release-1-1-0');
+    paragraph(candidate,'Новая версия включает фирменный Select, DatePicker и Calendar, размеры и состояния компонентов, каталог иконок и локальный архив исходников Figma. Формат документов и подключение JS/CSS сохранены. Текстовые ссылки и вставки renderer используют читаемые модификаторы; компонентные матрицы показывают исходную палитру.');
+    const candidateLink=el('a','af-link af-link--inline','Пакет, JS/CSS и отчёт приёмки');candidateLink.href='releases/1.1.0/';candidate.append(candidateLink);
+    paragraph(candidate,'Версия 1.1.0 опубликована в авторизованном Verdaccio 127.0.0.1:4873 с тегом latest. Проверены установка из реестра и контрольная сумма архива. Ручная проверка со скринридером отложена по решению пользователя и не выполнялась.');
+    const alignment=section('21 октября 2026 — компоненты Figma','figma-2026-10-21');
+    paragraph(alignment,'В текущей рабочей версии: Select/List/ListItem в S/M/L с клавиатурой и нативным значением формы; независимые Selected/Pressed/Loading у кнопок; checkbox/radio в размерах 16/20/24 px. SVG встроены в CSS. Подключение остаётся через готовые JS/CSS и существующий initComponents.');
+    paragraph(alignment,'Убраны общие переопределения размеров и цветов кнопок в композициях. Белый CTA на тёмном фоне задаётся af-btn--inverse. Сохранены контрастные поправки текста, видимый фокус и нативная работа форм.');
+    paragraph(alignment,'После проверки: стабилизирован внутренний кружок radio при дробном масштабе, убрана обрезка букв в Select, зазор под меню уменьшен до 2 px. Фокус полей соответствует одной границе 1 px из Figma; в системной высокой контрастности сохраняется отдельный контур.');
+    paragraph(alignment,'Switch приведён к размеру 44×24 px, ползунку 20 px и отдельным hover/disabled для OFF/ON. Input S/M/L согласован с обёрткой, подписями, подсказками и исходными SVG состояний. Textarea получил исходную типографику и счётчик через initComponents.');
+    paragraph(alignment,'Добавлены квадратные и круглые icon-button S/M/L на основе af-btn, три исходных маркера Bullet и левое выравнивание маркированных списков. Полная компонентная шкала Display/Heading/Title/Body/Label доступна через CSS-классы; исправлен межбуквенный интервал заголовков. Нумерация списков и fitted-типографика презентаций сохранены. Далее — именованные поверхности и оставшиеся семейства компонентов из аудита.');
+    paragraph(alignment,'По итогам просмотра: icon-button показывают действие «Подробнее» с исходной иконкой информации; списки содержат задачи, материалы и порядок деловой встречи. Буквица и разделители отмечены как дополнительные стили первоначальной реализации Framework: их происхождение в проверенных Figma и брендовых материалах не подтверждено.');
+    paragraph(alignment,'Уточнено центрирование рисунка и загрузки в icon-button при дробном масштабе. Каждый вид списка теперь оформлен отдельным блоком с описанием, предпросмотром и HTML-кодом, как остальные примеры типографики.');
+    paragraph(alignment,'Добавлены именованные поверхности на основе af-card: внешний/внутренний блок 32/16 px с gap 16 px, заливка, обводка 2–3 px и исходная тень Figma. Геометрия сохраняется на телефоне; старые карточки и флаги поверхности renderer совместимы. Новый раздел «Блоки и поверхности» показывает отдельные примеры и код. Далее — Calendar/DatePicker и семейства P2.');
+    paragraph(alignment,'Доработано поведение календаря: переходы по месяцам и годам с клавиатуры, конец короткого месяца, годы 0000–0099 и границы формата 0000–9999. Фокус и узел заголовка сохраняются; af:change отправляется после обновления выбранного дня. В разделе «Виджеты» добавлен пример с 29 февраля.');
+    paragraph(alignment,'Calendar сверен с приложенным скриншотом: компактные 250 px, квадратные дни 32 px, заголовок и SVG-стрелки, неактивные даты следующего месяца, рамка и тень. Добавлены пустое состояние, подтверждение/отмена и диапазон 10–17 сентября с переходом через неделю. Календарь в справочнике показан отдельно от панели; AFDocument сохраняет выбор одной даты. Даты соответствуют реальному месяцу, а подписи недель и начало периода сохраняют читаемый контраст. При недоступной Figma используем исходные снимки. Далее — поле DatePicker.');
+    paragraph(alignment,'Добавлен DatePicker по контексту Default и снимку состояний Figma: поле L 48 px, исходные иконки, календарь с подтверждением и ввод ДД.ММ.ГГГГ. Значение и FormData остаются ISO; работают required/min/max, readonly, disabled, reset и очистка через прежний initComponents. Невозможная дата не отправляет старое значение; для браузеров без type=date проверяются формат и границы. Схема документа сохранена. Новые форма встречи и состояния доступны в разделе «Формы и выбор». Далее — семейства P2.');
+    paragraph(alignment,'DatePicker поддерживает S/M/L 32/40/48 px. Option-btn/Multi-switch, Chip/Alert всех размеров, Dialog и навигация перепроверены по трём присланным скриншотам. Восстановлены прозрачные состояния группы, исходная палитра, значки, размеры крестиков, равные кнопки Dialog и серые/чёрные/синие состояния ссылок. Для более тёмного текста доступны модификаторы --accessible. Уточнённые правила и наблюдения сохранены локально; повторных обращений к Figma нет.');
+    paragraph(alignment,'Добавлен каталог иконок: 11 доступных значков/оформлений, размеры 16/20/24 px, наследование цвета и исходные двухцветные спиннеры. Размер иконки внутри кнопки задаётся кнопкой. Источники, масштабируемые варианты и недостающие SVG отмечены отдельно. Матрица всех 23 семейств обновлена по фактической реализации.');
+    const review=el('div','af-row');
+    for(const [label,href]of [['Кнопки и состояния','#buttons'],['Формы и выбор','#forms'],['Типографика и списки','#typography'],['Подключение и ограничения','docs/ru/author.html']]){const link=el('a','af-link af-link--inline',label);link.href=href;review.append(link)}
+    alignment.append(review);
     const release=section('0.6.0 — фирменные материалы и рабочее пространство','release-v6');paragraph(release,'Библиотека PPTX, проекты и версии в IndexedDB, схема 3, отдельное хранение материалов, миниатюры, контекстные свойства, кадрирование, сценарии показа и проверка качества. Приёмка с пятью авторами ожидает проведения.');
     const s=section('0.5.0 — композиции и сценарии','release');paragraph(s,'Фирменные композиции сайтов и слайдов, адаптивная высота, фоновые изображения, новые виджеты, готовые анимации, действия и модальные окна. Проекты версии 1 автоматически преобразуются в версию 2.');
     const roadmap=section('План развития','roadmap');const stages=el('ol','af-list');[
@@ -176,7 +233,7 @@ dispose();`,'JavaScript'));
     ].forEach(t=>stages.append(el('li','',t)));roadmap.append(stages);
     const verification=section('Что проверяется','verification');paragraph(verification,'Проверки схемы, истории и размещения; браузерные сценарии в Chromium, Firefox и WebKit: библиотека, документация, конструктор, доступность с axe, сохранение и открытие проекта, экспорт без сети и безопасное отображение текста. Скриншоты и PDF сохраняются в test-results. Автоматические проверки дополняют визуальную оценку и не заменяют её.');
     paragraph(verification,'Для ссылок и текстовых состояний добавлены контрастные значения: --af-text-link, --af-action-secondary-text, --af-action-clear-text-default — #0956BB; --af-action-ghost-text — #505A64. Палитра Figma в tokens.css сохранена; эти роли переопределяются в styles.css.');
-    const changes=section('Уточнения к Figma','decisions');const ul=el('ul','af-list');['В работе используется только копия ORZkPvF9Z6FElUH6K4GcsF. Исходный макет не изменяется.','Значения переменных сохранены отдельно. Семантический текст уведомлений затемнён: success #176B38, warning #874700, danger #9B1717, info #0956BB.','Добавлен видимый клавиатурный фокус. Веб-поля не используют обрезку высоты текста из макета.','В компонентной типографике не используем 8–10 px для вводимого текста; маленькие подписи показателей отделены от основного текста.','Вместо конфликтующих вариантов иконок используется ограниченный проверенный набор. SVG info, success и close сохранены из Figma.','Размеры основываются на действующих компонентах. Raster-таблицы в макете считаются справочными, а не источником автоматической генерации.','Шрифт преобразован из fonts/alabuga-sans.ttc в четыре WOFF2 без изменения исходного TTC.','Сложное обтекание, тёмная тема, серверные данные и автодеплой отложены. Редактор HTML/CSS/JS в конструкторе не предусмотрен.'].forEach(t=>ul.append(el('li','',t)));changes.append(ul);
+    const changes=section('Уточнения к Figma','decisions');const ul=el('ul','af-list');['В работе используется только копия ObAoKiDwraibmQrxUNvGWI. Исходный макет не изменяется.','Значения переменных сохранены отдельно. Chip и Alert по умолчанию используют исходную палитру; --accessible включает более тёмные роли текста: success #176B38, warning #874700, danger #9B1717, info #0956BB.','Добавлен видимый клавиатурный фокус. Веб-поля не используют обрезку высоты текста из макета.','В компонентной типографике не используем 8–10 px для вводимого текста; маленькие подписи показателей отделены от основного текста.','Вместо конфликтующих вариантов иконок используется ограниченный проверенный набор. SVG info, success и close сохранены из Figma.','Размеры основываются на действующих компонентах. Raster-таблицы в макете считаются справочными, а не источником автоматической генерации.','Шрифт преобразован из fonts/alabuga-sans.ttc в четыре WOFF2 без изменения исходного TTC.','Сложное обтекание, тёмная тема, серверные данные и автодеплой отложены. Редактор HTML/CSS/JS в конструкторе не предусмотрен.'].forEach(t=>ul.append(el('li','',t)));changes.append(ul);
   }
   const footer=el('footer','page-footer');footer.append(el('span','','Alabuga Framework · '+VERSION),el('span','','Общие правила. Свобода композиции.'));main.append(footer);
   dispose=initComponents(main);

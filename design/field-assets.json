@@ -1,0 +1,82 @@
+{
+  "source": "https://www.figma.com/design/ObAoKiDwraibmQrxUNvGWI/Design-System",
+  "date": "2026-10-21",
+  "components": {
+    "input": [
+      "298:1210",
+      "342:1035",
+      "337:658"
+    ],
+    "textarea": "303:1737",
+    "switch": "354:958"
+  },
+  "assets": [
+    {
+      "variant": "301:1549",
+      "icon": "301:1556",
+      "w": 24,
+      "h": 24,
+      "file": "src/icons/field-error-l.svg"
+    },
+    {
+      "variant": "342:1125",
+      "icon": "342:1132",
+      "w": 20,
+      "h": 20,
+      "file": "src/icons/field-error-m.svg"
+    },
+    {
+      "variant": "337:736",
+      "icon": "337:743",
+      "w": 16,
+      "h": 16,
+      "file": "src/icons/field-error-s.svg"
+    },
+    {
+      "variant": "301:1625",
+      "icon": "301:1632",
+      "w": 24,
+      "h": 24,
+      "file": "src/icons/field-success-l.svg"
+    },
+    {
+      "variant": "342:1147",
+      "icon": "342:1154",
+      "w": 20,
+      "h": 20,
+      "file": "src/icons/field-success-m.svg"
+    },
+    {
+      "variant": "337:703",
+      "icon": "337:710",
+      "w": 16,
+      "h": 16,
+      "file": "src/icons/field-success-s.svg"
+    },
+    {
+      "file": "src/icons/field-info-l.svg",
+      "variant": "298:1210",
+      "width": 24,
+      "sourceAsset": "5d0735cd-f6fc-460a-a7ad-8b59b351ed73"
+    },
+    {
+      "file": "src/icons/field-info-m.svg",
+      "variant": "342:1035",
+      "width": 20,
+      "sourceAsset": "9473e3df-4a6f-4129-9b7e-dd507106abc7"
+    },
+    {
+      "file": "src/icons/field-info-s.svg",
+      "variant": "337:658",
+      "width": 16,
+      "sourceAsset": "3a3376e6-d5e4-45f1-91c0-fbbe2f416e46"
+    }
+  ],
+  "notes": [
+    "SVG roots and paths are preserved and embedded in the existing CSS build.",
+    "Text Field sizes L/M/S: 48/40/32px, icons 24/20/16px, gaps 12/10/8px; horizontal padding 12px.",
+    "Switch has only L in Figma: 44x24px, 20px thumb, 2px inset, 12px label gap.",
+    "Field text uses full line height; existing accessibility text colors and the reviewed 1px focus border are preserved.",
+    "Textarea is the original 128px L variant, 16px/1.35 text and 12px padding. Counter follows native UTF-16 maxlength semantics."
+  ]
+}

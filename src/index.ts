@@ -3,6 +3,8 @@ export type { AFDocument, Widget, TextBlock, ValidationResult } from './schema.j
 export { renderDocument } from './runtime.js';
 export type { DocumentController } from './runtime.js';
 export { initComponents } from './components.js';
+export {renderCalendar} from './widgets.js';
+export type {CalendarRange,CalendarSingleOptions,CalendarRangeOptions} from './widgets.js';
 export {compositions,compositionCatalog,makeComposition,changeComposition,showcase} from './compositions.js';
 export type {Section,Action} from './schema.js';
 export {fitSlide,measureSlide,slideBackgrounds} from './slide-fit.js';

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Select — Alabuga Framework</title>
+  <link rel="stylesheet" href="../dist/alabuga.css">
+  <style>body{margin:32px;background:#f8f9fa}main{max-width:960px;margin:auto}.demo-fields{display:flex;align-items:flex-start;flex-wrap:wrap;gap:24px}.demo-fields>.af-field{width:278px;max-width:100%}.demo-actions{margin-top:32px}</style>
+</head>
+<body class="af">
+  <main class="af-card">
+    <h1 class="af-heading">Выпадающий список</h1>
+    <p>Пример подключается обычными JS и CSS файлами. Выберите значения, отправьте или сбросьте форму.</p>
+    <form data-af-validate>
+      <div class="demo-fields">
+        <div class="af-field">
+          <label class="af-label" for="large">Тема обращения · L <span class="af-required">*</span></label>
+          <select class="af-select af-select--lg" id="large" name="large" required aria-describedby="large-help large-error">
+            <option value="" selected disabled hidden>Выберите тему</option>
+            <option value="cooperation">Сотрудничество</option><option value="education">Обучение</option><option value="other">Другое</option>
+          </select>
+          <p class="af-help" id="large-help">Обязательный выбор</p>
+          <p class="af-error" id="large-error" data-af-error-for="large" hidden></p>
+        </div>
+        <div class="af-field">
+          <label class="af-label" for="medium">Тема обращения · M</label>
+          <select class="af-select" id="medium" name="medium" aria-describedby="medium-help">
+            <option value="cooperation">Сотрудничество</option><option value="education" disabled>Обучение · недоступно</option><option value="other">Другое</option>
+          </select>
+          <p class="af-help" id="medium-help">Недоступные пункты пропускаются</p>
+        </div>
+        <div class="af-field">
+          <label class="af-label" for="small">Тема обращения · S</label>
+          <select class="af-select af-select--sm" id="small" name="small" aria-describedby="small-help">
+            <option value="cooperation">Сотрудничество</option><option value="education">Обучение</option><option value="other">Другое</option>
+          </select>
+          <p class="af-help" id="small-help">Компактный размер</p>
+        </div>
+      </div>
+      <div class="af-row demo-actions">
+        <button class="af-btn" type="submit">Проверить форму</button>
+        <button class="af-btn af-btn--secondary" type="reset">Сбросить</button>
+      </div>
+    </form>
+    <p class="af-alert af-alert--success af-alert--accessible demo-actions" role="status" hidden id="result"></p>
+  </main>
+  <script src="../dist/alabuga.iife.js"></script>
+  <script>
+    const cleanup = Alabuga.initComponents(document.body);
+    const result = document.getElementById('result');
+    document.querySelector('form').addEventListener('af:submit', event => {
+      result.textContent = 'Выбрано: ' + [...event.detail.values()].join(', ');
+      result.hidden = false;
+    });
+    document.querySelector('form').addEventListener('reset', () => { result.hidden = true; });
+  </script>
+</body>
+</html>

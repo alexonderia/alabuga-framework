@@ -18,9 +18,12 @@ jobs:
       - run: node scripts/configure-registry.mjs "$ALABUGA_NPM_REGISTRY"
       - run: npm ci
       - run: npx playwright install --with-deps
-      - run: npm run build && npm test && npm run test:package && npm run test:consumers
+      - run: npm run check:design && npm run build && npm test && npm run test:package && npm run test:consumers
       - run: npm run build:docs && npm run check:docs
-      - run: npm run test:browser -- --workers=1
+      - run: npm run test:browser -- --workers=1 --reporter=line,json
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: artifacts/browser-final.json
+      - run: npm run prepare:release
       - run: npm run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.FRAMEWORK_PUBLISH_TOKEN }}

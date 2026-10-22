@@ -1,0 +1,820 @@
+{
+  "date": "2026-10-22",
+  "scope": "Current implementation status for all 23 inventoried Figma families. Source export coverage is separate from implementation coverage; not a claim of complete per-variant export.",
+  "families": [
+    {
+      "nodeId": "352:939",
+      "name": "Bullet",
+      "variants": 3,
+      "implementation": "implemented",
+      "classes": [
+        "af-bullet",
+        "af-list"
+      ],
+      "sizes": [
+        "33 px"
+      ],
+      "states": [
+        "diamond",
+        "outline",
+        "triangle"
+      ],
+      "preview": "http://127.0.0.1:4391/#typography",
+      "tests": [
+        "tests/type-icons.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/type-icon-assets.json"
+      ],
+      "sourceRules": [
+        "design/type-icon-assets.json"
+      ],
+      "note": "Фирменные маркеры и левое выравнивание; нумерация сохранена."
+    },
+    {
+      "nodeId": "298:1211",
+      "name": "Text Field",
+      "variants": 24,
+      "implementation": "implemented",
+      "classes": [
+        "af-input",
+        "af-input-wrap"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "error",
+        "success",
+        "readonly",
+        "disabled"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms",
+      "tests": [
+        "tests/fields.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/field-assets.json"
+      ],
+      "note": "Поле, обёртка, подписи и исходные иконки S/M/L."
+    },
+    {
+      "nodeId": "294:423",
+      "name": "icon-button",
+      "variants": 144,
+      "implementation": "implemented",
+      "classes": [
+        "af-btn--icon",
+        "af-btn--round"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "pressed",
+        "selected",
+        "disabled",
+        "loading"
+      ],
+      "preview": "http://127.0.0.1:4391/#buttons",
+      "tests": [
+        "tests/type-icons.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/type-icon-assets.json"
+      ],
+      "sourceRules": [
+        "design/type-icon-assets.json",
+        "design/control-assets.json"
+      ],
+      "note": "Квадрат/круг, четыре оформления; исключение Round Secondary L = 20 px."
+    },
+    {
+      "nodeId": "343:3296",
+      "name": "checkbox",
+      "variants": 18,
+      "implementation": "implemented",
+      "classes": [
+        "af-checkbox"
+      ],
+      "sizes": [
+        "16",
+        "20",
+        "24"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "checked",
+        "disabled",
+        "focus"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms",
+      "tests": [
+        "tests/controls.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/control-assets.json"
+      ],
+      "note": "Фирменная графика и нативные значения формы."
+    },
+    {
+      "nodeId": "377:1426",
+      "name": "radio-button",
+      "variants": 18,
+      "implementation": "implemented",
+      "classes": [
+        "af-radio"
+      ],
+      "sizes": [
+        "16",
+        "20",
+        "24"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "checked",
+        "disabled",
+        "focus"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms",
+      "tests": [
+        "tests/controls.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/control-assets.json"
+      ],
+      "note": "Стабилизировано центрирование при дробном масштабе."
+    },
+    {
+      "nodeId": "276:276",
+      "name": "button",
+      "variants": 72,
+      "implementation": "implemented",
+      "classes": [
+        "af-btn"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "pressed",
+        "selected",
+        "disabled",
+        "loading"
+      ],
+      "preview": "http://127.0.0.1:4391/#buttons",
+      "tests": [
+        "tests/components.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "sourceRules": [
+        "design/control-assets.json"
+      ],
+      "note": "Раздельные состояния четырёх оформлений; контекст композиции не меняет размеры."
+    },
+    {
+      "nodeId": "275:227",
+      "name": "icon",
+      "variants": 49,
+      "implementation": "partial-catalogue",
+      "classes": [
+        "af-icon"
+      ],
+      "sizes": [
+        "16",
+        "20",
+        "24"
+      ],
+      "states": [
+        "info",
+        "success",
+        "error",
+        "expand",
+        "collapse",
+        "previous",
+        "next",
+        "calendar",
+        "close",
+        "loading",
+        "loading-white"
+      ],
+      "preview": "http://127.0.0.1:4391/#icons",
+      "tests": [
+        "tests/icons.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/icon-catalog.json"
+      ],
+      "sourceRules": [
+        "design/type-icon-assets.json",
+        "design/control-assets.json",
+        "design/field-assets.json",
+        "design/select-assets.json",
+        "design/datepicker-rules.json",
+        "design/icon-catalog.json"
+      ],
+      "note": "Каталог 11 доступных значков/оформлений. Полный экспорт семейства отсутствует; масштабирование четырёх значков описано отдельно."
+    },
+    {
+      "nodeId": "377:2186",
+      "name": "ListItem",
+      "variants": 18,
+      "implementation": "implemented-inside-parent",
+      "classes": [
+        "af-select-option"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "selected",
+        "disabled"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/example-0",
+      "tests": [
+        "tests/select.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [],
+      "note": "Строка списка выбора; отдельная независимая строка не объявляется публичным JS API. Loading отдельной строки не выделен в самостоятельный компонент."
+    },
+    {
+      "nodeId": "322:218",
+      "name": "Select",
+      "variants": 18,
+      "implementation": "implemented",
+      "classes": [
+        "af-select"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "filled",
+        "readonly",
+        "disabled"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/example-0",
+      "tests": [
+        "tests/select.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/select-properties.json"
+      ],
+      "sourceRules": [
+        "design/select-assets.json"
+      ],
+      "note": "Фирменный single-select через прежний initComponents; optgroup поддержан. Multiple, size > 1 и opt-out сохраняют нативный fallback."
+    },
+    {
+      "nodeId": "337:584",
+      "name": "List",
+      "variants": 15,
+      "implementation": "implemented-inside-parent",
+      "classes": [
+        "af-select-list"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "states": [
+        "open",
+        "closed",
+        "scroll"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/example-0",
+      "tests": [
+        "tests/select.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [],
+      "note": "Список внутри Select; зазор 2 px по замечанию пользователя, viewport margin 8 px."
+    },
+    {
+      "nodeId": "303:1699",
+      "name": "Textarea",
+      "variants": 8,
+      "implementation": "implemented",
+      "classes": [
+        "af-textarea"
+      ],
+      "sizes": [
+        "128 px + native resize"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "focus",
+        "error",
+        "success",
+        "readonly",
+        "disabled",
+        "counter"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms",
+      "tests": [
+        "tests/fields.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "sourceRules": [
+        "design/field-assets.json"
+      ],
+      "note": "Типографика, padding 12 px и opt-in счётчик."
+    },
+    {
+      "nodeId": "332:883",
+      "name": "Calendar",
+      "variants": 1,
+      "implementation": "implemented",
+      "classes": [
+        "af-calendar"
+      ],
+      "sizes": [
+        "250 px"
+      ],
+      "states": [
+        "empty",
+        "selected",
+        "confirm",
+        "range"
+      ],
+      "preview": "http://127.0.0.1:4391/#widgets",
+      "tests": [
+        "tests/calendar.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/calendar-rules.json",
+        "design/datepicker-rules.json"
+      ],
+      "note": "Сверен со скриншотом пользователя; реальные даты и читаемые подписи."
+    },
+    {
+      "nodeId": "332:639",
+      "name": "Day",
+      "variants": 7,
+      "implementation": "implemented-inside-parent",
+      "classes": [
+        "af-calendar__day"
+      ],
+      "sizes": [
+        "32 × 32"
+      ],
+      "states": [
+        "default",
+        "disabled",
+        "selected",
+        "range start/middle/end/single"
+      ],
+      "preview": "http://127.0.0.1:4391/#widgets",
+      "tests": [
+        "tests/calendar.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/calendar-rules.json"
+      ],
+      "note": "Внутренняя часть Calendar; самостоятельный API не выделен."
+    },
+    {
+      "nodeId": "332:706",
+      "name": "Week",
+      "variants": 2,
+      "implementation": "implemented-inside-parent",
+      "classes": [
+        "af-calendar__days"
+      ],
+      "sizes": [
+        "7 × 32 px; row gap 4 px"
+      ],
+      "states": [
+        "week in month grid"
+      ],
+      "preview": "http://127.0.0.1:4391/#widgets",
+      "tests": [
+        "tests/calendar.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json"
+      ],
+      "sourceRules": [
+        "design/calendar-rules.json"
+      ],
+      "note": "Реализован внутри Calendar; самостоятельный API Week не выделен."
+    },
+    {
+      "nodeId": "340:1019",
+      "name": "DatePicker",
+      "variants": 8,
+      "implementation": "implemented",
+      "classes": [
+        "af-datepicker"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "default",
+        "focus",
+        "filled",
+        "invalid",
+        "readonly",
+        "disabled",
+        "confirm",
+        "cancel"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/datepicker",
+      "tests": [
+        "tests/datepicker.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/datepicker-default.txt"
+      ],
+      "sourceRules": [
+        "design/datepicker-rules.json"
+      ],
+      "note": "Default L по контексту, состояния по снимку; S/M — расширение по запросу пользователя."
+    },
+    {
+      "nodeId": "354:958",
+      "name": "Switch",
+      "variants": 6,
+      "implementation": "implemented",
+      "classes": [
+        "af-switch"
+      ],
+      "sizes": [
+        "44 × 24; thumb 20"
+      ],
+      "states": [
+        "off",
+        "on",
+        "hover off/on",
+        "disabled off/on",
+        "focus"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms",
+      "tests": [
+        "tests/fields.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json"
+      ],
+      "sourceRules": [
+        "design/field-assets.json"
+      ],
+      "note": "Ручка 20 px и отступ 2 px; нативный input."
+    },
+    {
+      "nodeId": "354:981",
+      "name": "Option-btn",
+      "variants": 5,
+      "implementation": "implemented",
+      "classes": [
+        "af-option"
+      ],
+      "sizes": [
+        "71 × 31 reference"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "pressed",
+        "disabled",
+        "selected"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/option-button",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Сверен по скриншоту: Regular и прозрачные невыбранные состояния."
+    },
+    {
+      "nodeId": "354:1004",
+      "name": "Multi-switch",
+      "variants": 3,
+      "implementation": "implemented",
+      "classes": [
+        "af-multi-switch"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48"
+      ],
+      "states": [
+        "selected",
+        "unselected",
+        "disabled",
+        "focus"
+      ],
+      "preview": "http://127.0.0.1:4391/#forms/multi-switch",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Прозрачная группа, padding/gap 4 px; нативные radio/reset/FormData."
+    },
+    {
+      "nodeId": "371:1195",
+      "name": "Chip",
+      "variants": 15,
+      "implementation": "implemented",
+      "classes": [
+        "af-chip"
+      ],
+      "sizes": [
+        "16",
+        "20",
+        "24"
+      ],
+      "states": [
+        "info",
+        "success",
+        "warning",
+        "error",
+        "default",
+        "dismiss"
+      ],
+      "preview": "http://127.0.0.1:4391/#feedback/chips",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Все 15 показанных вариантов; исходная палитра и opt-in --accessible."
+    },
+    {
+      "nodeId": "376:1500",
+      "name": "Alert",
+      "variants": 15,
+      "implementation": "implemented",
+      "classes": [
+        "af-alert"
+      ],
+      "sizes": [
+        "32",
+        "40",
+        "48 minimum"
+      ],
+      "states": [
+        "info",
+        "success",
+        "warning",
+        "error",
+        "default",
+        "dismiss"
+      ],
+      "preview": "http://127.0.0.1:4391/#feedback/alert-sizes",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Все 15 вариантов; L: значок 20 px и закрытие 24 px; длинный текст переносится."
+    },
+    {
+      "nodeId": "402:1724",
+      "name": "Dialog",
+      "variants": 1,
+      "implementation": "implemented",
+      "classes": [
+        "af-dialog--compact"
+      ],
+      "sizes": [
+        "350 px; mobile ≤ viewport − 32"
+      ],
+      "states": [
+        "closed",
+        "open",
+        "Escape",
+        "focus return"
+      ],
+      "preview": "http://127.0.0.1:4391/#dialog/dialog-slots",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/snapshot-2026-10-22/component-samples.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Слоты, gap 16 px, равные кнопки и небольшая тень."
+    },
+    {
+      "nodeId": "407:1751",
+      "name": "Breadcrumps",
+      "variants": 1,
+      "implementation": "implemented",
+      "classes": [
+        "af-breadcrumbs"
+      ],
+      "sizes": [
+        "36 px minimum"
+      ],
+      "states": [
+        "ancestor",
+        "current",
+        "wrap"
+      ],
+      "preview": "http://127.0.0.1:4391/#navigation",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Именованный nav/ol, aria-current и SVG-разделители."
+    },
+    {
+      "nodeId": "407:1740",
+      "name": "Link",
+      "variants": 3,
+      "implementation": "implemented",
+      "classes": [
+        "af-link"
+      ],
+      "sizes": [
+        "inherited typography"
+      ],
+      "states": [
+        "default",
+        "hover",
+        "active",
+        "focus"
+      ],
+      "preview": "http://127.0.0.1:4391/#navigation",
+      "tests": [
+        "tests/secondary.spec.ts"
+      ],
+      "sourceCoverage": "partial",
+      "sourceData": [
+        "design/figma/snapshot-2026-10-22/metadata.json",
+        "design/figma/p2-user-references-2026-10-22.json"
+      ],
+      "sourceRules": [
+        "design/secondary-components-rules.json"
+      ],
+      "note": "Серый/синий/чёрный по скриншоту; --accessible и --inline доступны явно."
+    }
+  ],
+  "remaining": [
+    "Dedicated original sources for the missing icon types.",
+    "Manual screen-reader acceptance was deferred by the user; not performed. Local registry publication and a fresh authenticated install passed. External production hosting and consumer updates are separate."
+  ],
+  "integration": {
+    "date": "2026-10-22",
+    "componentChecks": {
+      "passed": 62,
+      "skipped": 1
+    },
+    "compositionRuntimeChecks": {
+      "passed": 18
+    },
+    "engines": [
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ],
+    "npmAndStandalone": "Identical CSS bytes, icon geometry and browser images; zero network requests.",
+    "consumers": "Node, TypeScript and React StrictMode passed.",
+    "report": "artifacts/icon-catalog-2026-10-22/package-verification.json"
+  },
+  "release": {
+    "version": "1.1.0",
+    "status": "published-local",
+    "browser": {
+      "passed": 280,
+      "skipped": 8,
+      "failed": 0,
+      "flaky": 0
+    },
+    "unitTests": 16,
+    "canonicalPackage": {
+      "platform": "linux",
+      "node": "v24.19.0",
+      "npm": "11.17.0",
+      "files": 134
+    },
+    "report": "artifacts/release-1.1.0/acceptance.json",
+    "manualScreenReader": "deferred-by-user",
+    "published": true,
+    "registry": "http://127.0.0.1:4873/",
+    "publishedAt": "2026-10-22T09:16:16.433Z",
+    "integrity": "sha512-bzftfbbhmfsrw/19W6fIlfZzpHUpo8NO/yQG9cmCdy8kRysToZFmh8Je1FCD6RrU6BKKHYuOtFppXFLx9rFy/w==",
+    "publicationReport": "artifacts/release-1.1.0/publication.json"
+  }
+}

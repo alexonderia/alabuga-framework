@@ -1,0 +1,13 @@
+{
+  "source": "https://www.figma.com/design/ObAoKiDwraibmQrxUNvGWI/Design-System",
+  "usage": "Unmodified SVG exports used as CSS masks at their original L/M/S dimensions; embedded by the existing CSS build.",
+  "webAdjustments": ["Menu gap reduced from Figma 8px to 2px following user review; viewport margin remains 8px.", "Value text retains full line height instead of cap/alphabetic trimming to prevent clipped descenders.", "Field focus uses the source 1px border with no outer ring; forced colors retain the system outline."],
+  "assets": [
+    {"file": "src/icons/select-expand-l.svg", "node": "322:290", "width": 24, "height": 24},
+    {"file": "src/icons/select-collapse-l.svg", "node": "391:1303", "width": 24, "height": 24},
+    {"file": "src/icons/select-expand-m.svg", "node": "393:3951", "width": 20, "height": 20},
+    {"file": "src/icons/select-collapse-m.svg", "node": "393:3952", "width": 20, "height": 20},
+    {"file": "src/icons/select-expand-s.svg", "node": "393:4218", "width": 16, "height": 16},
+    {"file": "src/icons/select-collapse-s.svg", "node": "393:4219", "width": 16, "height": 16}
+  ]
+}

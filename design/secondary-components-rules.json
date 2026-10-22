@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-22",
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+    "samples": "design/figma/snapshot-2026-10-22/component-samples.json",
+    "userReferences": "design/figma/p2-user-references-2026-10-22.json",
+    "nodes": {
+      "option": "354:981",
+      "multiSwitch": "354:1004",
+      "chip": "371:1195",
+      "alert": "376:1500",
+      "dialog": "402:1724",
+      "breadcrumbs": "407:1751",
+      "link": "407:1740"
+    },
+    "coverage": "Visible variants checked against the three user screenshots and cached properties. Complete per-variant property and original-image export remains partial.",
+    "access": "No new Figma calls for this correction. The earlier single quota-limited P2 collection attempt is retained in the access log."
+  },
+  "geometry": {
+    "option": {
+      "source": [
+        71,
+        31
+      ],
+      "hover": [
+        73,
+        33
+      ],
+      "minHeight": 31,
+      "paddingInline": 10,
+      "paddingBlock": 10,
+      "fontSize": 16,
+      "fontWeight": 400,
+      "radius": 8,
+      "textTrim": "cap alphabetic",
+      "states": {
+        "default": "transparent / primary text",
+        "hover": "transparent / 1 px blue outer outline",
+        "pressed": "brand blue / white text",
+        "disabled": "transparent / neutral 400 text",
+        "selected": "brand blue / white text"
+      },
+      "note": "Hover uses an outer box-shadow to preserve layout dimensions while reproducing the expanded source outline."
+    },
+    "multiSwitch": {
+      "width": 263,
+      "heights": {
+        "S": 32,
+        "M": 40,
+        "L": 48
+      },
+      "padding": 4,
+      "gap": 4,
+      "border": 0,
+      "background": "transparent",
+      "fontSizes": {
+        "S": 12,
+        "M": 14,
+        "L": 16
+      },
+      "fontWeight": 400,
+      "childMinHeights": {
+        "S": 23,
+        "M": 31,
+        "L": 31
+      },
+      "note": "Children hug label content; no shared rounded frame or gray track."
+    },
+    "chip": {
+      "widthsForText": {
+        "S": 68,
+        "M": 76,
+        "L": 92
+      },
+      "heights": {
+        "S": 16,
+        "M": 20,
+        "L": 24
+      },
+      "fontSizes": {
+        "S": 10,
+        "M": 12,
+        "L": 14
+      },
+      "fontWeight": 500,
+      "icons": {
+        "S": 12,
+        "M": 12,
+        "L": 16
+      },
+      "closeSlots": {
+        "S": 12,
+        "M": 12,
+        "L": 16
+      },
+      "visibleCloseGlyph": {
+        "S": 4,
+        "M": 4,
+        "L": 8
+      },
+      "paddingInline": {
+        "S": 4,
+        "M": 6,
+        "L": 8
+      },
+      "gap": 8,
+      "radius": 333,
+      "note": "Source cap trimming is preserved when supported; root size-specific circle vectors are scaled inside their slots without editing SVG bytes."
+    },
+    "alert": {
+      "sourceWidths": {
+        "S": 230,
+        "M": 263,
+        "L": 292
+      },
+      "minHeights": {
+        "S": 32,
+        "M": 40,
+        "L": 48
+      },
+      "fontSizes": {
+        "S": 12,
+        "M": 14,
+        "L": 16
+      },
+      "fontWeight": 500,
+      "leadingIcons": {
+        "S": 16,
+        "M": 20,
+        "L": 20
+      },
+      "closeSlots": {
+        "S": 16,
+        "M": 20,
+        "L": 24
+      },
+      "visibleCloseGlyph": {
+        "S": 8,
+        "M": 12,
+        "L": 16
+      },
+      "paddingInline": 12,
+      "paddingBlock": {
+        "S": 6,
+        "M": 8,
+        "L": 10
+      },
+      "gap": 12,
+      "radius": 8,
+      "note": "The 20 px leading icon in L leaves 200 px for the source sentence at 292 px outer width. Long text may increase height."
+    },
+    "dialog": {
+      "width": 350,
+      "sourceHeight": 141,
+      "padding": 16,
+      "radius": 16,
+      "gap": 16,
+      "actionsGap": 12,
+      "actionHeight": 40,
+      "equalActionWidths": 153,
+      "titleSize": 22,
+      "titleWeight": 500,
+      "bodySize": 16,
+      "bodyWeight": 500,
+      "closeSlot": 24,
+      "visibleCloseGlyph": 16,
+      "shadow": "0 2px 3px neutral/300",
+      "note": "Compact variant uses flex column gaps, zero body margins and equal actions. Native dialog is hidden until open; viewport width remains constrained."
+    },
+    "link": {
+      "fontSize": 16,
+      "fontWeight": 400,
+      "default": "neutral/500",
+      "active": "neutral/900",
+      "hover": "brand/blue",
+      "textDecoration": "none"
+    },
+    "breadcrumbs": {
+      "minHeight": 36,
+      "paddingInline": 10,
+      "paddingBlock": 12,
+      "gap": 8,
+      "separatorSize": 12,
+      "currentWeight": 500,
+      "separator": "Original calendar-next-m.svg reused as a neutral/500 CSS mask; not a text character.",
+      "note": "Text cap trimming follows the source. Wrapping and full-line-height fallbacks preserve narrow viewport behavior."
+    }
+  },
+  "palette": {
+    "info": {
+      "text": "#0c6ff1",
+      "background": "#deeefd",
+      "glyph": "circle information"
+    },
+    "success": {
+      "text": "#3eac64",
+      "background": "#d0facc",
+      "glyph": "circle check"
+    },
+    "warning": {
+      "text": "#f79009",
+      "background": "#ffdfb5",
+      "glyph": "circle exclamation"
+    },
+    "error": {
+      "text": "#e62626",
+      "background": "#f7b1b1",
+      "glyph": "circle exclamation"
+    },
+    "default": {
+      "text": "#495057",
+      "background": "#cccfd8",
+      "glyph": "circle information"
+    }
+  },
+  "behavior": {
+    "selection": "CSS-only native checkbox/radio; checked, keyboard grouping, FormData, validation, disabled fieldsets and reset remain native.",
+    "dismissal": "Existing initComponents delegates data-af-dismiss for chips/alerts and transfers focus to a neighboring dismiss button when present.",
+    "dialog": "Existing native dialog, Escape and focus-return behavior. Slots add styling without a new initializer.",
+    "navigation": "Named nav, ol and native links; aria-current=page marks the current item; aria-current=false stays inactive."
+  },
+  "appearances": [
+    "default",
+    "info",
+    "success",
+    "warning",
+    "error"
+  ],
+  "aliases": {
+    "danger": "error",
+    "legacyBadge": "Existing af-badge remains separate"
+  },
+  "assets": [
+    {
+      "files": [
+        "src/icons/field-info-s.svg",
+        "src/icons/field-info-m.svg",
+        "src/icons/field-success-s.svg",
+        "src/icons/field-success-m.svg",
+        "src/icons/field-error-s.svg",
+        "src/icons/field-error-m.svg"
+      ],
+      "usage": "Original local circle vectors reused for all semantic sizes. Alert L intentionally uses M 20 px leading vectors."
+    },
+    {
+      "file": "assets/close.svg",
+      "usage": "Original 24 px vector with 4 px inset; mask size accounts for each reference close mark. Pointer area extends invisibly by 6 px (4 px in Dialog)."
+    },
+    {
+      "file": "src/icons/calendar-next-m.svg",
+      "usage": "Original local chevron reused for Breadcrumbs; SVG bytes remain unchanged."
+    }
+  ],
+  "webDecisions": [
+    "Default feedback colors now match the supplied reference. The previous automatic contrast correction no longer replaces the source appearance.",
+    "Opt-in af-chip--accessible and af-alert--accessible retain darker readable semantic text roles. Source colors, especially green/orange, do not meet AA text contrast on their pale fills.",
+    "af-link--accessible provides darker default text. af-link--inline restores blue underlined inline links when needed.",
+    "No AFDocument fields, runtime dependencies, architecture changes or public JS initializer.",
+    "Native checked controls own selected state. Source-like cap trimming has a full-line-height browser fallback."
+  ],
+  "correctedPreviousAssumptions": [
+    "Removed the Multi-switch gray track/shared border and equal stretching.",
+    "Restored 16 px Regular Option text and transparent unselected/disabled states.",
+    "Restored bright semantic source colors, semantic glyphs and small Chip close marks.",
+    "Corrected Alert L leading icon rather than expanding the reference width.",
+    "Restored Dialog section gaps, equal full-width buttons and subtle shadow.",
+    "Replaced blue underlined default links and Unicode Breadcrumbs separators with source states and vector chevrons."
+  ],
+  "gaps": [
+    "Original attachment bytes are not available as local files. No PNG checksum or automated source-image pixel diff is claimed.",
+    "Detailed per-variant Figma contexts and dedicated P2 SVG exports remain incomplete.",
+    "Browser images in artifacts/p2-correction-2026-10-22 are implementation evidence, not original Figma screenshots."
+  ]
+}

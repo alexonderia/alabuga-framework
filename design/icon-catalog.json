@@ -1,0 +1,864 @@
+{
+  "date": "2026-10-22",
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "family": "275:227",
+    "metadata": "design/figma/snapshot-2026-10-22/metadata.json",
+    "method": "Local inventory and original SVG reuse only; no new Figma request."
+  },
+  "contract": {
+    "defaultNamedSize": "M = 20 px",
+    "sizes": {
+      "S": 16,
+      "M": 20,
+      "L": 24
+    },
+    "legacy": "Bare .af-icon stays a 24 px wrapper. Size modifiers support custom children without stretching their SVG roots.",
+    "button": "Combine af-btn__icon af-icon af-icon--NAME. Button size owns slot/source; Secondary Round L uses M = 20 px.",
+    "semantics": "Decorative glyphs use aria-hidden=true; standalone meaningful glyphs need role=img and aria-label; icon-only buttons need an accessible name.",
+    "motion": "Original two-color loaders rotate; reduced motion disables rotation; existing busy-button behavior is unchanged."
+  },
+  "icons": [
+    {
+      "name": "info",
+      "label": "Информация",
+      "figmaType": "Info",
+      "className": "af-icon--info",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/field-info-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "56567c8c0c874f66c477742b7b9665999aaf3d02eb869b1b003aea16783a48d5"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/field-info-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "e76d7addb58e608483b5e52af8b157e11f38497208c6adc7ed8e7f0c126cc2b6"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/field-info-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "a4d69ce49182e6c218e0298c410ede7cd642275a8b2f193882f3ca1ebed88e48"
+        }
+      ]
+    },
+    {
+      "name": "success",
+      "label": "Успех",
+      "figmaType": "Checked",
+      "className": "af-icon--success",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/field-success-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "1da7fc00b956f14cb2878533b6b0ebcef1e569482a085037fce0b25c0b982879"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/field-success-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "d4aa2b9b5b582b43553fa35b7d6014ca3eb80251830e03f89683107a4946957a"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/field-success-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "7688ecc38e2df78619a3b4f4a0893098cdf9d327acdb61ae231d6d93b01fe2a9"
+        }
+      ]
+    },
+    {
+      "name": "error",
+      "label": "Ошибка",
+      "figmaType": "Error",
+      "className": "af-icon--error",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/field-error-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "a6cd46d915448e4124025acc1657597ed820ad1a97ad1db2ffa1ed280ee8b5ca"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/field-error-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "40480c557493a44682543eba976fb779d6f0071630f0e464874b26a449148d11"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/field-error-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "e3e10f76de908520ab33d848f8acf289fa285659566d0a44030aebdd8dc9f677"
+        }
+      ]
+    },
+    {
+      "name": "expand",
+      "label": "Развернуть",
+      "figmaType": "Expand",
+      "className": "af-icon--expand",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/select-expand-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "42eb8cd5a2de3b50e719955e8ded044f4a7997c7f0bdb6559a3fab9fac17a862"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/select-expand-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "71e7d8bc13a337979c949878a4827fa789a720a8c07405210b813cc8127aad04"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/select-expand-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "133ba36926bc5b758ce06fbd7fdaad93fdf4532415dfea0e26a6ecd066a38a24"
+        }
+      ]
+    },
+    {
+      "name": "collapse",
+      "label": "Свернуть",
+      "figmaType": "Collapse",
+      "className": "af-icon--collapse",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/select-collapse-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "ec3e8da66fda8a7f5b7576b0e703613d98e371f461798a4b25157ee2d822bab2"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/select-collapse-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "832348f155ac600fc1348d7c6c9164e976b7c9452b7f3002bb272db48ef2391f"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/select-collapse-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "1d806b95d1b843a28017a4ea4a5a3782db2952f3ac0604ea75762e945045fa5d"
+        }
+      ]
+    },
+    {
+      "name": "previous",
+      "label": "Назад",
+      "figmaType": "ToLeft",
+      "className": "af-icon--previous",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/calendar-previous-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": true,
+          "sha256": "f38d0532fa995ff6bef89b2f12101bfefdba54de1be8127a372e33b7fca56e57"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/calendar-previous-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "f38d0532fa995ff6bef89b2f12101bfefdba54de1be8127a372e33b7fca56e57"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/calendar-previous-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": true,
+          "sha256": "f38d0532fa995ff6bef89b2f12101bfefdba54de1be8127a372e33b7fca56e57"
+        }
+      ]
+    },
+    {
+      "name": "next",
+      "label": "Вперёд",
+      "figmaType": "ToRight",
+      "className": "af-icon--next",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/calendar-next-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": true,
+          "sha256": "37c7a115717a9171996c4997a4ba9a22b1aa9f128a6bbd420c0e5ecbddd37230"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/calendar-next-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "37c7a115717a9171996c4997a4ba9a22b1aa9f128a6bbd420c0e5ecbddd37230"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/calendar-next-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": true,
+          "sha256": "37c7a115717a9171996c4997a4ba9a22b1aa9f128a6bbd420c0e5ecbddd37230"
+        }
+      ]
+    },
+    {
+      "name": "calendar",
+      "label": "Календарь",
+      "figmaType": "Calendar",
+      "className": "af-icon--calendar",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/datepicker-calendar-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": true,
+          "sha256": "de5e97a475cec39d1d2f4740a8e997ecaeceb2b640d651b261514336c764160a"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/datepicker-calendar-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": true,
+          "sha256": "de5e97a475cec39d1d2f4740a8e997ecaeceb2b640d651b261514336c764160a"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/datepicker-calendar-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "de5e97a475cec39d1d2f4740a8e997ecaeceb2b640d651b261514336c764160a"
+        }
+      ]
+    },
+    {
+      "name": "close",
+      "label": "Закрыть",
+      "figmaType": "Cancel",
+      "className": "af-icon--close",
+      "render": "currentColor mask",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "assets/close.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": true,
+          "sha256": "501c2d6ea9221a09dbacdb377ab01d8c1f4a00cbad46dd047863044c43a93317"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "assets/close.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": true,
+          "sha256": "501c2d6ea9221a09dbacdb377ab01d8c1f4a00cbad46dd047863044c43a93317"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "assets/close.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "501c2d6ea9221a09dbacdb377ab01d8c1f4a00cbad46dd047863044c43a93317"
+        }
+      ]
+    },
+    {
+      "name": "loading",
+      "label": "Загрузка",
+      "figmaType": "Loading",
+      "className": "af-icon--loading",
+      "render": "original two-color image + rotation",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/button-loading-blue-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "a7309ee87a62635d1e247d31f0b26f5191a29ed9054b05ef62ea9f8cf62eba08"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/button-loading-blue-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "67569442d232d160700611bab986054aebaccb98242a319c46a85b9b1bf17a6b"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/button-loading-blue-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "64fef8f9da4d145d47f26a64da2083f105473e6349856e6f5bd81d60f9ebbc61"
+        }
+      ]
+    },
+    {
+      "name": "loading-white",
+      "label": "Загрузка на тёмном фоне",
+      "figmaType": "Loading",
+      "className": "af-icon--loading-white",
+      "render": "original two-color image + rotation",
+      "provenance": "Reused original archived component SVG; not a new export of the standalone icon family",
+      "assets": [
+        {
+          "size": "S",
+          "slot": 16,
+          "file": "src/icons/button-loading-white-s.svg",
+          "rootWidth": 16,
+          "rootHeight": 16,
+          "scaled": false,
+          "sha256": "11b6f119df6c22411adf5baa15b997a063c2ae2bd1d13e4fe0bd04ba988b894e"
+        },
+        {
+          "size": "M",
+          "slot": 20,
+          "file": "src/icons/button-loading-white-m.svg",
+          "rootWidth": 20,
+          "rootHeight": 20,
+          "scaled": false,
+          "sha256": "b271b40aee7d78496ed7f501a97af1094e01735626c5516fe502d17b671d92a0"
+        },
+        {
+          "size": "L",
+          "slot": 24,
+          "file": "src/icons/button-loading-white-l.svg",
+          "rootWidth": 24,
+          "rootHeight": 24,
+          "scaled": false,
+          "sha256": "31e9c3711a874a845518f774f70d8f6dc9e38200c5ab1d942acafc0e90eb1073"
+        }
+      ]
+    }
+  ],
+  "figmaVariants": [
+    {
+      "nodeId": "276:262",
+      "name": "Size=S, Type=Default",
+      "width": 16,
+      "height": 16,
+      "publicNames": []
+    },
+    {
+      "nodeId": "276:260",
+      "name": "Size=M, Type=Default",
+      "width": 20,
+      "height": 20,
+      "publicNames": []
+    },
+    {
+      "nodeId": "275:226",
+      "name": "Size=L, Type=Default",
+      "width": 24,
+      "height": 24,
+      "publicNames": []
+    },
+    {
+      "nodeId": "298:1283",
+      "name": "Size=S, Type=Loading",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "loading",
+        "loading-white"
+      ]
+    },
+    {
+      "nodeId": "298:1277",
+      "name": "Size=M, Type=Loading",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "loading",
+        "loading-white"
+      ]
+    },
+    {
+      "nodeId": "298:1271",
+      "name": "Size=L, Type=Loading",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "loading",
+        "loading-white"
+      ]
+    },
+    {
+      "nodeId": "298:1369",
+      "name": "Size=S, Type=Error",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "error"
+      ]
+    },
+    {
+      "nodeId": "298:1361",
+      "name": "Size=M, Type=Error",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "error"
+      ]
+    },
+    {
+      "nodeId": "298:1352",
+      "name": "Size=L, Type=Error",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "error"
+      ]
+    },
+    {
+      "nodeId": "298:1408",
+      "name": "Size=S, Type=Help",
+      "width": 16,
+      "height": 16,
+      "publicNames": []
+    },
+    {
+      "nodeId": "298:1403",
+      "name": "Size=M, Type=Help",
+      "width": 20,
+      "height": 20,
+      "publicNames": []
+    },
+    {
+      "nodeId": "298:1393",
+      "name": "Size=L, Type=Help",
+      "width": 24,
+      "height": 24,
+      "publicNames": []
+    },
+    {
+      "nodeId": "299:1429",
+      "name": "Size=S, Type=Info",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "info"
+      ]
+    },
+    {
+      "nodeId": "299:1424",
+      "name": "Size=M, Type=Info",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "info"
+      ]
+    },
+    {
+      "nodeId": "299:1418",
+      "name": "Size=L, Type=Info",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "info"
+      ]
+    },
+    {
+      "nodeId": "302:1696",
+      "name": "Size=S, Type=Checked",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "success"
+      ]
+    },
+    {
+      "nodeId": "302:1692",
+      "name": "Size=M, Type=Checked",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "success"
+      ]
+    },
+    {
+      "nodeId": "302:1686",
+      "name": "Size=L, Type=Checked",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "success"
+      ]
+    },
+    {
+      "nodeId": "332:390",
+      "name": "Size=S, Type=Calendar",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "calendar"
+      ]
+    },
+    {
+      "nodeId": "332:383",
+      "name": "Size=M, Type=Calendar",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "calendar"
+      ]
+    },
+    {
+      "nodeId": "332:369",
+      "name": "Size=L, Type=Calendar",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "calendar"
+      ]
+    },
+    {
+      "nodeId": "332:429",
+      "name": "Size=S, Type=CancelRound",
+      "width": 16,
+      "height": 16,
+      "publicNames": []
+    },
+    {
+      "nodeId": "332:424",
+      "name": "Size=M, Type=CancelRound",
+      "width": 20,
+      "height": 20,
+      "publicNames": []
+    },
+    {
+      "nodeId": "332:418",
+      "name": "Size=L, Type=CancelRound",
+      "width": 24,
+      "height": 24,
+      "publicNames": []
+    },
+    {
+      "nodeId": "374:1397",
+      "name": "Size=L, Type=Expand",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "expand"
+      ]
+    },
+    {
+      "nodeId": "332:475",
+      "name": "Size=L, Type=ToLeft",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "previous"
+      ]
+    },
+    {
+      "nodeId": "332:614",
+      "name": "Size=L, Type=ToRight",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "next"
+      ]
+    },
+    {
+      "nodeId": "343:3561",
+      "name": "Size=L, Type=Check",
+      "width": 24,
+      "height": 24,
+      "publicNames": []
+    },
+    {
+      "nodeId": "374:1400",
+      "name": "Size=M, Type=Expand",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "expand"
+      ]
+    },
+    {
+      "nodeId": "332:550",
+      "name": "Size=M, Type=ToLeft",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "previous"
+      ]
+    },
+    {
+      "nodeId": "332:620",
+      "name": "Size=M, Type=ToRight",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "next"
+      ]
+    },
+    {
+      "nodeId": "357:3890",
+      "name": "Size=M, Type=Check",
+      "width": 20,
+      "height": 20,
+      "publicNames": []
+    },
+    {
+      "nodeId": "336:475",
+      "name": "Size=S, Type=Expand",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "expand"
+      ]
+    },
+    {
+      "nodeId": "332:554",
+      "name": "Size=S, Type=ToLeft",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "previous"
+      ]
+    },
+    {
+      "nodeId": "332:624",
+      "name": "Size=S, Type=ToRight",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "next"
+      ]
+    },
+    {
+      "nodeId": "357:3894",
+      "name": "Size=S, Type=Check",
+      "width": 16,
+      "height": 16,
+      "publicNames": []
+    },
+    {
+      "nodeId": "374:1406",
+      "name": "Size=L, Type=Cancel",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1450",
+      "name": "Size=L, Type=Cancel",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1454",
+      "name": "Size=L, Type=Cancel",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1428",
+      "name": "Size=L, Type=Cancel",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1452",
+      "name": "Size=L, Type=Cancel",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1456",
+      "name": "Size=L, Type=Cancel",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "376:1432",
+      "name": "Size=L, Type=Cancel",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "close"
+      ]
+    },
+    {
+      "nodeId": "377:1529",
+      "name": "Size=S, Type=Radio",
+      "width": 16,
+      "height": 16,
+      "publicNames": []
+    },
+    {
+      "nodeId": "377:1525",
+      "name": "Size=M, Type=Radio",
+      "width": 20,
+      "height": 20,
+      "publicNames": []
+    },
+    {
+      "nodeId": "377:1520",
+      "name": "Size=L, Type=Radio",
+      "width": 24,
+      "height": 24,
+      "publicNames": []
+    },
+    {
+      "nodeId": "391:1294",
+      "name": "Size=L, Type=Collapse",
+      "width": 24,
+      "height": 24,
+      "publicNames": [
+        "collapse"
+      ]
+    },
+    {
+      "nodeId": "391:1297",
+      "name": "Size=M, Type=Collapse",
+      "width": 20,
+      "height": 20,
+      "publicNames": [
+        "collapse"
+      ]
+    },
+    {
+      "nodeId": "391:1300",
+      "name": "Size=S, Type=Collapse",
+      "width": 16,
+      "height": 16,
+      "publicNames": [
+        "collapse"
+      ]
+    }
+  ],
+  "gaps": [
+    "The standalone icon family has 49 nodes and 15 type names; its complete SVG/context/screenshot export is unavailable.",
+    "Default, Help, CancelRound, Check and Radio have no public named glyph in this catalogue; related control state artwork is not substituted for them.",
+    "Cancel variants have repeated Size=L labels at 16/20/24 px in the source metadata; dimensions are retained verbatim. The one archived close SVG is 24 px.",
+    "Previous/Next use 20 px originals and Calendar/Close use 24 px originals; other slots explicitly scale these assets."
+  ],
+  "relatedSources": [
+    "design/field-assets.json",
+    "design/select-assets.json",
+    "design/type-icon-assets.json",
+    "design/datepicker-rules.json",
+    "design/secondary-components-rules.json"
+  ],
+  "preview": "http://127.0.0.1:4391/#icons",
+  "tests": [
+    "tests/icons.spec.ts",
+    "tests/type-icons.spec.ts"
+  ]
+}

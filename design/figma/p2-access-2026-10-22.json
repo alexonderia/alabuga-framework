@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-22",
+  "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+  "nodes": [
+    "354:981",
+    "354:1004",
+    "371:1195",
+    "376:1500",
+    "402:1724",
+    "407:1751",
+    "407:1740"
+  ],
+  "purpose": "Single collection of genuinely missing P2 properties, screenshots and assets",
+  "result": "Figma MCP tool call limit reached on Starter plan",
+  "receivedDesignData": false,
+  "retried": false
+}

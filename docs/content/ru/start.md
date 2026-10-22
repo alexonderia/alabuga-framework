@@ -6,8 +6,10 @@ Alabuga Framework — независимая дизайн-система, CSS-к
 
 Настройте scoped HTTPS registry @alabuga и read token в пользовательском npm config. Затем установите точную версию:
 
+Версия 1.1.0 опубликована в локальном авторизованном Verdaccio. При настроенной учётной записи чтения команда для этого реестра:
+
 ```sh
-npm install --save-exact @alabuga/framework@1.0.2
+npm install --save-exact @alabuga/framework@1.1.0 --registry=http://127.0.0.1:4873/
 ```
 
 Для локальной приёмки используется авторизованный Verdaccio на 127.0.0.1:4873. Production-адрес пока не подключён. Собранное приложение не обращается к реестру при работе.

@@ -12,6 +12,8 @@ Node.js 24.19.0 и npm 11.17.0 закреплены в конфигурация�
 | npm run test:package | Проверка фактического npm-архива и exports |
 | npm run test:consumers | Чистые Node, NodeNext и React-потребители |
 | npm run build:docs / check:docs | Справочник, RU/EN, ссылки и ресурсы |
+| npm run check:design | Целостность локальных источников Figma и реестра компонентов |
+| npm run prepare:release | Локальный кандидат после проверок, без публикации |
 | npm run test:browser | Состояния CSS, runtime, примеры и снимки |
 
 ## Дизайн-токены и исходные материалы

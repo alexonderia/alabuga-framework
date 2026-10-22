@@ -12,6 +12,8 @@ Node.js 24.19.0/npm 11.17.0 are pinned. npm ci uses this repository's independen
 | npm run test:package | Actual npm archive and exports |
 | npm run test:consumers | Isolated Node, NodeNext and React consumers |
 | npm run build:docs / check:docs | Reference, RU/EN, links and resources |
+| npm run check:design | Local Figma archive and component index integrity |
+| npm run prepare:release | Assemble the verified local candidate without publishing |
 | npm run test:browser | CSS states, runtime, examples and snapshots |
 
 ## Tokens and original assets

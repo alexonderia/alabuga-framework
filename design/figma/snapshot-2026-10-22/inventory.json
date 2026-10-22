@@ -1,0 +1,464 @@
+[
+  {
+    "id": "352:939",
+    "name": "Bullet",
+    "type": "COMPONENT_SET",
+    "count": 3,
+    "variantNames": [
+      "Property 1=Triangle full-colour",
+      "Property 1=Triangle",
+      "Property 1=Triangle outline"
+    ],
+    "sizes": [
+      "33x33"
+    ]
+  },
+  {
+    "id": "298:1211",
+    "name": "Text Field",
+    "type": "COMPONENT_SET",
+    "count": 24,
+    "variantNames": [
+      "State=Read-only",
+      "State=Disabled",
+      "State=Success",
+      "State=Error",
+      "State=Filled",
+      "State=Focus",
+      "State=Hover",
+      "State=Default"
+    ],
+    "sizes": [
+      "278x82",
+      "258x71",
+      "258x61",
+      "258x82"
+    ]
+  },
+  {
+    "id": "294:423",
+    "name": "icon-button",
+    "type": "COMPONENT_SET",
+    "count": 144,
+    "variantNames": [
+      "View=Primary, State=Loading, Type=Default",
+      "View=Primary, State=Selected, Type=Default",
+      "View=Primary, State=Disabled, Type=Default",
+      "View=Primary, State=Pressed, Type=Default",
+      "View=Primary, State=Hover, Type=Default",
+      "View=Primary, State=Default, Type=Default",
+      "View=Primary, State=Loading, Type=Round",
+      "View=Primary, State=Selected, Type=Round",
+      "View=Primary, State=Disabled, Type=Round",
+      "View=Primary, State=Pressed, Type=Round",
+      "View=Primary, State=Hover, Type=Round",
+      "View=Primary, State=Default, Type=Round",
+      "View=Secondary, State=Default, Type=Default",
+      "View=Secondary, State=Hover, Type=Default",
+      "View=Secondary, State=Pressed, Type=Default",
+      "View=Secondary, State=Disabled, Type=Default",
+      "View=Secondary, State=Selected, Type=Default",
+      "View=Secondary, State=Loading, Type=Default",
+      "View=Secondary, State=Default, Type=Round",
+      "View=Secondary, State=Hover, Type=Round",
+      "View=Secondary, State=Pressed, Type=Round",
+      "View=Secondary, State=Disabled, Type=Round",
+      "View=Secondary, State=Selected, Type=Round",
+      "View=Secondary, State=Loading, Type=Round",
+      "View=Ghost, State=Disabled, Type=Default",
+      "View=Ghost, State=Default, Type=Default",
+      "View=Ghost, State=Default, Type=Round",
+      "View=Ghost, State=Hover, Type=Default",
+      "View=Ghost, State=Hover, Type=Round",
+      "View=Ghost, State=Pressed, Type=Default",
+      "View=Ghost, State=Pressed, Type=Round",
+      "View=Ghost, State=Disabled, Type=Round",
+      "View=Ghost, State=Selected, Type=Default",
+      "View=Ghost, State=Selected, Type=Round",
+      "View=Ghost, State=Loading, Type=Default",
+      "View=Ghost, State=Loading, Type=Round",
+      "View=Clear, State=Default, Type=Default",
+      "View=Clear, State=Default, Type=Round",
+      "View=Clear, State=Hover, Type=Default",
+      "View=Clear, State=Hover, Type=Round",
+      "View=Clear, State=Pressed, Type=Default",
+      "View=Clear, State=Pressed, Type=Round",
+      "View=Clear, State=Disabled, Type=Default",
+      "View=Clear, State=Disabled, Type=Round",
+      "View=Clear, State=Selected, Type=Default",
+      "View=Clear, State=Selected, Type=Round",
+      "View=Clear, State=Loading, Type=Default",
+      "View=Clear, State=Loading, Type=Round"
+    ],
+    "sizes": [
+      "48x48",
+      "40x40",
+      "32x32"
+    ]
+  },
+  {
+    "id": "343:3296",
+    "name": "checkbox",
+    "type": "COMPONENT_SET",
+    "count": 18,
+    "variantNames": [
+      "View=Primary, State=Loading",
+      "View=Primary, State=Selected",
+      "View=Primary, State=Disabled",
+      "View=Primary, State=Pressed",
+      "View=Primary, State=Hover",
+      "View=Primary, State=Default"
+    ],
+    "sizes": [
+      "72x24",
+      "63x20",
+      "52x16"
+    ]
+  },
+  {
+    "id": "377:1426",
+    "name": "radio-button",
+    "type": "COMPONENT_SET",
+    "count": 18,
+    "variantNames": [
+      "View=Primary, State=Loading",
+      "View=Primary, State=Selected",
+      "View=Primary, State=Disabled",
+      "View=Primary, State=Pressed",
+      "View=Primary, State=Hover",
+      "View=Primary, State=Default"
+    ],
+    "sizes": [
+      "72x24",
+      "63x20",
+      "52x16"
+    ]
+  },
+  {
+    "id": "276:276",
+    "name": "button",
+    "type": "COMPONENT_SET",
+    "count": 72,
+    "variantNames": [
+      "View=Primary, State=Loading",
+      "View=Primary, State=Selected",
+      "View=Primary, State=Disabled",
+      "View=Primary, State=Pressed",
+      "View=Primary, State=Hover",
+      "View=Primary, State=Default",
+      "View=Secondary, State=Loading",
+      "View=Secondary, State=Selected",
+      "View=Secondary, State=Disabled",
+      "View=Secondary, State=Pressed",
+      "View=Secondary, State=Hover",
+      "View=Secondary, State=Default",
+      "View=Ghost, State=Loading",
+      "View=Ghost, State=Selected",
+      "View=Ghost, State=Disabled",
+      "View=Ghost, State=Pressed",
+      "View=Ghost, State=Hover",
+      "View=Ghost, State=Default",
+      "View=Clear, State=Loading",
+      "View=Clear, State=Selected",
+      "View=Clear, State=Disabled",
+      "View=Clear, State=Pressed",
+      "View=Clear, State=Hover",
+      "View=Clear, State=Default"
+    ],
+    "sizes": [
+      "238x48",
+      "206x40",
+      "174x32",
+      "240x48",
+      "208x40",
+      "176x32"
+    ]
+  },
+  {
+    "id": "275:227",
+    "name": "icon",
+    "type": "COMPONENT_SET",
+    "count": 49,
+    "variantNames": [
+      "Type=Default",
+      "Type=Loading",
+      "Type=Error",
+      "Type=Help",
+      "Type=Info",
+      "Type=Checked",
+      "Type=Calendar",
+      "Type=CancelRound",
+      "Type=Expand",
+      "Type=ToLeft",
+      "Type=ToRight",
+      "Type=Check",
+      "Type=Cancel",
+      "Type=Radio",
+      "Type=Collapse"
+    ],
+    "sizes": [
+      "16x16",
+      "20x20",
+      "24x24"
+    ]
+  },
+  {
+    "id": "377:2186",
+    "name": "ListItem",
+    "type": "COMPONENT_SET",
+    "count": 18,
+    "variantNames": [
+      "State=Default",
+      "State=Hover",
+      "State=Pressed",
+      "State=Disabled",
+      "State=Selected",
+      "State=Loading"
+    ],
+    "sizes": [
+      "200x48",
+      "200x40",
+      "200x32"
+    ]
+  },
+  {
+    "id": "322:218",
+    "name": "Select",
+    "type": "COMPONENT_SET",
+    "count": 18,
+    "variantNames": [
+      "State=Read-only",
+      "State=Disabled",
+      "State=Filled",
+      "State=Focus",
+      "State=Hover",
+      "State=Default"
+    ],
+    "sizes": [
+      "278x82",
+      "278x71",
+      "278x61"
+    ]
+  },
+  {
+    "id": "337:584",
+    "name": "List",
+    "type": "COMPONENT_SET",
+    "count": 15,
+    "variantNames": [
+      "State=Read-only",
+      "State=Disabled",
+      "State=Focus",
+      "State=Hover",
+      "State=Default"
+    ],
+    "sizes": [
+      "300x164",
+      "300x138",
+      "300x113"
+    ]
+  },
+  {
+    "id": "303:1699",
+    "name": "Textarea",
+    "type": "COMPONENT_SET",
+    "count": 8,
+    "variantNames": [
+      "State=Read-only",
+      "State=Disabled",
+      "State=Success",
+      "State=Error",
+      "State=Filled",
+      "State=Focus",
+      "State=Hover",
+      "State=Default"
+    ],
+    "sizes": [
+      "278x162"
+    ]
+  },
+  {
+    "id": "332:883",
+    "name": "Calendar",
+    "type": "COMPONENT",
+    "count": 1,
+    "variantNames": [
+      "Calendar"
+    ],
+    "sizes": [
+      "250x304"
+    ]
+  },
+  {
+    "id": "332:639",
+    "name": "Day",
+    "type": "COMPONENT_SET",
+    "count": 7,
+    "variantNames": [
+      "State=Default",
+      "State=Disabled",
+      "State=Hover",
+      "State=Pressed",
+      "State=Range-start",
+      "State=Range-middle",
+      "State=Range-end"
+    ],
+    "sizes": [
+      "32x32"
+    ]
+  },
+  {
+    "id": "332:706",
+    "name": "Week",
+    "type": "COMPONENT_SET",
+    "count": 2,
+    "variantNames": [
+      "State=Default",
+      "State=Names"
+    ],
+    "sizes": [
+      "224x32"
+    ]
+  },
+  {
+    "id": "340:1019",
+    "name": "DatePicker",
+    "type": "COMPONENT_SET",
+    "count": 8,
+    "variantNames": [
+      "State=Default",
+      "State=Hover",
+      "State=Focus",
+      "State=Filled",
+      "State=Error",
+      "State=Success",
+      "State=Disabled",
+      "State=Read-only"
+    ],
+    "sizes": [
+      "278x62"
+    ]
+  },
+  {
+    "id": "354:958",
+    "name": "Switch",
+    "type": "COMPONENT_SET",
+    "count": 6,
+    "variantNames": [
+      "State=Default (OFF)",
+      "State=Hover(ON)",
+      "State=Disabled(OFF)",
+      "State=Selected (ON)",
+      "State=Hover (ON)",
+      "State=Disabled(ON)"
+    ],
+    "sizes": [
+      "95x24"
+    ]
+  },
+  {
+    "id": "354:981",
+    "name": "Option-btn",
+    "type": "COMPONENT_SET",
+    "count": 5,
+    "variantNames": [
+      "State=Default",
+      "State=Hover",
+      "State=Pressed",
+      "State=Disabled",
+      "State=Selected"
+    ],
+    "sizes": [
+      "71x31",
+      "73x33"
+    ]
+  },
+  {
+    "id": "354:1004",
+    "name": "Multi-switch",
+    "type": "COMPONENT_SET",
+    "count": 3,
+    "variantNames": [
+      ""
+    ],
+    "sizes": [
+      "263x48",
+      "263x40",
+      "263x32"
+    ]
+  },
+  {
+    "id": "371:1195",
+    "name": "Chip",
+    "type": "COMPONENT_SET",
+    "count": 15,
+    "variantNames": [
+      "View=Default",
+      "View=Error",
+      "View=Warning",
+      "View=Success",
+      "View=Info"
+    ],
+    "sizes": [
+      "92x24",
+      "76x20",
+      "68x16"
+    ]
+  },
+  {
+    "id": "376:1500",
+    "name": "Alert",
+    "type": "COMPONENT_SET",
+    "count": 15,
+    "variantNames": [
+      "View=Default",
+      "View=Error",
+      "View=Warning",
+      "View=Success",
+      "View=Info"
+    ],
+    "sizes": [
+      "292x48",
+      "263x40",
+      "230x32"
+    ]
+  },
+  {
+    "id": "402:1724",
+    "name": "Dialog",
+    "type": "COMPONENT",
+    "count": 1,
+    "variantNames": [
+      "Dialog"
+    ],
+    "sizes": [
+      "350x141"
+    ]
+  },
+  {
+    "id": "407:1751",
+    "name": "Breadcrumps",
+    "type": "COMPONENT",
+    "count": 1,
+    "variantNames": [
+      "Breadcrumps"
+    ],
+    "sizes": [
+      "169x36"
+    ]
+  },
+  {
+    "id": "407:1740",
+    "name": "Link",
+    "type": "COMPONENT_SET",
+    "count": 3,
+    "variantNames": [
+      "State=Default",
+      "State=Active",
+      "State=Hover"
+    ],
+    "sizes": [
+      "31x11"
+    ]
+  }
+]

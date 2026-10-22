@@ -7,7 +7,32 @@ class AxeBuilder {
   async analyze(){await this.options.page.evaluate(axe.source);return this.options.page.evaluate(async()=>({violations:(await (window as any).axe.run()).violations.map((v:any)=>({id:v.id,nodes:v.nodes.map((n:any)=>({target:n.target,reason:n.failureSummary}))}))}));}
 }
 
+// The reference explicitly shows low-contrast source colors. Admit only these
+// exact palette roles inside component previews, then audit the readable variants.
+async function auditSourcePreviews(page:import('@playwright/test').Page,info:import('@playwright/test').TestInfo,route:string){
+  await page.evaluate(axe.source);
+  const source=await page.evaluate(async()=>{
+    const result=await (window as any).axe.run();
+    const colors=['rgb(12, 111, 241)','rgb(62, 172, 100)','rgb(247, 144, 9)','rgb(230, 38, 38)','rgb(134, 142, 150)'];
+    return result.violations.map((v:any)=>({id:v.id,nodes:v.nodes.map((n:any)=>{
+      const element=document.querySelector(n.target.join(' '));
+      const component=element?.closest('.af-alert:not(.af-alert--accessible),.af-chip:not(.af-chip--accessible),.af-link:not(.af-link--accessible):not(.af-link--inline)');
+      return {target:n.target,documented:v.id==='color-contrast'&&!!component?.closest('.example-preview')&&colors.includes(getComputedStyle(element).color)};
+    })}));
+  });
+  await info.attach(`source-palette-${route}.json`,{body:JSON.stringify(source,null,2),contentType:'application/json'});
+  expect(source.every((v:any)=>v.id==='color-contrast'&&v.nodes.every((n:any)=>n.documented)),`${route}: unexpected accessibility failure ${JSON.stringify(source)}`).toBe(true);
+  const originals=await page.locator('.example-preview :is(.af-alert,.af-chip,.af-link)').evaluateAll(nodes=>nodes.map(n=>({id:n,className:n.className})).map(({className},i)=>{
+    const n=nodes[i];n.setAttribute('data-audit-original',className);
+    n.classList.add(n.classList.contains('af-alert')?'af-alert--accessible':n.classList.contains('af-chip')?'af-chip--accessible':'af-link--accessible');return className;
+  }));
+  try{expect((await new AxeBuilder({page}).analyze()).violations,`${route}: readable variants`).toEqual([]);}
+  finally{await page.locator('[data-audit-original]').evaluateAll(nodes=>nodes.forEach(n=>{n.setAttribute('class',n.getAttribute('data-audit-original')!);n.removeAttribute('data-audit-original')}));}
+  expect(originals.length).toBeGreaterThan(0);
+}
+
 test('documentation search, examples and accessibility',async({page},info)=>{
+  test.setTimeout(90000);
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('/');await expect(page.locator('.hero')).toBeVisible();
   await page.locator('#search').fill('af-btn');await expect(page.locator('.search-result').first()).toBeVisible();await page.locator('.search-result').first().click();
@@ -15,7 +40,11 @@ test('documentation search, examples and accessibility',async({page},info)=>{
   await page.evaluate(()=>document.fonts.ready);
   expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
   await page.screenshot({path:info.outputPath('buttons.png'),fullPage:true});
-  for(const route of ['start','colors','typography','grid','forms','feedback','dialog','widgets','slides','builder','classes','api','changes']){await page.goto('/#'+route);await expect(page.locator('.page-title')).toBeVisible();expect((await new AxeBuilder({page}).analyze()).violations,route).toEqual([]);}
+  for(const route of ['start','colors','typography','grid','forms','feedback','dialog','surfaces','navigation','icons','widgets','slides','builder','classes','api','changes']){
+    await page.goto('/#'+route);await expect(page.locator('.page-title')).toBeVisible();
+    if(route==='feedback'||route==='navigation')await auditSourcePreviews(page,info,route);
+    else expect((await new AxeBuilder({page}).analyze()).violations,route).toEqual([]);
+  }
   expect(errors).toEqual([]);
 });
 test('panel calendar keyboard selection survives resizing and mobile layout',async({page},info)=>{

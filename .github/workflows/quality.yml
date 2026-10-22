@@ -15,9 +15,12 @@ jobs:
       - run: npm install --global npm@11.17.0
       - run: npm ci
       - run: npx playwright install --with-deps
-      - run: npm run build && npm test && npm run test:package && npm run test:consumers
+      - run: npm run check:design && npm run build && npm test && npm run test:package && npm run test:consumers
       - run: npm run build:docs && npm run check:docs
-      - run: npm run test:browser -- --workers=1
+      - run: npm run test:browser -- --workers=1 --reporter=line,json
+        env:
+          PLAYWRIGHT_JSON_OUTPUT_FILE: artifacts/browser-final.json
+      - run: npm run prepare:release
       - uses: actions/upload-artifact@v4
         if: always()
         with: {name: framework-evidence, path: "artifacts\ntest-results", retention-days: 14}

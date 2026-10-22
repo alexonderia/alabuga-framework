@@ -1,0 +1,1484 @@
+{
+  "source": {
+    "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+    "date": "2026-10-21",
+    "iconButton": "294:423",
+    "typography": "260:592",
+    "bullet": "352:939",
+    "rules": "250:339"
+  },
+  "bullets": [
+    {
+      "nodeId": "352:940",
+      "name": "Property 1=Triangle full-colour",
+      "path": "src/icons/bullet-diamond.svg",
+      "width": 33,
+      "height": 33,
+      "method": "Figma SVG_STRING export, unchanged"
+    },
+    {
+      "nodeId": "352:942",
+      "name": "Property 1=Triangle",
+      "path": "src/icons/bullet-triangle.svg",
+      "width": 33,
+      "height": 33,
+      "method": "Figma SVG_STRING export, unchanged"
+    },
+    {
+      "nodeId": "352:944",
+      "name": "Property 1=Triangle outline",
+      "path": "src/styles.css",
+      "width": 33,
+      "height": 33,
+      "method": "Original get_design_context CSS rectangle, 23.334524 px rotated 45 degrees, source 2.978495 px inside border rounded to 3 px to prevent browser border snapping to 2 px, radius 0.992831 px; exported SVG mask renders incorrectly in browsers"
+    }
+  ],
+  "iconButtons": [
+    {
+      "nodeId": "294:454",
+      "name": "Size=L, View=Primary, State=Loading, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:466",
+      "name": "Size=L, View=Primary, State=Selected, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:505",
+      "name": "Size=L, View=Primary, State=Disabled, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:482",
+      "name": "Size=L, View=Primary, State=Pressed, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:430",
+      "name": "Size=L, View=Primary, State=Hover, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:478",
+      "name": "Size=L, View=Primary, State=Default, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:655",
+      "name": "Size=L, View=Primary, State=Loading, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:649",
+      "name": "Size=L, View=Primary, State=Selected, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:643",
+      "name": "Size=L, View=Primary, State=Disabled, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:637",
+      "name": "Size=L, View=Primary, State=Pressed, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:631",
+      "name": "Size=L, View=Primary, State=Hover, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:625",
+      "name": "Size=L, View=Primary, State=Default, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "294:536",
+      "name": "Size=M, View=Primary, State=Default, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:538",
+      "name": "Size=M, View=Primary, State=Hover, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:540",
+      "name": "Size=M, View=Primary, State=Pressed, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:542",
+      "name": "Size=M, View=Primary, State=Disabled, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:544",
+      "name": "Size=M, View=Primary, State=Selected, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:519",
+      "name": "Size=M, View=Primary, State=Loading, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:710",
+      "name": "Size=M, View=Primary, State=Loading, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:698",
+      "name": "Size=M, View=Primary, State=Selected, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:692",
+      "name": "Size=M, View=Primary, State=Disabled, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:680",
+      "name": "Size=M, View=Primary, State=Pressed, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:674",
+      "name": "Size=M, View=Primary, State=Hover, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:661",
+      "name": "Size=M, View=Primary, State=Default, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "294:582",
+      "name": "Size=S, View=Primary, State=Loading, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:569",
+      "name": "Size=S, View=Primary, State=Selected, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:562",
+      "name": "Size=S, View=Primary, State=Disabled, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:555",
+      "name": "Size=S, View=Primary, State=Pressed, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:533",
+      "name": "Size=S, View=Primary, State=Hover, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:526",
+      "name": "Size=S, View=Primary, State=Default, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:741",
+      "name": "Size=S, View=Primary, State=Loading, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:739",
+      "name": "Size=S, View=Primary, State=Selected, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:737",
+      "name": "Size=S, View=Primary, State=Disabled, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:735",
+      "name": "Size=S, View=Primary, State=Pressed, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:733",
+      "name": "Size=S, View=Primary, State=Hover, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "294:731",
+      "name": "Size=S, View=Primary, State=Default, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:4674",
+      "name": "Size=L, View=Secondary, State=Default, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4637",
+      "name": "Size=L, View=Secondary, State=Hover, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4643",
+      "name": "Size=L, View=Secondary, State=Pressed, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4649",
+      "name": "Size=L, View=Secondary, State=Disabled, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4655",
+      "name": "Size=L, View=Secondary, State=Selected, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4666",
+      "name": "Size=L, View=Secondary, State=Loading, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4680",
+      "name": "Size=L, View=Secondary, State=Default, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4686",
+      "name": "Size=L, View=Secondary, State=Hover, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4692",
+      "name": "Size=L, View=Secondary, State=Pressed, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4698",
+      "name": "Size=L, View=Secondary, State=Disabled, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4704",
+      "name": "Size=L, View=Secondary, State=Selected, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4715",
+      "name": "Size=L, View=Secondary, State=Loading, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:4765",
+      "name": "Size=L, View=Ghost, State=Disabled, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4729",
+      "name": "Size=L, View=Ghost, State=Default, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4731",
+      "name": "Size=L, View=Ghost, State=Default, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4741",
+      "name": "Size=L, View=Ghost, State=Hover, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4743",
+      "name": "Size=L, View=Ghost, State=Hover, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4753",
+      "name": "Size=L, View=Ghost, State=Pressed, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4755",
+      "name": "Size=L, View=Ghost, State=Pressed, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4767",
+      "name": "Size=L, View=Ghost, State=Disabled, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4777",
+      "name": "Size=L, View=Ghost, State=Selected, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4779",
+      "name": "Size=L, View=Ghost, State=Selected, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4789",
+      "name": "Size=L, View=Ghost, State=Loading, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:4791",
+      "name": "Size=L, View=Ghost, State=Loading, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5171",
+      "name": "Size=L, View=Clear, State=Default, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5173",
+      "name": "Size=L, View=Clear, State=Default, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5183",
+      "name": "Size=L, View=Clear, State=Hover, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5185",
+      "name": "Size=L, View=Clear, State=Hover, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5195",
+      "name": "Size=L, View=Clear, State=Pressed, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5197",
+      "name": "Size=L, View=Clear, State=Pressed, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5207",
+      "name": "Size=L, View=Clear, State=Disabled, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5209",
+      "name": "Size=L, View=Clear, State=Disabled, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5219",
+      "name": "Size=L, View=Clear, State=Selected, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5221",
+      "name": "Size=L, View=Clear, State=Selected, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5231",
+      "name": "Size=L, View=Clear, State=Loading, Type=Default",
+      "width": 48,
+      "height": 48,
+      "radius": 8,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5233",
+      "name": "Size=L, View=Clear, State=Loading, Type=Round",
+      "width": 48,
+      "height": 48,
+      "radius": 333,
+      "iconSize": 24
+    },
+    {
+      "nodeId": "393:5255",
+      "name": "Size=M, View=Secondary, State=Default, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5257",
+      "name": "Size=M, View=Secondary, State=Default, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5269",
+      "name": "Size=M, View=Secondary, State=Hover, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5271",
+      "name": "Size=M, View=Secondary, State=Hover, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5281",
+      "name": "Size=M, View=Secondary, State=Pressed, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5283",
+      "name": "Size=M, View=Secondary, State=Pressed, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5293",
+      "name": "Size=M, View=Secondary, State=Disabled, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5295",
+      "name": "Size=M, View=Secondary, State=Disabled, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5307",
+      "name": "Size=M, View=Secondary, State=Selected, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5309",
+      "name": "Size=M, View=Secondary, State=Selected, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5329",
+      "name": "Size=M, View=Secondary, State=Loading, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5331",
+      "name": "Size=M, View=Secondary, State=Loading, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5382",
+      "name": "Size=S, View=Secondary, State=Default, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5384",
+      "name": "Size=S, View=Secondary, State=Default, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5394",
+      "name": "Size=S, View=Secondary, State=Hover, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5396",
+      "name": "Size=S, View=Secondary, State=Hover, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5406",
+      "name": "Size=S, View=Secondary, State=Pressed, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5408",
+      "name": "Size=S, View=Secondary, State=Pressed, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5418",
+      "name": "Size=S, View=Secondary, State=Disabled, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5420",
+      "name": "Size=S, View=Secondary, State=Disabled, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5430",
+      "name": "Size=S, View=Secondary, State=Selected, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5432",
+      "name": "Size=S, View=Secondary, State=Selected, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5452",
+      "name": "Size=S, View=Secondary, State=Loading, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5454",
+      "name": "Size=S, View=Secondary, State=Loading, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5496",
+      "name": "Size=M, View=Ghost, State=Default, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5498",
+      "name": "Size=M, View=Ghost, State=Default, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5508",
+      "name": "Size=M, View=Ghost, State=Hover, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5510",
+      "name": "Size=M, View=Ghost, State=Hover, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5520",
+      "name": "Size=M, View=Ghost, State=Pressed, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5522",
+      "name": "Size=M, View=Ghost, State=Pressed, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5532",
+      "name": "Size=M, View=Ghost, State=Disabled, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5534",
+      "name": "Size=M, View=Ghost, State=Disabled, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5546",
+      "name": "Size=M, View=Ghost, State=Selected, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5548",
+      "name": "Size=M, View=Ghost, State=Selected, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5568",
+      "name": "Size=M, View=Ghost, State=Loading, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5570",
+      "name": "Size=M, View=Ghost, State=Loading, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5612",
+      "name": "Size=S, View=Ghost, State=Default, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5614",
+      "name": "Size=S, View=Ghost, State=Default, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5624",
+      "name": "Size=S, View=Ghost, State=Hover, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5626",
+      "name": "Size=S, View=Ghost, State=Hover, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5636",
+      "name": "Size=S, View=Ghost, State=Pressed, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5638",
+      "name": "Size=S, View=Ghost, State=Pressed, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5648",
+      "name": "Size=S, View=Ghost, State=Disabled, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5650",
+      "name": "Size=S, View=Ghost, State=Disabled, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5660",
+      "name": "Size=S, View=Ghost, State=Selected, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5662",
+      "name": "Size=S, View=Ghost, State=Selected, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5682",
+      "name": "Size=S, View=Ghost, State=Loading, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5684",
+      "name": "Size=S, View=Ghost, State=Loading, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5726",
+      "name": "Size=M, View=Clear, State=Default, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5728",
+      "name": "Size=M, View=Clear, State=Default, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5738",
+      "name": "Size=M, View=Clear, State=Hover, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5740",
+      "name": "Size=M, View=Clear, State=Hover, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5750",
+      "name": "Size=M, View=Clear, State=Pressed, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5752",
+      "name": "Size=M, View=Clear, State=Pressed, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5762",
+      "name": "Size=M, View=Clear, State=Disabled, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5764",
+      "name": "Size=M, View=Clear, State=Disabled, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5774",
+      "name": "Size=M, View=Clear, State=Selected, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5776",
+      "name": "Size=M, View=Clear, State=Selected, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5796",
+      "name": "Size=M, View=Clear, State=Loading, Type=Default",
+      "width": 40,
+      "height": 40,
+      "radius": 8,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5798",
+      "name": "Size=M, View=Clear, State=Loading, Type=Round",
+      "width": 40,
+      "height": 40,
+      "radius": 333,
+      "iconSize": 20
+    },
+    {
+      "nodeId": "393:5840",
+      "name": "Size=S, View=Clear, State=Default, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5842",
+      "name": "Size=S, View=Clear, State=Default, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5852",
+      "name": "Size=S, View=Clear, State=Hover, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5854",
+      "name": "Size=S, View=Clear, State=Hover, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5864",
+      "name": "Size=S, View=Clear, State=Pressed, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5866",
+      "name": "Size=S, View=Clear, State=Pressed, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5876",
+      "name": "Size=S, View=Clear, State=Disabled, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5878",
+      "name": "Size=S, View=Clear, State=Disabled, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5888",
+      "name": "Size=S, View=Clear, State=Selected, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5890",
+      "name": "Size=S, View=Clear, State=Selected, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5910",
+      "name": "Size=S, View=Clear, State=Loading, Type=Default",
+      "width": 32,
+      "height": 32,
+      "radius": 8,
+      "iconSize": 16
+    },
+    {
+      "nodeId": "393:5912",
+      "name": "Size=S, View=Clear, State=Loading, Type=Round",
+      "width": 32,
+      "height": 32,
+      "radius": 333,
+      "iconSize": 16
+    }
+  ],
+  "textStyles": [
+    {
+      "name": "Components/Display/L",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Semi Expanded Extra Bold"
+      },
+      "size": 44,
+      "line": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Heading/H1",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Semi Expanded Extra Bold"
+      },
+      "size": 32,
+      "line": {
+        "unit": "PERCENT",
+        "value": 100
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Heading/H2",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Semi Expanded Bold"
+      },
+      "size": 28,
+      "line": {
+        "unit": "PERCENT",
+        "value": 120.00000476837158
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Heading/H3",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Semi Expanded Bold"
+      },
+      "size": 24,
+      "line": {
+        "unit": "PERCENT",
+        "value": 120.00000476837158
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Title/L",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Medium"
+      },
+      "size": 22,
+      "line": {
+        "unit": "PERCENT",
+        "value": 120.00000476837158
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Title/M",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 16,
+      "line": {
+        "unit": "PERCENT",
+        "value": 150
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Body/L",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 16,
+      "line": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Body/M",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 14,
+      "line": {
+        "unit": "PERCENT",
+        "value": 139.9999976158142
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Body/S",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 12,
+      "line": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Label/L",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Medium"
+      },
+      "size": 16,
+      "line": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Label/M",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Medium"
+      },
+      "size": 14,
+      "line": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Label/S",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Medium"
+      },
+      "size": 12,
+      "line": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      },
+      "spacing": {
+        "unit": "PIXELS",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Body/XS",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 10,
+      "line": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "spacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Body/XXS",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Regular"
+      },
+      "size": 8,
+      "line": {
+        "unit": "PERCENT",
+        "value": 135.0000023841858
+      },
+      "spacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    },
+    {
+      "name": "Components/Label/XS",
+      "font": {
+        "family": "Alabuga Sans",
+        "style": "Medium"
+      },
+      "size": 10,
+      "line": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      },
+      "spacing": {
+        "unit": "PERCENT",
+        "value": 0
+      }
+    }
+  ],
+  "decisions": [
+    "Native button and anchor semantics, existing af-btn states and loaders are reused.",
+    "Secondary Round L retains its 20 px icon and matching 20 px loader.",
+    "Filled diamond and triangle SVG assets retain their original 33 px geometry, embedded in CSS; outline uses the original CSS geometry because the SVG export mask is invalid. Unordered text lists align left; ordered numbering is preserved.",
+    "Web text retains full line height; Figma text-box-trim is not applied to body copy.",
+    "Standard component letter spacing is zero. Page Display keeps the explicit 36 px mobile exception; fitted slide typography is unchanged."
+  ],
+  "demoIcon": {
+    "name": "Information",
+    "cssClass": "af-btn__icon--info",
+    "action": "More information",
+    "assets": [
+      {
+        "file": "src/icons/field-info-l.svg",
+        "variant": "298:1210",
+        "width": 24,
+        "sourceAsset": "5d0735cd-f6fc-460a-a7ad-8b59b351ed73"
+      },
+      {
+        "file": "src/icons/field-info-m.svg",
+        "variant": "342:1035",
+        "width": 20,
+        "sourceAsset": "9473e3df-4a6f-4129-9b7e-dd507106abc7"
+      },
+      {
+        "file": "src/icons/field-info-s.svg",
+        "variant": "337:658",
+        "width": 16,
+        "sourceAsset": "3a3376e6-d5e4-45f1-91c0-fbbe2f416e46"
+      }
+    ],
+    "method": "Existing unchanged size-specific Figma SVGs, intrinsic-size CSS alpha mask with currentColor"
+  },
+  "legacyExtensions": {
+    "classes": [
+      "af-dropcap",
+      "af-divider",
+      "af-divider--ornament"
+    ],
+    "presentInCommit": "57cc037",
+    "date": "2026-10-20",
+    "status": "No confirmed source in reviewed Figma/PDF materials; marked as optional Framework extensions in documentation"
+  },
+  "iconCentering": {
+    "anchor": "left/top 50%, translate -50% -50%",
+    "appliesTo": [
+      "direct af-btn__icon children of af-btn--icon",
+      "af-btn--icon loading pseudo-element"
+    ],
+    "svgGeometry": "unchanged",
+    "animation": "rotation uses independent transform"
+  }
+}

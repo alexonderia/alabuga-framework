@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-22",
+  "fileKey": "ObAoKiDwraibmQrxUNvGWI",
+  "method": "Visual reading of three user-supplied Figma screenshots in the conversation, cross-checked against previously archived node dimensions, tokens and property samples; no new Figma request.",
+  "images": [
+    {
+      "id": "option-multi",
+      "width": 750,
+      "height": 372,
+      "components": [
+        "354:981",
+        "354:1004"
+      ],
+      "visibleVariants": "Option Default/Hover/Pressed/Disabled/Selected; Multi-switch L/M/S",
+      "approximateScale": 1.393,
+      "localImagePath": null
+    },
+    {
+      "id": "chip-dialog-navigation",
+      "width": 1083,
+      "height": 722,
+      "components": [
+        "371:1195",
+        "402:1724",
+        "407:1740",
+        "407:1751"
+      ],
+      "visibleVariants": "Chip five appearances in L/M/S, Dialog, Link Default/Active/Hover, Breadcrumbs",
+      "approximateScale": 1.45,
+      "localImagePath": null
+    },
+    {
+      "id": "alerts",
+      "width": 1268,
+      "height": 569,
+      "components": [
+        "376:1500"
+      ],
+      "visibleVariants": "Alert Info/Success/Warning/Error/Default in L/M/S",
+      "approximateScale": 1.45,
+      "localImagePath": null
+    }
+  ],
+  "observations": [
+    "Option text is Regular, with transparent default/hover/disabled, a blue hover outline and blue pressed/selected fills.",
+    "Multi-switch has no overall border or fill. It keeps 4 px inner padding and 4 px gaps; children hug their labels.",
+    "Chip and Alert use source semantic colors and three distinct circle glyphs: information, check, exclamation.",
+    "Chip close marks are much smaller than their leading circle icons, particularly in M/S.",
+    "Alert L combines a 20 px leading circle and a 24 px close slot; using 24 px for both incorrectly wraps the reference sentence.",
+    "Dialog has equal-width actions across its content width with a 12 px gap, 16 px vertical section gaps and a subtle source shadow.",
+    "Link is gray by default, black when active and blue on hover, without persistent underlining. Breadcrumbs use a real chevron vector."
+  ],
+  "measurements": "Native component metrics and corrections are recorded in design/secondary-components-rules.json. Screenshot scales are approximate; cached Figma dimensions take precedence.",
+  "limitations": [
+    "Original attachment bytes are not available as local files. No PNG checksum or automated source-image pixel diff is claimed.",
+    "Detailed per-variant Figma contexts and dedicated P2 SVG exports remain incomplete.",
+    "Browser images in artifacts/p2-correction-2026-10-22 are implementation evidence, not original Figma screenshots."
+  ]
+}

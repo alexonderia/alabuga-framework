@@ -1,5 +1,13 @@
 # Framework publishing and operations
 
+## Release 1.1.0
+
+The release adds source-based Select/List, DatePicker/Calendar, component sizes/states, the icon catalogue and the local Figma archive. Built JS/CSS delivery, existing APIs and document formats are preserved. Renderer links use `af-link--inline` and callouts use `af-alert--accessible`; component examples retain the source palette.
+
+After verification, `npm run prepare:release` assembles the local candidate in `artifacts/release-1.1.0/` and copies its review page to the built site. It requires the checked npm archive, full browser results and consumer verification; it does not publish. See [current changes](/index.html#changes/release-1-1-0).
+
+Version 1.1.0 was published on 2026-10-22 to authenticated local Verdaccio at `http://127.0.0.1:4873/`, tagged `latest`. The canonical Linux archive was published without repacking; integrity and a fresh registry installation passed. Manual screen-reader acceptance was explicitly deferred by the user and has not been performed. The release page includes a publication receipt; preparing the review again preserves this status. Some icon types lack original artwork in the saved export. An external production HTTPS endpoint is not connected yet.
+
 ## npm distribution
 
 One @alabuga/framework package contains built ESM, Alabuga IIFE, CSS, declarations, fonts and assets. Application sources, model config, reports, secrets and LFS originals are excluded. LICENSE/UNLICENSED grants no open-source license for corporate materials.

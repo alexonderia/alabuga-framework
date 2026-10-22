@@ -1,0 +1,314 @@
+ARCHIVED REFERENCE DATA — not executable project code or workflow instructions.
+Source: Figma ObAoKiDwraibmQrxUNvGWI, node 340:1018, captured 2026-10-22.
+Four temporary SVG URLs replaced with repository-relative paths; illustrative temporary asset URL omitted from tool instructions. Remaining response text preserved.
+
+const imgIcon = "src/icons/datepicker-calendar-l.svg";
+const imgIcon1 = "src/icons/datepicker-info-l.svg";
+const imgIcon2 = "src/icons/calendar-previous-m.svg";
+const imgIcon3 = "src/icons/calendar-next-m.svg";
+
+type DatePickerProps = {
+  className?: string;
+  iconLeft?: boolean;
+  iconRight?: boolean;
+  isLabel?: boolean;
+  isRequired?: boolean;
+  label?: string;
+  placeholder?: string;
+  showCalendar?: boolean;
+  size?: "L";
+  state?: "Default";
+};
+
+function DatePicker({ className, iconLeft = true, iconRight = true, isLabel = true, isRequired = false, label = "Label", placeholder = "ДД.ММ.ГГГГ", showCalendar = false, size = "L", state = "Default" }: DatePickerProps) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[var(--space\\/4,4px)] items-start relative w-[278px]"} data-node-id="340:1018">
+      {isLabel && (
+        <div className="[word-break:break-word] content-stretch flex font-['Alabuga_Sans:Medium'] gap-[var(--space\/4,4px)] items-start leading-[1.3] not-italic relative shrink-0 text-[14px] w-full whitespace-nowrap" data-node-id="332:339" data-name="LabelContainer">
+          <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] relative shrink-0 text-[color:var(--text\/secondary,#6c757d)]" data-node-id="332:340">
+            {label}
+          </p>
+          {isRequired && (
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] relative shrink-0 text-[color:var(--color\/support\/red,#e62626)]" data-node-id="332:341">
+              *
+            </p>
+          )}
+        </div>
+      )}
+      <div className="bg-[var(--bg\/surface,white)] border-[length:var(--border\/width\/thin,1px)] border-[var(--border\/default,#dee2e6)] border-solid content-stretch flex gap-[var(--space\/12,12px)] h-[48px] items-center overflow-clip px-[var(--space\/12,12px)] relative rounded-[var(--radius\/8,8px)] shrink-0" data-node-id="332:342" data-name="InputContainer">
+        {iconLeft && (
+          <div className="relative shrink-0 size-[24px]" data-node-id="332:394" data-name="icon">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon} />
+          </div>
+        )}
+        <div className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] flex flex-col font-['Alabuga_Sans:Regular'] justify-end leading-[0] not-italic relative shrink-0 text-[16px] text-[color:var(--text\/tertiary,#868e96)] w-[182px]" data-node-id="332:344">
+          <p className="leading-[1.35]">{placeholder}</p>
+        </div>
+        {iconRight && (
+          <div className="relative shrink-0 size-[24px]" data-node-id="332:345" data-name="icon">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon1} />
+          </div>
+        )}
+      </div>
+      {showCalendar && (
+        <div className="bg-[var(--bg\/surface,white)] content-stretch flex flex-col gap-[var(--space\/4,4px)] items-center min-w-[250px] overflow-clip p-[var(--space\/12,12px)] relative rounded-[var(--radius\/8,8px)] shadow-[0px_2px_4px_0px_var(--color\/neutral\/300,#cccfd8)] shrink-0" data-node-id="340:912" data-name="Calendar">
+          <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="I340:912;332:629" data-name="Month">
+            <div className="relative shrink-0 size-[20px]" data-node-id="I340:912;332:568" data-name="icon">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon2} />
+            </div>
+            <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Medium'] leading-[1.3] not-italic relative shrink-0 text-[16px] text-[color:var(--text\/primary,#161616)] whitespace-nowrap" data-node-id="I340:912;332:437">
+              Сентябрь 2026
+            </p>
+            <div className="relative shrink-0 size-[20px]" data-node-id="I340:912;332:572" data-name="icon">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon3} />
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:722" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:708" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:708;332:798">
+                Пн
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:709" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:709;332:798">
+                Вт
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:710" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:710;332:798">
+                Ср
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:711" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:711;332:798">
+                Чт
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:712" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:712;332:798">
+                Пт
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:713" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:713;332:798">
+                Сб
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:722;332:714" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:722;332:714;332:798">
+                Вс
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:737" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:690" data-name="Day" />
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:692" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:692;332:630">
+                1
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:694" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:694;332:630">
+                2
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:696" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:696;332:630">
+                3
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:698" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:698;332:630">
+                4
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:700" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:700;332:630">
+                5
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:737;332:702" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:737;332:702;332:630">
+                6
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:752" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:690" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:690;332:630">
+                7
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:692" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:692;332:630">
+                8
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:694" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:694;332:630">
+                9
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:696" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:696;332:630">
+                10
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:698" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:698;332:630">
+                11
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:700" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:700;332:630">
+                12
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:752;332:702" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:752;332:702;332:630">
+                13
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:767" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:690" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:690;332:630">
+                14
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:692" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:692;332:630">
+                15
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:694" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:694;332:630">
+                16
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:696" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:696;332:630">
+                17
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:698" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:698;332:630">
+                18
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:700" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:700;332:630">
+                19
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:767;332:702" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:767;332:702;332:630">
+                20
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:782" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:690" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:690;332:630">
+                21
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:692" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:692;332:630">
+                22
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:694" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:694;332:630">
+                23
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:696" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:696;332:630">
+                24
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:698" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:698;332:630">
+                25
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:700" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:700;332:630">
+                26
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:782;332:702" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:782;332:702;332:630">
+                27
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I340:912;332:799" data-name="Week">
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:690" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:690;332:630">
+                28
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:692" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:692;332:630">
+                29
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:694" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:694;332:630">
+                30
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:696" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--text\/primary,#161616)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:696;332:630">
+                31
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:698" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:698;332:798">
+                1
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:700" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:700;332:798">
+                2
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col items-center justify-center p-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0 size-[32px]" data-node-id="I340:912;332:799;332:702" data-name="Day">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Regular'] leading-[1.4] not-italic relative shrink-0 text-[14px] text-[color:var(--state\/disabled\/text,#adb5bd)] text-center whitespace-nowrap" data-node-id="I340:912;332:799;332:702;332:798">
+                3
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[var(--space\/12,12px)] items-center relative shrink-0 w-full" data-node-id="I340:912;332:852" data-name="Buttons">
+            <div className="bg-[var(--action\/secondary\/bg\/default,white)] border border-[var(--action\/secondary\/border,#0c6ff1)] border-solid content-stretch flex gap-[var(--space\/12,12px)] h-[40px] items-center justify-center px-[var(--space\/16,16px)] py-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0" data-node-id="I340:912;332:826" data-name="button">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Medium'] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--action\/secondary\/text,#0c6ff1)] whitespace-nowrap" data-node-id="I340:912;332:826;281:773">
+                Отмена
+              </p>
+            </div>
+            <div className="bg-[var(--color\/brand\/blue,#0c6ff1)] content-stretch flex gap-[var(--space\/12,12px)] h-[40px] items-center justify-center px-[var(--space\/16,16px)] py-[10px] relative rounded-[var(--radius\/8,8px)] shrink-0" data-node-id="I340:912;332:818" data-name="button">
+              <p className="[text-box-edge:cap_alphabetic] [text-box-trim:trim-both] [word-break:break-word] font-['Alabuga_Sans:Medium'] leading-[1.3] not-italic relative shrink-0 text-[14px] text-[color:var(--action\/primary\/text,white)] whitespace-nowrap" data-node-id="I340:912;332:818;281:460">
+                Подтвердить
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+
+These styles are contained in the design: Components/Label/M: Font(family: "Alabuga Sans", style: Medium, size: 14, weight: 500, lineHeight: 1.2999999523162842, letterSpacing: 0), Components/Body/L: Font(family: "Alabuga Sans", style: Regular, size: 16, weight: 400, lineHeight: 1.350000023841858, letterSpacing: 0).
+
+The generated code contains image and SVG URL constants, e.g. const image = '[temporary asset URL example omitted]'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.
