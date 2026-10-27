@@ -16,7 +16,7 @@ export interface DocumentController {
   checkOverflow(): string[];
 }
 const mounted = new WeakMap<HTMLElement, DocumentController>();
-export function renderDocument(container: HTMLElement, input: unknown,options:ResourceOptions&{editing?:boolean;resolveAsset?:(id:string)=>string|undefined}={}): DocumentController {
+export function renderDocument(container: HTMLElement, input: unknown,options:ResourceOptions&{editing?:boolean;slideOffset?:number;slideCount?:number;resolveAsset?:(id:string)=>string|undefined}={}): DocumentController {
   const parsed=validateDocument(input);
   if(!parsed.success)throw new Error(parsed.issues.map(i=>`${i.path}: ${i.message}`).join('\n'));
   const resolveAsset=(src:string)=>src.startsWith('asset:')?(options.resolveAsset?.(src.slice(6))??''):resolveAssetUrl(src,options);
@@ -62,7 +62,11 @@ export function renderDocument(container: HTMLElement, input: unknown,options:Re
       if(page.role)shell.classList.add('af-section--'+page.role);
       shell.dataset.sectionId=page.id;
       shell.id=page.id;
-      if(doc.kind==='presentation')shell.append(el('span','af-eyebrow','АЛАБУГА / '+doc.title));
+      if(doc.kind==='presentation'){
+        const header=el('span','af-eyebrow',page.chrome?.header?.text?.trim()||'АЛАБУГА / '+doc.title);
+        if(page.chrome?.header?.visible===false){header.style.visibility='hidden';header.setAttribute('aria-hidden','true')}
+        shell.append(header);
+      }
       if(page.title)shell.append(el(doc.kind==='presentation'||page!==doc.pages[0]?'h2':'h1',doc.kind==='presentation'?'af-slide__title':'af-heading',page.title));
       const panel=el('div','af-panel');panel.style.setProperty('--af-columns',String(page.grid.columns));panel.style.setProperty('--af-row-height',page.grid.rowHeight+'px');panel.style.setProperty('--af-panel-gap',page.grid.gap+'px');
       for(const w of page.widgets){
@@ -77,7 +81,11 @@ export function renderDocument(container: HTMLElement, input: unknown,options:Re
       }
       shell.append(panel);
       styleSection(shell,page.appearance?.background?{...page,appearance:{...page.appearance,background:resolveAsset(page.appearance.background)}}:page,doc.kind);
-      if(doc.kind==='presentation'){shell.append(el('span','af-slide__number',String(slides.length+1).padStart(2,'0')));slides.push(shell);stage!.append(shell)}else root.append(shell);
+      if(doc.kind==='presentation'){
+        const config=page.chrome?.number,n=slides.length+1+(options.slideOffset??0),total=options.slideCount??doc.pages.length;
+        if(config?.visible!==false){const number=el('span','af-slide__number',config?.value?.trim()||(config?.format==='total'?`${n} / ${total}`:config?.format==='plain'?String(n):String(n).padStart(2,'0')));number.dataset.position=config?.position??'right';if(config?.background)number.dataset.numberBackground=config.background;if(config?.color)number.dataset.numberColor=config.color;shell.append(number)}
+        slides.push(shell);stage!.append(shell);
+      }else root.append(shell);
     }
     if(doc.kind==='presentation'){
       const controls=el('nav','af-deck__controls');controls.setAttribute('aria-label','Навигация презентации');

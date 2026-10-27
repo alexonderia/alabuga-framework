@@ -2,8 +2,8 @@ import { z } from 'zod';
 
 import {VERSION} from './version.js';
 export {VERSION};
-export const DOCUMENT_SCHEMA_VERSION = 3 as const;
-export const SUPPORTED_DOCUMENT_SCHEMA_VERSIONS = [1,2,3] as const;
+export const DOCUMENT_SCHEMA_VERSION = 5 as const;
+export const SUPPORTED_DOCUMENT_SCHEMA_VERSIONS = [1,2,3,4,5] as const;
 export function isSafeUrl(value: string): boolean {
   if (!value || /[\u0000-\u0020\u007f\\]/.test(value) || value.startsWith('//')) return false;
   try { return ['https:', 'http:'].includes(new URL(value, 'https://alabuga.invalid/').protocol); }
@@ -26,7 +26,10 @@ const typography=z.object({heading:z.union([z.literal(64),z.literal(80),z.litera
 export type SlideTypography=z.infer<typeof typography>;
 const elementStyle=z.object({size:z.enum(['compact','normal','large']).optional(),color:z.enum(['inherit','ink','blue','white','muted']).optional(),padding:z.enum(['none','compact','normal','spacious']).optional(),locked:z.boolean().optional()}).strict();
 export type ElementStyle=z.infer<typeof elementStyle>;
-const base = { style:elementStyle.optional(), slot:z.string().max(64).optional(), typography:typography.optional(), id: z.string().regex(/^[a-zA-Z][\w-]{0,63}$/), title: z.string().max(200).default(''), align: z.enum(['left','center','right']).optional(), position, motion:motion.optional(), mobileOrder:z.number().int().min(0).max(100).optional(),tabletOrder:z.number().int().min(0).max(100).optional(),surface:z.enum(['plain','card']).optional() };
+const responsiveSize=z.object({width:z.number().int().min(1).max(100).optional(),minHeight:z.number().int().min(0).max(3200).optional()}).strict();
+export type ResponsiveSize=z.infer<typeof responsiveSize>;
+const responsive=z.object({tablet:responsiveSize.optional(),mobile:responsiveSize.optional()}).strict();
+const base = { responsive:responsive.optional(), style:elementStyle.optional(), slot:z.string().max(64).optional(), typography:typography.optional(), id: z.string().regex(/^[a-zA-Z][\w-]{0,63}$/), title: z.string().max(200).default(''), align: z.enum(['left','center','right']).optional(), position, motion:motion.optional(), mobileOrder:z.number().int().min(0).max(100).optional(),tabletOrder:z.number().int().min(0).max(100).optional(),surface:z.enum(['plain','card']).optional() };
 const contentBlock = z.discriminatedUnion('type', [
   z.object({ type: z.literal('paragraph'), text, dropCap: z.boolean().default(false) }).strict(),
   z.object({ type: z.literal('heading'), text }).strict(),
@@ -52,8 +55,10 @@ const widget = z.discriminatedUnion('type', [
 ]);
 const grid = z.object({ columns: z.number().int().min(1).max(24).default(12), rowHeight: z.number().int().min(32).max(160).default(64), gap: z.number().int().min(0).max(48).default(16) }).strict().default({ columns: 12, rowHeight: 64, gap: 16 });
 const appearance=z.object({backgroundId:z.string().max(100).optional(),backgroundPlacement:z.enum(backgroundPlacements).optional(),fitted:z.boolean().optional(),theme:z.enum(['light','contrast','accent','image']).default('light'),spacing:z.enum(['compact','normal','generous']).default('normal'),width:z.enum(['wide','narrow']).default('wide'),layout:z.enum(['fixed','flow']).default('flow'),decoration:z.enum(['none','orbit','lines']).default('none'),background:imageUrl.optional(),focalPoint:focalPoint.optional(),mobileFocalPoint:focalPoint.optional(),focal:z.enum(['center','top','bottom','left','right']).default('center'),shade:z.enum(['medium','strong']).default('strong')}).strict();
-const page = z.object({ layoutVariant:z.enum(['primary','stacked','asymmetric']).optional(), id: z.string().regex(/^[a-zA-Z][\w-]{0,63}$/), title: z.string().max(200), role:z.enum(['header','content','footer']).optional(),composition:z.string().max(40).optional(),appearance:appearance.optional(),transition:z.enum(['none','fade','slide']).optional(), grid, widgets: z.array(widget).max(100) }).strict();
-const schema = z.object({ schemaVersion: z.union([z.literal(1),z.literal(2),z.literal(3)]), kind: z.enum(['page', 'presentation']), title: z.string().min(1).max(200), pages: z.array(page).min(1).max(100),modals:z.array(z.object({id:z.string().regex(/^[a-zA-Z][\w-]{0,63}$/),title:z.string().min(1).max(200),text}).strict()).max(20).optional() }).strict();
+const slideChrome=z.object({header:z.object({visible:z.boolean().optional(),text:z.string().max(240).optional()}).strict().optional(),number:z.object({visible:z.boolean().optional(),value:z.string().max(20).optional(),format:z.enum(['padded','plain','total']).optional(),position:z.enum(['left','center','right']).optional(),background:z.enum(['transparent','white','ink','blue','light']).optional(),color:z.enum(['inherit','ink','blue','white','muted']).optional()}).strict().optional()}).strict();
+export type SlideChrome=z.infer<typeof slideChrome>;
+const page = z.object({ chrome:slideChrome.optional(), layoutVariant:z.enum(['primary','stacked','asymmetric']).optional(), id: z.string().regex(/^[a-zA-Z][\w-]{0,63}$/), title: z.string().max(200), role:z.enum(['header','content','footer']).optional(),composition:z.string().max(40).optional(),appearance:appearance.optional(),transition:z.enum(['none','fade','slide']).optional(), grid, widgets: z.array(widget).max(100) }).strict();
+const schema = z.object({ schemaVersion: z.union([z.literal(1),z.literal(2),z.literal(3),z.literal(4),z.literal(5)]), kind: z.enum(['page', 'presentation']), title: z.string().min(1).max(200), pages: z.array(page).min(1).max(100),modals:z.array(z.object({id:z.string().regex(/^[a-zA-Z][\w-]{0,63}$/),title:z.string().min(1).max(200),text}).strict()).max(20).optional() }).strict();
 export type AFDocument = z.infer<typeof schema>;
 export type Widget = z.infer<typeof widget>;
 export type TextBlock = z.infer<typeof contentBlock>;
@@ -73,7 +78,8 @@ export function validateDocument(input: unknown): ValidationResult {
   const parsed = schema.safeParse(input);
   if (!parsed.success) return { success: false, issues: parsed.error.issues.map(e => ({ path: e.path.join('.'), message: e.message })) };
   const doc = parsed.data;
-  doc.schemaVersion=3;
+  // Keep older documents readable until they use a new serialized feature.
+  doc.schemaVersion=doc.schemaVersion===5||doc.pages.some(p=>p.chrome)?5:doc.schemaVersion===4||doc.pages.some(p=>p.widgets.some(w=>w.responsive))?4:3;
   const issues: ValidationIssue[] = [];
   const ids = new Set<string>();
   for(const modal of doc.modals??[]){if(ids.has(modal.id))issues.push({path:'modals',message:'Повторяющийся ID'});ids.add(modal.id)}

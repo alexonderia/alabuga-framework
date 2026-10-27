@@ -331,6 +331,12 @@ makeComposition creates a section. changeComposition and applyLayoutVariant tran
 
 fitSlide/measureSlide need browser DOM, fonts and images. fitSlide returns a result rather than writing to an application. Supply signal, resolveAsset and assetsBaseUrl as needed. Do not apply failed results; content is never shortened. See [live fitting](/index.html#compositions) and [Constructor fitting controls]({{CONSTRUCTOR_URL}}/docs/en/slide-fit.html).
 
+## Readable panels without nested scrolling
+
+In the [panel example](/index.html#grid), the calendar spans four columns, the comment eight and each metric four; the table and text appear below. The table uses `wrap: true` so long values wrap within their columns.
+
+The `.panel-demo` wrapper and `demos/panel.css` allow rows to grow with their content. Container width controls reflow: two columns at 1000 px or less, then one column with paired metrics at 600 px or less. This is example styling; regular documents and presentations retain fixed geometry. Load this CSS alongside the ready-made Framework styles to reproduce the adaptation. Prevent unnecessary scrollbars by providing space and wrapping text rather than hiding overflow.
+
 ## React
 
 React owns a host ref; Framework owns its descendants. Mount a controller in useEffect, update its document in a separate effect and destroy it in cleanup. StrictMode remounts must release listeners. tests/consumers/react-document.mjs is the checked example; no separate React package is published.

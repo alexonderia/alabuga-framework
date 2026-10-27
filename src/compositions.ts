@@ -42,7 +42,7 @@ export function makeComposition(name:string,kind:AFDocument['kind']='page'):Sect
 
 export function changeComposition(section:Section,name:string,kind:AFDocument['kind']):Section{
  const target=makeComposition(name,kind);
- if(!section.widgets.length)return {...target,id:section.id,title:section.title,appearance:section.appearance??target.appearance};
+ if(!section.widgets.length)return {...target,id:section.id,title:section.title,appearance:section.appearance??target.appearance,...(section.chrome?{chrome:structuredClone(section.chrome)}:{})};
  const source=semanticSlots(section),dest=semanticSlots(target);
  if(source.size!==dest.size||[...dest].some(([slot,w])=>source.get(slot)?.type!==w.type))throw new Error('В этой композиции другие места для содержимого. Выберите совместимый вариант или добавьте новую секцию.');
  const result=structuredClone(section);result.composition=name;delete result.layoutVariant;

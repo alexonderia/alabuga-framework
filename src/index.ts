@@ -9,7 +9,7 @@ export {compositions,compositionCatalog,makeComposition,changeComposition,showca
 export type {Section,Action} from './schema.js';
 export {fitSlide,measureSlide,slideBackgrounds} from './slide-fit.js';
 export type {FitSlideOptions,FitSlideResult,BackgroundPlacement} from './slide-fit.js';
-export type {SlideTypography} from './schema.js';
+export type {ResponsiveSize,SlideTypography,SlideChrome} from './schema.js';
 
 export {applyLayoutVariant,layoutVariants,semanticSlots} from './layout-variants.js';
 export type {ElementStyle} from './schema.js';

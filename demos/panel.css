@@ -1,0 +1,21 @@
+/* The documentation example grows with its content; fixed application grids
+   and presentation canvases retain their public sizing behavior. */
+.panel-demo { container-type: inline-size; }
+.panel-demo .af-page { padding: 0; }
+.panel-demo .af-panel { grid-auto-rows: minmax(var(--af-row-height), auto); }
+.panel-demo .af-widget { height: auto; min-height: min-content; }
+.panel-demo .af-widget__content { flex: auto; min-height: min-content; overflow: visible; }
+.panel-demo .af-table-scroll { flex: auto; overflow: visible; }
+.panel-demo .af-widget--metric { padding: var(--af-space-16); }
+.panel-demo .af-widget--metric .af-widget__title { font-size: 14px; line-height: 1.4; margin-bottom: var(--af-space-8); }
+.panel-demo .af-metric__value { line-height: 1.4; white-space: nowrap; }
+@container (max-width: 1000px) {
+  .panel-demo .af-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
+  .panel-demo .af-widget { grid-column: auto !important; grid-row: auto !important; }
+  .panel-demo :is(.af-widget--table, [data-widget-id=welcome]) { grid-column: 1 / -1 !important; }
+}
+@container (max-width: 600px) {
+  .panel-demo .af-panel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .panel-demo .af-widget { grid-column: 1 / -1 !important; }
+  .panel-demo .af-widget--metric { grid-column: auto !important; }
+}

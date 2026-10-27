@@ -3,11 +3,11 @@ export const panelExample: AFDocument = {
   schemaVersion:1,kind:'page',title:'Рабочая панель',pages:[{
     id:'dashboard',title:'План на сегодня',grid:{columns:12,rowHeight:64,gap:16},widgets:[
       {id:'calendar',type:'calendar',title:'Календарь',date:'2026-09-30',position:{col:1,row:1,width:4,height:4}},
-      {id:'comment',type:'text',title:'Комментарий',content:[{type:'paragraph',text:'Встреча команды — в 14:00. Согласуем следующую итерацию.',dropCap:false}],position:{col:5,row:1,width:2,height:1}},
-      {id:'tasks',type:'metric',title:'Задачи',value:'12',note:'',position:{col:5,row:2,width:1,height:1}},
-      {id:'people',type:'metric',title:'Команда',value:'08',note:'',position:{col:6,row:2,width:1,height:1}},
-      {id:'table',type:'table',title:'План работ',columns:[{key:'name',label:'Задача'},{key:'status',label:'Статус'}],rows:[{name:'Библиотека',status:'В работе'},{name:'Документация',status:'В работе'},{name:'Конструктор',status:'Позже'}],pageSize:5,position:{col:5,row:3,width:2,height:2}},
-      {id:'welcome',type:'text',title:'Общая основа',content:[{type:'heading',text:'Меньше повторений. Больше смысла.'},{type:'paragraph',text:'Собирайте интерфейсы из знакомых элементов. Цвета, типографика и размеры уже согласованы между собой.',dropCap:true},{type:'divider',decorative:true},{type:'callout',tone:'info',text:'Размер виджета задаётся сеткой. Содержимое остаётся на своём месте.'}],position:{col:7,row:1,width:6,height:4}},
+      {id:'comment',type:'text',title:'Комментарий',content:[{type:'paragraph',text:'Встреча команды — в 14:00. Согласуем следующую итерацию.',dropCap:false}],position:{col:5,row:1,width:8,height:2}},
+      {id:'tasks',type:'metric',title:'Задачи',value:'12',note:'',position:{col:5,row:3,width:4,height:2}},
+      {id:'people',type:'metric',title:'Команда',value:'08',note:'',position:{col:9,row:3,width:4,height:2}},
+      {id:'table',type:'table',title:'План работ',wrap:true,columns:[{key:'name',label:'Задача'},{key:'status',label:'Статус'}],rows:[{name:'Библиотека',status:'В работе'},{name:'Документация',status:'В работе'},{name:'Конструктор',status:'Позже'}],pageSize:5,position:{col:1,row:5,width:6,height:4}},
+      {id:'welcome',type:'text',title:'Общая основа',content:[{type:'heading',text:'Меньше повторений. Больше смысла.'},{type:'paragraph',text:'Собирайте интерфейсы из знакомых элементов. Цвета, типографика и размеры уже согласованы между собой.',dropCap:true},{type:'divider',decorative:true},{type:'callout',tone:'info',text:'Размер виджета задаётся сеткой. Содержимое остаётся на своём месте.'}],position:{col:7,row:5,width:6,height:4}},
     ]
   }]
 };

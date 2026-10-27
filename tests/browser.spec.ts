@@ -38,10 +38,12 @@ test('documentation search, examples and accessibility',async({page},info)=>{
   await page.locator('#search').fill('af-btn');await expect(page.locator('.search-result').first()).toBeVisible();await page.locator('.search-result').first().click();
   await expect(page.locator('.example-preview .af-btn').first()).toBeVisible();
   await page.evaluate(()=>document.fonts.ready);
+  await expect(page.locator('#navigation [aria-current=page]')).toHaveCSS('background-color','rgb(12, 111, 241)');
   expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
   await page.screenshot({path:info.outputPath('buttons.png'),fullPage:true});
   for(const route of ['start','colors','typography','grid','forms','feedback','dialog','surfaces','navigation','icons','widgets','slides','builder','classes','api','changes']){
     await page.goto('/#'+route);await expect(page.locator('.page-title')).toBeVisible();
+    await expect(page.locator('#navigation [aria-current=page]')).toHaveCSS('background-color','rgb(12, 111, 241)');
     if(route==='feedback'||route==='navigation')await auditSourcePreviews(page,info,route);
     else expect((await new AxeBuilder({page}).analyze()).violations,route).toEqual([]);
   }
@@ -51,7 +53,7 @@ test('panel calendar keyboard selection survives resizing and mobile layout',asy
   await page.goto('/demos/panel.html');
   await page.locator('[data-date="2026-09-30"]').focus();await page.keyboard.press('ArrowRight');await expect(page.locator('[data-date="2026-10-01"]')).toBeFocused();await page.keyboard.press('Enter');
   await page.locator('#resize').click();await expect(page.locator('[data-date="2026-10-01"]')).toHaveAttribute('aria-pressed','true');
-  await expect(page.locator('[data-widget-id="tasks"]')).toHaveCSS('grid-row','2 / span 2');
+  await expect(page.locator('[data-widget-id="tasks"]')).toHaveCSS('grid-row','4 / span 2');
   await page.setViewportSize({width:390,height:844});
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);

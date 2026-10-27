@@ -5,7 +5,7 @@
 | Export | Capabilities |
 | --- | --- |
 | Package root | VERSION, schema, renderer, behavior, compositions, export |
-| schema | AFDocument, Section, Widget, validateDocument, isSafeUrl |
+| schema | AFDocument, Section, Widget, ResponsiveSize, validateDocument, isSafeUrl |
 | runtime | renderDocument, DocumentController |
 | components, dom, widgets | initComponents, DOM helpers, registry |
 | compositions, layout-variants | compositionCatalog, makeComposition, changeComposition, semanticSlots, applyLayoutVariant |
@@ -49,3 +49,7 @@ keepBackground/keepTypography preserve selected values; resolveAsset resolves as
 Authoring hooks include data-section-id, data-widget-id, data-action-id, .af-page, .af-slide, .af-panel, .af-widget, its title/content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, quote text/author and feature title/text. Prose/list/figcaption/row/cell/card order follows data. docs/public-contract.md records the full contract. Breaking these hooks requires a major release.
 
 See [live API examples](/index.html#api), [compositions](author.md) and [brand](brand.md).
+
+For isolated slide thumbnails, renderDocument accepts `slideOffset` (preceding slide count, default 0) and `slideCount` (total slide count). See [document data](data.md) for `page.chrome`. DOM anchors are `.af-eyebrow` and `.af-slide__number`; a hidden header uses visibility:hidden and aria-hidden.
+
+Set page.chrome.number.background and page.chrome.number.color independently to style the page number.

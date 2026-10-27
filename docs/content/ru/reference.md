@@ -5,7 +5,7 @@
 | Экспорт | Возможности |
 | --- | --- |
 | Корень пакета | VERSION, schema, renderer, поведение, композиции и экспорт |
-| schema | AFDocument, Section, Widget, validateDocument, isSafeUrl |
+| schema | AFDocument, Section, Widget, ResponsiveSize, validateDocument, isSafeUrl |
 | runtime | renderDocument, DocumentController |
 | components, dom, widgets | initComponents, DOM-помощники, реестр |
 | compositions, layout-variants | compositionCatalog, makeComposition, changeComposition, semanticSlots, applyLayoutVariant |
@@ -49,3 +49,5 @@ keepBackground/keepTypography сохраняют выбранные настро
 Редакторские опоры: data-section-id, data-widget-id, data-action-id; .af-page, .af-slide, .af-panel, .af-widget, .af-widget__title, .af-widget__content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, .af-quote__text, .af-quote__author, .af-feature и его title/text. Порядок prose, list items, figcaption, строк/ячеек и карточек соответствует данным. Полный контракт хранится в docs/public-contract.md. Нарушение этих опор требует major-версии.
 
 [Живые примеры](/index.html#api), [композиции](author.md), [бренд](brand.md).
+
+Для изолированных миниатюр слайда renderDocument принимает slideOffset (число предыдущих слайдов, по умолчанию 0) и slideCount (общее число слайдов). Настройки page.chrome описаны в [формате документа](data.md). DOM-опоры: .af-eyebrow, .af-slide__number; скрытая подпись имеет visibility:hidden и aria-hidden. Фон и цвет номера задаются через page.chrome.number.background и page.chrome.number.color.

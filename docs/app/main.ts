@@ -1,5 +1,6 @@
 import '@alabuga/framework/standalone.css';
 import {slideFitDocs} from './slide-fit-docs';
+import {releaseHistory} from './release-history';
 import { initComponents, renderDocument, renderCalendar, VERSION, widgetRegistry, type DocumentController, type AFDocument, type CalendarRange } from '@alabuga/framework';
 import { panelExample, presentationExample } from '@alabuga/framework/examples';
 import { el, button } from '@alabuga/framework/dom';
@@ -10,16 +11,20 @@ import {makeComposition,showcase} from '@alabuga/framework/compositions';
 const libraryCss=baseCss+compositionCss;
 import tokens from '../../design/figma-tokens.json';
 import './site.css';
+import '../../demos/panel.css';
+import panelExampleCss from '../../demos/panel.css?raw';
 const constructorOrigin=new URL(import.meta.env.VITE_CONSTRUCTOR_URL||'http://127.0.0.1:4176').origin;
 
 const pages = [
-  ['ai','Локальный ИИ','Документы'],
-  ['start','Начало работы','Обзор'],['colors','Цвета и токены','Основа'],['typography','Типографика','Основа'],['grid','Панельная сетка','Основа'],
-  ['buttons','Кнопки','Компоненты'],['forms','Формы и выбор','Компоненты'],['feedback','Уведомления и бейджи','Компоненты'],['dialog','Диалог','Компоненты'],
-  ['surfaces','Блоки и поверхности','Компоненты'],
-  ['navigation','Навигация','Компоненты'],
-  ['icons','Иконки','Компоненты'],
-  ['compositions','Композиции и эффекты','Документы'],['widgets','Виджеты','Документы'],['slides','Презентации','Документы'],['builder','Конструктор','Документы'],['workspace','Проекты и материалы','Документы'],['classes','Справочник классов','Справочник'],['api','JavaScript API','Справочник'],['changes','Изменения и решения','Справочник'],
+  ['start','Начало работы','Подключение библиотеки'],
+  ['colors','Цвета и токены','Цвета, шрифты и сетка'],['typography','Типографика','Цвета, шрифты и сетка'],['grid','Панельная сетка','Цвета, шрифты и сетка'],
+  ['buttons','Кнопки','Компоненты интерфейса'],['forms','Формы и выбор','Компоненты интерфейса'],['feedback','Уведомления и бейджи','Компоненты интерфейса'],['dialog','Диалог','Компоненты интерфейса'],
+  ['surfaces','Блоки и поверхности','Компоненты интерфейса'],
+  ['navigation','Навигация','Компоненты интерфейса'],
+  ['icons','Иконки','Компоненты интерфейса'],
+  ['compositions','Композиции и эффекты','Страницы и презентации'],['widgets','Виджеты','Страницы и презентации'],['slides','Презентации','Страницы и презентации'],
+  ['builder','Конструктор','Alabuga Constructor'],['workspace','Проекты и материалы','Alabuga Constructor'],['ai','Локальный ИИ','Alabuga Constructor'],
+  ['classes','Справочник классов','CSS, API и изменения'],['api','JavaScript API','CSS, API и изменения'],['changes','Изменения и решения','CSS, API и изменения'],
 ];
 const constructorGuides:Record<string,string>={ai:'ai',workspace:'projects'};
 const pageHref=(id:string)=>constructorGuides[id]?`${constructorOrigin}/docs/ru/${constructorGuides[id]}.html`:'#'+id;
@@ -38,25 +43,35 @@ const descriptions: Record<string,string>={
   widgets:'Самостоятельные блоки для вашей композиции. Один контракт — разные сценарии.',slides:'Та же библиотека на холсте 16:9. Собирайте, показывайте и печатайте.',
   compositions:'Готовые фирменные композиции, адаптивная сетка и сценарии движения.',
   builder:'Визуальная сборка страниц и презентаций. Выберите виджет, настройте содержимое и разместите его в сетке.',
-  classes:'Найдите нужный класс по имени или назначению. Внутренние классы __ описывают части компонентов.',api:'Проверка документа, отображение и управление жизненным циклом.',changes:'Что перенесено из Figma, что уточнено для браузера и что осталось за границами версии 0.6.',
+  classes:'Найдите нужный класс по имени или назначению. Внутренние классы __ описывают части компонентов.',api:'Проверка документа, отображение и управление жизненным циклом.',changes:'Версии Framework и их изменения.',
 };
 const app=document.querySelector<HTMLElement>('#app')!;app.className='af docs';
 app.innerHTML=`<a class="skip-link" href="#content">К содержимому</a>
-<header class="site-header"><a class="wordmark" href="#start"><span class="brand-mark" aria-hidden="true">A</span><span>alabuga<span class="wordmark-sub">framework</span></span></a><span class="header-label">ДИЗАЙН → КОД</span><nav class="header-nav" aria-label="Верхняя навигация"><a href="#start">Документация</a><a href="${constructorOrigin}/builder/">Конструктор ↗</a><a href="/docs/ru/start.html" lang="ru">RU</a><a href="/docs/en/start.html" lang="en">EN</a><a href="#changes" class="version">v${VERSION}</a></nav></header>
-<aside class="sidebar"><label class="search-box"><span class="af-sr-only">Поиск классов и разделов</span><input id="search" type="search" placeholder="Поиск классов…" autocomplete="off"><kbd>/</kbd></label><div id="search-results" role="status"></div><nav id="navigation" aria-label="Разделы документации"></nav><div class="sidebar-footer"><span class="status-dot"></span> Рабочее ядро <span>${VERSION}</span></div></aside>
+<header class="site-header"><a class="wordmark" href="#start"><span class="brand-mark" aria-hidden="true">A</span><span>alabuga<span class="wordmark-sub">framework</span></span></a><span class="header-label af-label af-label--sm">ДИЗАЙН → КОД</span><nav class="header-nav" aria-label="Верхняя навигация"><a class="af-link af-link--accessible" href="#start" aria-current="page">Документация</a><a class="af-btn af-btn--secondary af-btn--sm" href="${constructorOrigin}/builder/">Конструктор ↗</a><a class="af-link af-link--accessible" href="/docs/ru/start.html" lang="ru">RU</a><a class="af-link af-link--accessible" href="/docs/en/start.html" lang="en">EN</a><a href="#changes" class="version af-chip af-chip--info af-chip--accessible">v${VERSION}</a></nav></header>
+<aside class="sidebar"><label class="search-box"><span class="af-sr-only">Поиск классов и разделов</span><input class="af-input" id="search" type="search" placeholder="Поиск классов…" autocomplete="off" aria-keyshortcuts="/"><kbd aria-hidden="true">/</kbd></label><div id="search-results" role="status"></div><nav id="navigation" aria-label="Разделы документации"></nav><div class="sidebar-footer"><span class="status-dot"></span> Рабочее ядро <span>${VERSION}</span></div></aside>
 <main id="content" class="content" tabindex="-1"></main><aside class="toc" aria-label="На этой странице"><span>НА ЭТОЙ СТРАНИЦЕ</span><nav id="toc"></nav><div class="toc-note">Один источник.<br>Живой пример.<br>Точный код.</div></aside>`;
 const main=document.querySelector<HTMLElement>('#content')!;
 const navigation=document.querySelector<HTMLElement>('#navigation')!;
-let category='';for(const [id,title,group] of pages){if(group!==category){navigation.append(el('p','nav-group',group));category=group}const a=el('a','nav-link',title);a.href=pageHref(id);a.dataset.page=id;navigation.append(a)}
+let category='',navItems:HTMLElement;
+for(const [id,title,group] of pages){
+  if(group!==category){
+    const section=el('section','nav-section'),heading=el('h2','af-label af-label--sm nav-group',group);
+    heading.id=`nav-group-${id}`;section.setAttribute('aria-labelledby',heading.id);
+    navItems=el('div','nav-items');section.append(heading,navItems);navigation.append(section);category=group;
+  }
+  const a=el('a','af-btn af-btn--clear nav-link',title);a.href=pageHref(id);a.dataset.page=id;
+  if(constructorGuides[id]){const arrow=el('span','nav-external','↗');arrow.setAttribute('aria-hidden','true');a.append(arrow)}
+  navItems!.append(a);
+}
 let dispose:()=>void=()=>{};let controllers:DocumentController[]=[];
 const classNames=[...new Set([...libraryCss.matchAll(/\.(af(?:-[a-z0-9_-]+)?)(?![\w-])/g)].map(m=>m[1]))].sort();
 const classGroup=(name:string)=>/btn/.test(name)?'buttons':/^af-card(?:$|--)/.test(name)?'surfaces':/^af-surface--/.test(name)?'compositions':/^(af-label|af-body|af-title|af-heading|af-display|af-bullet|af-list)/.test(name)?'typography':/breadcrumb|^af-link/.test(name)?'navigation':/chip|alert|badge/.test(name)?'feedback':/^af-icon(?:$|--)/.test(name)?'icons':/option|input|field|required|check|radio|switch|select|textarea|help|error|placeholder|icon/.test(name)?'forms':/dialog/.test(name)?'dialog':/slide|deck/.test(name)?'slides':/calendar|table|widget|metric|image|empty/.test(name)?'widgets':/panel|page/.test(name)?'grid':'typography';
 function codeBlock(code:string,language='HTML'){
   const box=el('div','code-block');const top=el('div','code-bar');top.append(el('span','',language));
-  const copy=button('Копировать',async()=>{try{await navigator.clipboard.writeText(code);copy.textContent='Скопировано';setTimeout(()=>{if(copy.isConnected)copy.textContent='Копировать'},1500)}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);copy.textContent='Выделено · Ctrl+C'}},'copy-button');
+  const copy=button('Копировать',async()=>{try{await navigator.clipboard.writeText(code);copy.textContent='Скопировано';setTimeout(()=>{if(copy.isConnected)copy.textContent='Копировать'},1500)}catch{const range=document.createRange();range.selectNodeContents(pre);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);copy.textContent='Выделено · Ctrl+C'}},'af-btn af-btn--clear af-btn--sm copy-button');
   copy.setAttribute('aria-label','Копировать '+language);top.append(copy);const pre=el('pre');pre.tabIndex=0;pre.setAttribute('aria-label',language);pre.append(el('code','',code));box.append(top,pre);return box;
 }
-function section(title:string,id:string){const s=el('section','doc-section');s.id=id;const h=el('h2','doc-heading',title);s.append(h);main.append(s);const a=el('a','',title);a.href='#'+current+'/'+id;document.querySelector('#toc')!.append(a);return s}
+function section(title:string,id:string){const s=el('section','doc-section');s.id=id;const h=el('h2','af-heading af-heading--3 doc-heading',title);s.append(h);main.append(s);const a=el('a','af-link af-link--accessible',title);a.href='#'+current+'/'+id;document.querySelector('#toc')!.append(a);return s}
 function paragraph(parent:HTMLElement,text:string){parent.append(el('p','doc-copy',text))}
 let current='start';
 function mountExample(parent:HTMLElement,example:(typeof examples)[string][number],i:number){
@@ -88,8 +103,8 @@ function mountExample(parent:HTMLElement,example:(typeof examples)[string][numbe
   if(kind==='panel'){
     const target=live.querySelector<HTMLElement>('#panel-example')!;const c=renderDocument(target,panelExample);controllers.push(c);
     const controls=el('div','af-row demo-controls');
-    controls.append(button('Комментарий 1×1 / показатель 1×2',()=>{const d=c.getDocument();d.pages[0].widgets[1].position.width=1;d.pages[0].widgets[2].position.height=2;d.pages[0].widgets[4].position.row=4;c.update(d)}),button('Сбросить',()=>c.update(panelExample)));live.prepend(controls);
-    const a=el('a','af-link af-link--inline','Открыть панель на всю ширину ↗');a.href='demos/panel.html';s.append(a);s.append(codeBlock(`const documentData = ${JSON.stringify(panelExample,null,2)};\nconst controller = Alabuga.renderDocument(document.querySelector('#panel-example'), documentData);`,'JavaScript'));
+    controls.append(button('Больше места для комментария',()=>{const d=c.getDocument();d.pages[0].widgets[1].position.height=3;d.pages[0].widgets[2].position.row=4;d.pages[0].widgets[3].position.row=4;d.pages[0].widgets[4].position.row=6;d.pages[0].widgets[5].position.row=6;c.update(d)},'af-btn af-btn--clear af-btn--sm'),button('Сбросить',()=>c.update(panelExample),'af-btn af-btn--clear af-btn--sm'));live.prepend(controls);
+    const a=el('a','af-link af-link--inline','Открыть панель на всю ширину ↗');a.href='demos/panel.html';s.append(a);codeHost.append(codeBlock(`const documentData = ${JSON.stringify(panelExample,null,2)};\nconst controller = Alabuga.renderDocument(document.querySelector('#panel-example'), documentData);`,'JavaScript'),codeBlock(panelExampleCss,'CSS'));
   }
   if(kind==='calendar'||kind==='table'){
     const w=structuredClone(panelExample.pages[0].widgets.find(w=>w.type===kind)!);w.position={col:1,row:1,width:4,height:4};
@@ -114,12 +129,12 @@ function render(){
   if(constructorGuides[route]){location.replace(pageHref(route));return}
   current=pages.some(p=>p[0]===route)?route:'start';
   main.replaceChildren();document.querySelector('#toc')!.replaceChildren();
-  navigation.querySelectorAll('a').forEach(a=>{if(a.dataset.page===current)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  navigation.querySelectorAll('a').forEach(a=>{const active=a.dataset.page===current;a.classList.toggle('af-btn--clear',!active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   document.title=`${pages.find(p=>p[0]===current)![1]} — Alabuga Framework`;
-  const header=el('header','page-header');header.append(el('p','breadcrumb','ALABUGA FRAMEWORK / '+pages.find(p=>p[0]===current)![2].toUpperCase()),el('h1','page-title',pages.find(p=>p[0]===current)![1]),el('p','page-intro',descriptions[current]));main.append(header);
+  const header=el('header','page-header');header.append(el('p','af-eyebrow breadcrumb','ALABUGA FRAMEWORK / '+pages.find(p=>p[0]===current)![2].toUpperCase()),el('h1','af-display page-title',pages.find(p=>p[0]===current)![1]),el('p','af-body page-intro',descriptions[current]));main.append(header);
   if(current==='start'){
-    const hero=el('section','hero');hero.innerHTML=`<div class="hero-content"><span class="hero-label">СОЗДАНО ДЛЯ АЛАБУГИ</span><h2>Один язык.<br>Любая композиция.</h2><p>Компоненты, которые работают вместе.<br>От первого блока до целой презентации.</p><a class="hero-link" href="#buttons">Изучить компоненты <span>↗</span></a></div><div class="hero-art" aria-hidden="true"><div class="art-panel"><div class="art-top"><span></span><i></i><i></i></div><div class="art-main"><div class="art-cell"><b>24</b><small>Возможности</small></div><div class="art-bars"><i></i><i></i><i></i><i></i></div><div class="art-lines"><i></i><i></i><i></i></div><div class="art-check">✓</div></div></div><div class="art-tag">4 × 4</div></div>`;main.append(hero);
-    const links=el('div','quick-links');for(const [number,title,copy,href]of[['01','Компоненты','Готовые состояния и размеры','#buttons'],['02','Панельная сетка','Собирайте из виджетов','#grid'],['03','Презентации','Тот же язык на слайдах','#slides']]){const a=el('a','quick-card');a.href=href;a.append(el('span','quick-number',number),el('h2','',title),el('p','',copy),el('span','quick-arrow','↗'));links.append(a)}main.append(links);
+    const hero=el('section','af-card af-card--outer af-card--filled hero');hero.innerHTML=`<div class="hero-content"><span class="hero-label af-label af-label--sm">СОЗДАНО ДЛЯ АЛАБУГИ</span><h2 class="af-display">Один язык.<br>Любая композиция.</h2><p class="af-body">Компоненты, которые работают вместе.<br>От первого блока до целой презентации.</p><a class="af-btn af-btn--inverse hero-link" href="#buttons">Изучить компоненты <span aria-hidden="true">↗</span></a></div><div class="hero-art" aria-hidden="true"><div class="af-card af-card--inner art-panel"><div class="art-top"><span></span><i></i><i></i></div><div class="art-main"><div class="art-cell"><b>24</b><small>Возможности</small></div><div class="art-bars"><i></i><i></i><i></i><i></i></div><div class="art-lines"><i></i><i></i><i></i></div><div class="art-check">✓</div></div></div><div class="art-tag">4 × 4</div></div>`;main.append(hero);
+    const links=el('div','quick-links');for(const [number,title,copy,href]of[['01','Компоненты','Готовые состояния и размеры','#buttons'],['02','Панельная сетка','Собирайте из виджетов','#grid'],['03','Презентации','Тот же язык на слайдах','#slides']]){const a=el('a','af-card af-card--inner quick-card');a.href=href;a.append(el('span','af-label af-label--sm quick-number',number),el('h2','af-title af-title--md',title),el('p','af-body af-body--sm',copy),el('span','quick-arrow','↗'));links.append(a)}main.append(links);
     const install=section('Быстрое подключение','installation');paragraph(install,'Установите @alabuga/framework из приватного реестра. Готовые файлы находятся в dist; публичные точки входа — standalone.css и standalone.js. Пример ниже не требует сборщика на вашем сайте. Все классы применяются внутри контейнера .af.');install.append(codeBlock(`<link rel="stylesheet" href="alabuga.css">
 <script src="alabuga.iife.js"></script>
 <main class="af">
@@ -147,7 +162,7 @@ npm run test:browser`,'Команды'));
   border: 1px solid var(--af-border-default);
   border-radius: var(--af-radius-16);
 }`,'CSS'));
-    const all=section('Все переменные','tokens');const list=el('div','token-list');list.tabIndex=0;list.setAttribute('role','region');list.setAttribute('aria-label','CSS tokens');tokens.variables.forEach(v=>{const row=el('div','token-row');row.append(el('code','', '--af-'+v.name.replace(/[\s/+]+/g,'-').toLowerCase()),el('span','',v.type==='COLOR'?'Цвет':'Число'));list.append(row)});all.append(list);paragraph(all,'Исходные значения сохранены в design/figma-tokens.json. Коррекции доступности описаны в разделе «Изменения и решения».');
+    const all=section('Все переменные','tokens');const list=el('div','token-list');list.tabIndex=0;list.setAttribute('role','region');list.setAttribute('aria-label','CSS tokens');tokens.variables.forEach(v=>{const row=el('div','token-row');row.append(el('code','', '--af-'+v.name.replace(/[\s/+]+/g,'-').toLowerCase()),el('span','',v.type==='COLOR'?'Цвет':'Число'));list.append(row)});all.append(list);paragraph(all,'Исходные значения сохранены в design/figma-tokens.json. Коррекции доступности описаны в руководстве по фирменным источникам.');
   }
   for(const [i,example] of (examples[current]??[]).entries())mountExample(main,example,i);
   if(current==='grid'){const rules=section('Правила размещения','rules');paragraph(rules,'По умолчанию: 12 колонок, строка 64 px, промежуток 16 px. col/row начинаются с 1, width/height задают число ячеек. validateDocument отклоняет пересечения и выход за границы. При ширине окна менее 768 px страница становится одноколоночной; порядок виджетов берётся из массива документа.');paragraph(rules,'Размер 1×1 — единица сетки, а не квадрат. Текст и таблица прокручиваются внутри. Состояние календаря хранится в документе; сортировка и страница таблицы при update сбрасываются.');}
@@ -201,39 +216,10 @@ dispose();`,'JavaScript'));
   }
   if(current==='slides')dispose=slideFitDocs(main);
   if(current==='changes'){
-    const candidate=section('1.1.0 — опубликовано в локальном реестре','release-1-1-0');
-    paragraph(candidate,'Новая версия включает фирменный Select, DatePicker и Calendar, размеры и состояния компонентов, каталог иконок и локальный архив исходников Figma. Формат документов и подключение JS/CSS сохранены. Текстовые ссылки и вставки renderer используют читаемые модификаторы; компонентные матрицы показывают исходную палитру.');
-    const candidateLink=el('a','af-link af-link--inline','Пакет, JS/CSS и отчёт приёмки');candidateLink.href='releases/1.1.0/';candidate.append(candidateLink);
-    paragraph(candidate,'Версия 1.1.0 опубликована в авторизованном Verdaccio 127.0.0.1:4873 с тегом latest. Проверены установка из реестра и контрольная сумма архива. Ручная проверка со скринридером отложена по решению пользователя и не выполнялась.');
-    const alignment=section('21 октября 2026 — компоненты Figma','figma-2026-10-21');
-    paragraph(alignment,'В текущей рабочей версии: Select/List/ListItem в S/M/L с клавиатурой и нативным значением формы; независимые Selected/Pressed/Loading у кнопок; checkbox/radio в размерах 16/20/24 px. SVG встроены в CSS. Подключение остаётся через готовые JS/CSS и существующий initComponents.');
-    paragraph(alignment,'Убраны общие переопределения размеров и цветов кнопок в композициях. Белый CTA на тёмном фоне задаётся af-btn--inverse. Сохранены контрастные поправки текста, видимый фокус и нативная работа форм.');
-    paragraph(alignment,'После проверки: стабилизирован внутренний кружок radio при дробном масштабе, убрана обрезка букв в Select, зазор под меню уменьшен до 2 px. Фокус полей соответствует одной границе 1 px из Figma; в системной высокой контрастности сохраняется отдельный контур.');
-    paragraph(alignment,'Switch приведён к размеру 44×24 px, ползунку 20 px и отдельным hover/disabled для OFF/ON. Input S/M/L согласован с обёрткой, подписями, подсказками и исходными SVG состояний. Textarea получил исходную типографику и счётчик через initComponents.');
-    paragraph(alignment,'Добавлены квадратные и круглые icon-button S/M/L на основе af-btn, три исходных маркера Bullet и левое выравнивание маркированных списков. Полная компонентная шкала Display/Heading/Title/Body/Label доступна через CSS-классы; исправлен межбуквенный интервал заголовков. Нумерация списков и fitted-типографика презентаций сохранены. Далее — именованные поверхности и оставшиеся семейства компонентов из аудита.');
-    paragraph(alignment,'По итогам просмотра: icon-button показывают действие «Подробнее» с исходной иконкой информации; списки содержат задачи, материалы и порядок деловой встречи. Буквица и разделители отмечены как дополнительные стили первоначальной реализации Framework: их происхождение в проверенных Figma и брендовых материалах не подтверждено.');
-    paragraph(alignment,'Уточнено центрирование рисунка и загрузки в icon-button при дробном масштабе. Каждый вид списка теперь оформлен отдельным блоком с описанием, предпросмотром и HTML-кодом, как остальные примеры типографики.');
-    paragraph(alignment,'Добавлены именованные поверхности на основе af-card: внешний/внутренний блок 32/16 px с gap 16 px, заливка, обводка 2–3 px и исходная тень Figma. Геометрия сохраняется на телефоне; старые карточки и флаги поверхности renderer совместимы. Новый раздел «Блоки и поверхности» показывает отдельные примеры и код. Далее — Calendar/DatePicker и семейства P2.');
-    paragraph(alignment,'Доработано поведение календаря: переходы по месяцам и годам с клавиатуры, конец короткого месяца, годы 0000–0099 и границы формата 0000–9999. Фокус и узел заголовка сохраняются; af:change отправляется после обновления выбранного дня. В разделе «Виджеты» добавлен пример с 29 февраля.');
-    paragraph(alignment,'Calendar сверен с приложенным скриншотом: компактные 250 px, квадратные дни 32 px, заголовок и SVG-стрелки, неактивные даты следующего месяца, рамка и тень. Добавлены пустое состояние, подтверждение/отмена и диапазон 10–17 сентября с переходом через неделю. Календарь в справочнике показан отдельно от панели; AFDocument сохраняет выбор одной даты. Даты соответствуют реальному месяцу, а подписи недель и начало периода сохраняют читаемый контраст. При недоступной Figma используем исходные снимки. Далее — поле DatePicker.');
-    paragraph(alignment,'Добавлен DatePicker по контексту Default и снимку состояний Figma: поле L 48 px, исходные иконки, календарь с подтверждением и ввод ДД.ММ.ГГГГ. Значение и FormData остаются ISO; работают required/min/max, readonly, disabled, reset и очистка через прежний initComponents. Невозможная дата не отправляет старое значение; для браузеров без type=date проверяются формат и границы. Схема документа сохранена. Новые форма встречи и состояния доступны в разделе «Формы и выбор». Далее — семейства P2.');
-    paragraph(alignment,'DatePicker поддерживает S/M/L 32/40/48 px. Option-btn/Multi-switch, Chip/Alert всех размеров, Dialog и навигация перепроверены по трём присланным скриншотам. Восстановлены прозрачные состояния группы, исходная палитра, значки, размеры крестиков, равные кнопки Dialog и серые/чёрные/синие состояния ссылок. Для более тёмного текста доступны модификаторы --accessible. Уточнённые правила и наблюдения сохранены локально; повторных обращений к Figma нет.');
-    paragraph(alignment,'Добавлен каталог иконок: 11 доступных значков/оформлений, размеры 16/20/24 px, наследование цвета и исходные двухцветные спиннеры. Размер иконки внутри кнопки задаётся кнопкой. Источники, масштабируемые варианты и недостающие SVG отмечены отдельно. Матрица всех 23 семейств обновлена по фактической реализации.');
-    const review=el('div','af-row');
-    for(const [label,href]of [['Кнопки и состояния','#buttons'],['Формы и выбор','#forms'],['Типографика и списки','#typography'],['Подключение и ограничения','docs/ru/author.html']]){const link=el('a','af-link af-link--inline',label);link.href=href;review.append(link)}
-    alignment.append(review);
-    const release=section('0.6.0 — фирменные материалы и рабочее пространство','release-v6');paragraph(release,'Библиотека PPTX, проекты и версии в IndexedDB, схема 3, отдельное хранение материалов, миниатюры, контекстные свойства, кадрирование, сценарии показа и проверка качества. Приёмка с пятью авторами ожидает проведения.');
-    const s=section('0.5.0 — композиции и сценарии','release');paragraph(s,'Фирменные композиции сайтов и слайдов, адаптивная высота, фоновые изображения, новые виджеты, готовые анимации, действия и модальные окна. Проекты версии 1 автоматически преобразуются в версию 2.');
-    const roadmap=section('План развития','roadmap');const stages=el('ol','af-list');[
-      'Библиотека: токены, шрифты, компоненты, панельная сетка, виджеты и формат документа — реализовано в 0.1.0.',
-      'Проверка: автоматические тесты, доступность, три браузерных движка, контрольные страницы и печать — выполнено. Следующий шаг: оценить реальные материалы и удобство выбранных размеров.',
-      'Конструктор: базовая версия реализована — выбор виджетов, добавление и удаление, перемещение и размеры в сетке, панель свойств, отмена и повтор, сохранение документа. Следующий шаг — проверить рабочие сценарии на реальных материалах.',
-      'Страницы и презентации: реализованы вертикальные секции с независимыми сетками, управление слайдами, режим просмотра, проверка переполнения и экспорт HTML. Для многостраничного сайта потребуется отдельная модель навигации.',
-      'Расширение: дополнительные виджеты и шаблоны по реальным задачам; публикация и автодеплой отдельным этапом.'
-    ].forEach(t=>stages.append(el('li','',t)));roadmap.append(stages);
-    const verification=section('Что проверяется','verification');paragraph(verification,'Проверки схемы, истории и размещения; браузерные сценарии в Chromium, Firefox и WebKit: библиотека, документация, конструктор, доступность с axe, сохранение и открытие проекта, экспорт без сети и безопасное отображение текста. Скриншоты и PDF сохраняются в test-results. Автоматические проверки дополняют визуальную оценку и не заменяют её.');
-    paragraph(verification,'Для ссылок и текстовых состояний добавлены контрастные значения: --af-text-link, --af-action-secondary-text, --af-action-clear-text-default — #0956BB; --af-action-ghost-text — #505A64. Палитра Figma в tokens.css сохранена; эти роли переопределяются в styles.css.');
-    const changes=section('Уточнения к Figma','decisions');const ul=el('ul','af-list');['В работе используется только копия ObAoKiDwraibmQrxUNvGWI. Исходный макет не изменяется.','Значения переменных сохранены отдельно. Chip и Alert по умолчанию используют исходную палитру; --accessible включает более тёмные роли текста: success #176B38, warning #874700, danger #9B1717, info #0956BB.','Добавлен видимый клавиатурный фокус. Веб-поля не используют обрезку высоты текста из макета.','В компонентной типографике не используем 8–10 px для вводимого текста; маленькие подписи показателей отделены от основного текста.','Вместо конфликтующих вариантов иконок используется ограниченный проверенный набор. SVG info, success и close сохранены из Figma.','Размеры основываются на действующих компонентах. Raster-таблицы в макете считаются справочными, а не источником автоматической генерации.','Шрифт преобразован из fonts/alabuga-sans.ttc в четыре WOFF2 без изменения исходного TTC.','Сложное обтекание, тёмная тема, серверные данные и автодеплой отложены. Редактор HTML/CSS/JS в конструкторе не предусмотрен.'].forEach(t=>ul.append(el('li','',t)));changes.append(ul);
+    for(const {version,paragraphs} of releaseHistory){
+      const release=section(version,'release-'+version.replaceAll('.','-'));
+      for(const text of paragraphs)paragraph(release,text);
+    }
   }
   const footer=el('footer','page-footer');footer.append(el('span','','Alabuga Framework · '+VERSION),el('span','','Общие правила. Свобода композиции.'));main.append(footer);
   dispose=initComponents(main);

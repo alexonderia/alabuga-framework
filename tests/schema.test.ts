@@ -4,6 +4,18 @@ import { validateDocument, isSafeUrl } from '@alabuga/framework/schema';
 import { panelExample, presentationExample } from '@alabuga/framework/examples';
 import {showcase,compositionCatalog,makeComposition,changeComposition} from '@alabuga/framework/compositions';
 
+test('responsive sizes round-trip independently and reject unsafe or ambiguous values',()=>{
+ const doc=structuredClone(showcase('page'));const widget=doc.pages[0].widgets[0];
+ widget.responsive={tablet:{width:73,minHeight:321},mobile:{width:91,minHeight:240}};
+ const result=validateDocument(doc);assert.equal(result.success,true);
+ if(result.success){assert.equal(result.data.schemaVersion,4);assert.deepEqual(result.data.pages[0].widgets[0].responsive,widget.responsive)}
+ const explicit=validateDocument({...showcase('page'),schemaVersion:4});assert.equal(explicit.success,true);if(explicit.success)assert.equal(explicit.data.schemaVersion,4);
+ assert.equal(validateDocument({...showcase('page'),schemaVersion:6}).success,false);
+ for(const size of [{width:0},{width:101},{width:50.5},{minHeight:-1},{minHeight:3201},{minHeight:Infinity},{width:'80'},{height:20}]){
+  const invalid:any=structuredClone(doc);invalid.pages[0].widgets[0].responsive.tablet=size;assert.equal(validateDocument(invalid).success,false,JSON.stringify(size));
+ }
+});
+
 test('optional slide typography stays in schema 3 and rejects non-brand sizes',()=>{
  const doc={schemaVersion:3 as const,kind:'presentation' as const,title:'Typography',pages:[makeComposition('text','presentation')]};
  const legacy=validateDocument(doc);assert.ok(legacy.success);assert.equal(legacy.data.pages[0].widgets[0].typography,undefined);assert.equal(legacy.data.pages[0].appearance?.fitted,undefined);

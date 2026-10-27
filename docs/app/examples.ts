@@ -353,7 +353,7 @@ ${[['info','Новые материалы'],['success','Изменения со�
   <a class="af-link" href="#navigation" aria-current="page">Навигация</a>
   <a class="af-link" href="#forms">Формы и выбор</a>
 </div>`}],
-  grid:[{title:'Панель 12 колонок',description:'Позиция и размеры задаются в единицах родительской сетки. Меняйте размер — содержимое остаётся в документе.',enhancement:'panel',html:`<div id="panel-example"></div>`,js:`const controller = Alabuga.renderDocument(
+  grid:[{title:'Панель 12 колонок',description:'Позиция и размеры задаются в единицах родительской сетки. В этом примере блоки растут по содержимому, а на узкой панели перестраиваются в две или одну колонку. Комментарий, показатели и таблица читаются без вложенной прокрутки. Код адаптации доступен под примером.',enhancement:'panel',collapseCode:true,html:`<div id="panel-example" class="panel-demo"></div>`,js:`const controller = Alabuga.renderDocument(
   document.querySelector('#panel-example'), documentData
 );
 // documentData — проверенный документ schemaVersion: 1.
