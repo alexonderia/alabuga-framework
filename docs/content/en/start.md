@@ -4,15 +4,25 @@ Alabuga Framework is an independent design system, CSS component library and web
 
 ## Install the published package
 
-Configure the @alabuga HTTPS registry and a read token in user npm config, then pin a version:
+`@alabuga/framework` version **1.3.1** is available from the external HTTPS registry:
 
-Version 1.1.0 is published to authenticated local Verdaccio. With read credentials configured, install from that registry:
-
-```sh
-npm install --save-exact @alabuga/framework@1.1.0 --registry=http://127.0.0.1:4873/
+```text
+https://npm.acom-offer-desk.ru/
 ```
 
-Local acceptance uses authenticated Verdaccio on 127.0.0.1:4873. Production hosting is not yet connected. Built applications do not contact the registry at runtime.
+Anonymous read is enabled for the test contour; publishing is restricted. Add this to the project `.npmrc`:
+
+```ini
+@alabuga:registry=https://npm.acom-offer-desk.ru/
+```
+
+Then install the exact version:
+
+```sh
+npm install --save-exact @alabuga/framework@1.3.1
+```
+
+Use Node.js 24.19.0 and npm 11.17.0. For production, use a dedicated read token and do not keep anonymous access. Built applications do not contact the registry at runtime.
 
 ## CSS and JavaScript
 
