@@ -44,6 +44,10 @@ if (result.success) documentData.pages[index] = result.slide;
 
 keepBackground/keepTypography preserve selected values; resolveAsset resolves asset:. Results include changes/issues/candidates and are never applied automatically. Export accepts runtime.css, runtime.script, assetsBaseUrl and async resolveAsset. See [formats/resources](data.md).
 
+## Notification sizes
+
+Alert sizes S/M/L define minimum heights of 32/40/48 px. Wrapped text increases the notification height; line breaks depend on the available width and browser font metrics. Avoid assigning a fixed height to a multiline notification.
+
 ## DOM compatibility
 
 Authoring hooks include data-section-id, data-widget-id, data-action-id, .af-page, .af-slide, .af-panel, .af-widget, its title/content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, quote text/author and feature title/text. Prose/list/figcaption/row/cell/card order follows data. docs/public-contract.md records the full contract. Breaking these hooks requires a major release.

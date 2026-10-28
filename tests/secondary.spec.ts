@@ -36,12 +36,23 @@ test('P2 size matrix matches saved outer dimensions and long alerts can grow',as
     await expect(page.locator('#chip-'+size)).toHaveCSS('height',chipHeight+'px');
   }
   await page.locator('#alert-lg').evaluate(n=>{n.style.width='292px';n.querySelector('.af-alert__text')!.textContent='This user has a notification.'});
-  await expect(page.locator('#alert-lg')).toHaveCSS('height','48px');
+  // The source sentence can wrap differently with each browser's font metrics.
+  // 48 px is the minimum; wrapped text must remain visible as the alert grows.
+  expect((await page.locator('#alert-lg').boundingBox())!.height).toBeGreaterThanOrEqual(48);
   await expect(page.locator('#alert-lg .af-alert__icon')).toHaveCSS('width','20px');
   await expect(page.locator('#alert-lg .af-alert__close')).toHaveCSS('width','24px');
   await expect(page.locator('#alert-lg .af-alert__text')).toHaveCSS('width','200px');
-  await page.locator('#alert-md').evaluate(n=>{n.style.width='180px';n.querySelector('.af-alert__text')!.textContent='A very long message must wrap without clipping its text or producing horizontal overflow.'});
-  expect((await page.locator('#alert-md').boundingBox())!.height).toBeGreaterThan(40);
+  await page.locator('#alert-lg .af-alert__text').evaluate(n=>n.textContent='Notification.');
+  await expect(page.locator('#alert-lg')).toHaveCSS('height','48px');
+  for(const [id,minHeight] of [['alert-md',40],['alert-lg',48]] as const){
+    const notice=page.locator('#'+id);
+    await notice.evaluate(n=>{n.style.width='180px';n.querySelector('.af-alert__text')!.textContent='A very long message must wrap without clipping its text or producing horizontal overflow.'});
+    expect((await notice.boundingBox())!.height).toBeGreaterThan(minHeight);
+    expect(await notice.evaluate(n=>{
+      const box=n.getBoundingClientRect(),range=document.createRange();range.selectNodeContents(n.querySelector('.af-alert__text')!);
+      return n.scrollWidth<=n.clientWidth+2&&n.scrollHeight<=n.clientHeight+2&&[...range.getClientRects()].every(r=>r.top>=box.top&&r.bottom<=box.bottom&&r.left>=box.left&&r.right<=box.right);
+    }),'wrapped alert text stays inside its growing container').toBe(true);
+  }
   for(const node of ['.af-chip__icon','.af-chip__remove','.af-alert__icon','.af-alert__close']){
     const mask=await page.locator(node).first().evaluate((n,selector)=>getComputedStyle(n,selector.includes('remove')||selector.includes('close')?'::before':null).maskImage,node);
     expect(mask).toContain('data:image/svg+xml');

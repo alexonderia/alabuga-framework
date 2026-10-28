@@ -60,7 +60,7 @@ for(const route of ['/#grid','/demos/panel.html'])test(`panel content fits witho
   await expect(panel.locator('.af-widget')).toHaveCount(6);
   await page.evaluate(()=>document.fonts.ready);
   const overflow=()=>panel.locator('.af-widget,.af-widget__content,.af-table-scroll').evaluateAll(nodes=>nodes.filter(n=>n.scrollHeight>n.clientHeight+2||n.scrollWidth>n.clientWidth+2).map(n=>({widget:n.closest<HTMLElement>('[data-widget-id]')?.dataset.widgetId,part:n.className,width:n.clientWidth,scrollWidth:n.scrollWidth,height:n.clientHeight,scrollHeight:n.scrollHeight})));
-  for(const width of [1440,1100,900,768,390,320]){
+  for(const width of [1440,1100,900,768,390,320,768,1440,320]){
     await page.setViewportSize({width,height:1000});
     expect(await overflow(),`${route} at ${width}px`).toEqual([]);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

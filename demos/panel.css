@@ -3,8 +3,9 @@
 .panel-demo { container-type: inline-size; }
 .panel-demo .af-page { padding: 0; }
 .panel-demo .af-panel { grid-auto-rows: minmax(var(--af-row-height), auto); }
-.panel-demo .af-widget { height: auto; min-height: min-content; }
-.panel-demo .af-widget__content { flex: auto; min-height: min-content; overflow: visible; }
+/* Automatic minimums let WebKit recalculate wrapped content after resizing. */
+.panel-demo .af-widget { height: auto; min-height: auto; }
+.panel-demo .af-widget__content { flex: auto; min-height: auto; overflow: visible; }
 .panel-demo .af-table-scroll { flex: auto; overflow: visible; }
 .panel-demo .af-widget--metric { padding: var(--af-space-16); }
 .panel-demo .af-widget--metric .af-widget__title { font-size: 14px; line-height: 1.4; margin-bottom: var(--af-space-8); }

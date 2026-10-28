@@ -44,6 +44,10 @@ if (result.success) documentData.pages[index] = result.slide;
 
 keepBackground/keepTypography сохраняют выбранные настройки; resolveAsset разрешает asset:. fit возвращает changes/issues/candidates и не записывает результат самостоятельно. Экспорт принимает runtime.css, runtime.script, assetsBaseUrl и async resolveAsset. [Форматы и ресурсы](data.md).
 
+## Размеры уведомлений
+
+У Alert размеры S/M/L задают минимальную высоту 32/40/48 px. При переносе текста уведомление растёт по содержимому; число строк зависит от доступной ширины и метрик шрифта браузера. Не ограничивайте многострочное уведомление фиксированной высотой.
+
 ## DOM и совместимость
 
 Редакторские опоры: data-section-id, data-widget-id, data-action-id; .af-page, .af-slide, .af-panel, .af-widget, .af-widget__title, .af-widget__content, .af-prose, .af-heading, .af-slide__title, .af-section-background, .af-table-scroll, .af-title, .af-label, .af-caption, .af-metric__value, .af-quote__text, .af-quote__author, .af-feature и его title/text. Порядок prose, list items, figcaption, строк/ячеек и карточек соответствует данным. Полный контракт хранится в docs/public-contract.md. Нарушение этих опор требует major-версии.

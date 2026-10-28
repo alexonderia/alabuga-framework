@@ -24,6 +24,8 @@ The live reference and RU/EN guides use the ready-made `standalone.css`: Alabuga
 
 The sidebar groups topics by purpose: setup, colors and grids, components, documents, Constructor and API. Navigation links use `af-btn af-btn--clear` (Clean, without a persistent outline); the current page uses the primary `af-btn` and `aria-current="page"`. Groups have headings and separators and scroll horizontally on narrow screens. RU/EN guides separately group setup and components, API and formats, and development and releases.
 
+The working panel example shares `demos/panel.css` between the reference and `/demos/panel.html`. Cards and their content use `min-height: auto`, allowing WebKit to recalculate their height when resizing causes text to wrap. Tests cover shrinking and expanding the panel, a long comment and the absence of nested scrolling.
+
 The “Changes and decisions” section groups detailed descriptions by version, newest first. Preserve features, fixes, dimensions, states, compatibility and release verification details; place related decisions and explanations under their version without separate operational sections. Do not reduce the history to broad summaries. History data lives in `docs/app/release-history.ts`; future plans remain outside the version history.
 
 ## Tokens and original assets
