@@ -1,5 +1,12 @@
 import {resolve,dirname} from 'node:path';
 import {readdir,readFile,access} from 'node:fs/promises';
+const {version}=JSON.parse(await readFile('package.json','utf8'));
+const releaseNotesPath=`docs/releases/${version}.md`;
+const releaseNotes=await readFile(releaseNotesPath,'utf8').catch(error=>{
+ if(error.code==='ENOENT')throw new Error(`Missing release notes for ${version}: create ${releaseNotesPath} before preparing the release`);
+ throw error;
+});
+if(!releaseNotes.trim())throw new Error(`Empty release notes: ${releaseNotesPath}`);
 for(const lang of ['ru','en']){
  const topics=(await readdir(`docs/content/${lang}`)).filter(f=>f.endsWith('.md')).sort();
  const other=(await readdir(`docs/content/${lang==='ru'?'en':'ru'}`)).filter(f=>f.endsWith('.md')).sort();

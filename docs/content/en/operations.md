@@ -1,10 +1,16 @@
 # Framework publishing and operations
 
+## Preparing the current version 1.3.1
+
+The candidate version comes from `package.json`. It requires a nonempty `docs/releases/1.3.1.md`; `npm run check:docs` verifies this file before the browser run. When changing the package version, add its corresponding `docs/releases/<version>.md`.
+
+After the build, full Chromium/Firefox/WebKit run, package and consumer verification, run `npm run prepare:release`. It assembles the candidate in `artifacts/release-1.3.1/` and copies the review page to `dist/docs/releases/1.3.1/`; it does not publish. See [version changes](/index.html#changes/release-1-3-1).
+
 ## Release 1.1.0
 
 The release adds source-based Select/List, DatePicker/Calendar, component sizes/states, the icon catalogue and the local Figma archive. Built JS/CSS delivery, existing APIs and document formats are preserved. Renderer links use `af-link--inline` and callouts use `af-alert--accessible`; component examples retain the source palette.
 
-After verification, `npm run prepare:release` assembles the local candidate in `artifacts/release-1.1.0/` and copies its review page to the built site. It requires the checked npm archive, full browser results and consumer verification; it does not publish. See [current changes](/index.html#changes/release-1-1-0).
+Version 1.1.0 review materials are preserved in `artifacts/release-1.1.0/`. See [version changes](/index.html#changes/release-1-1-0).
 
 Version 1.1.0 was published on 2026-10-22 to authenticated local Verdaccio at `http://127.0.0.1:4873/`, tagged `latest`. The canonical Linux archive was published without repacking; integrity and a fresh registry installation passed. Manual screen-reader acceptance was explicitly deferred by the user and has not been performed. The release page includes a publication receipt; preparing the review again preserves this status. Some icon types lack original artwork in the saved export. An external production HTTPS endpoint is not connected yet.
 
